@@ -1,8 +1,10 @@
 
 import React from 'react';
+import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
-import NavigationIcon from '../components/NavigationIcon';
+import PortfolioCard from '../components/PortfolioCard';
 import PortfolioSection from '../components/PortfolioSection';
+import AboutSection from '../components/AboutSection';
 import ContactForm from '../components/ContactForm';
 
 const Index = () => {
@@ -13,21 +15,20 @@ const Index = () => {
     }
   };
 
-  const navigationIcons = [
-    { type: 'vinetas' as const, label: 'Viñetas', position: { x: 20, y: 30 }, id: 'vinetas' },
-    { type: 'team' as const, label: 'Team Building', position: { x: 80, y: 25 }, id: 'team' },
-    { type: 'ia' as const, label: 'IA', position: { x: 15, y: 70 }, id: 'ia' },
-    { type: 'firmas' as const, label: 'Firmas', position: { x: 85, y: 75 }, id: 'firmas' },
-    { type: 'visual' as const, label: 'Visual Thinking', position: { x: 30, y: 15 }, id: 'visual' },
-    { type: 'infantil' as const, label: 'Infantil', position: { x: 70, y: 85 }, id: 'infantil' },
-    { type: 'editorial' as const, label: 'Editorial', position: { x: 75, y: 15 }, id: 'editorial' },
+  const portfolioCategories = [
+    { title: 'Viñetas', description: 'Historias dibujadas con gracia', id: 'vinetas' },
+    { title: 'Team Building', description: 'Dinámicas grupales ilustradas', id: 'team' },
+    { title: 'IA', description: 'Robots con personalidad', id: 'ia' },
+    { title: 'Firmas', description: 'Identidad única en cada trazo', id: 'firmas' },
+    { title: 'Visual Thinking', description: 'Ideas complejas, dibujos simples', id: 'visual' },
+    { title: 'Infantil', description: 'Mundo de fantasía', id: 'infantil' },
+    { title: 'Editorial', description: 'Narrativa visual', id: 'editorial' },
   ];
 
   const portfolioSections = [
     {
       id: 'vinetas',
       title: 'Viñetas',
-      type: 'vinetas' as const,
       images: [
         { src: 'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?w=500', title: 'Viñeta 1', description: 'Una historia dibujada con gracia' },
         { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500', title: 'Viñeta 2', description: 'Momentos cotidianos con humor' },
@@ -37,7 +38,6 @@ const Index = () => {
     {
       id: 'team',
       title: 'Team Building',
-      type: 'team' as const,
       images: [
         { src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500', title: 'Equipo 1', description: 'Dinámicas grupales ilustradas' },
         { src: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=500', title: 'Equipo 2', description: 'Colaboración visual' },
@@ -47,7 +47,6 @@ const Index = () => {
     {
       id: 'ia',
       title: 'IA',
-      type: 'ia' as const,
       images: [
         { src: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500', title: 'IA 1', description: 'Robots con personalidad' },
         { src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500', title: 'IA 2', description: 'Futuro dibujado a mano' },
@@ -57,7 +56,6 @@ const Index = () => {
     {
       id: 'firmas',
       title: 'Firmas Personalizadas',
-      type: 'firmas' as const,
       images: [
         { src: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500', title: 'Firma 1', description: 'Identidad única en cada trazo' },
         { src: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=500', title: 'Firma 2', description: 'Elegancia manuscrita' },
@@ -67,7 +65,6 @@ const Index = () => {
     {
       id: 'visual',
       title: 'Visual Thinking',
-      type: 'visual' as const,
       images: [
         { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', title: 'Visual 1', description: 'Ideas complejas, dibujos simples' },
         { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500', title: 'Visual 2', description: 'Conceptos visualizados' },
@@ -77,7 +74,6 @@ const Index = () => {
     {
       id: 'infantil',
       title: 'Infantil',
-      type: 'infantil' as const,
       images: [
         { src: 'https://images.unsplash.com/photo-1530325553146-0b2a0f9a6b7c?w=500', title: 'Infantil 1', description: 'Mundo de fantasía' },
         { src: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500', title: 'Infantil 2', description: 'Aventuras dibujadas' },
@@ -87,7 +83,6 @@ const Index = () => {
     {
       id: 'editorial',
       title: 'Editorial',
-      type: 'editorial' as const,
       images: [
         { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500', title: 'Editorial 1', description: 'Narrativa visual' },
         { src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500', title: 'Editorial 2', description: 'Historias ilustradas' },
@@ -98,35 +93,30 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm py-4 px-4 md:px-8">
-        <div className="flex justify-center">
-          <img 
-            src="/lovable-uploads/38261183-3067-4b9c-b722-fbf329309b63.png" 
-            alt="Mariatepinta" 
-            className="h-8 md:h-10"
-          />
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-white pt-20">
-        <div className="text-center z-10">
+      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-16">
+        <div className="text-center mb-12">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 max-w-2xl mx-auto px-4">
             Ilustro cosas. A veces hasta con sentido.
           </h1>
-          
-          <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
-            <LottieAnimation className="w-full h-full" />
-            
-            {/* Navigation Icons */}
-            {navigationIcons.map((icon, index) => (
-              <NavigationIcon
+        </div>
+        
+        {/* Lottie Animation Centered */}
+        <div className="w-80 h-80 md:w-96 md:h-96 mb-16">
+          <LottieAnimation className="w-full h-full" />
+        </div>
+
+        {/* Portfolio Cards Grid */}
+        <div className="max-w-6xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {portfolioCategories.map((category, index) => (
+              <PortfolioCard
                 key={index}
-                type={icon.type}
-                label={icon.label}
-                position={icon.position}
-                onClick={() => scrollToSection(icon.id)}
+                title={category.title}
+                description={category.description}
+                onClick={() => scrollToSection(category.id)}
               />
             ))}
           </div>
@@ -139,10 +129,12 @@ const Index = () => {
           key={index}
           id={section.id}
           title={section.title}
-          type={section.type}
           images={section.images}
         />
       ))}
+
+      {/* About Section */}
+      <AboutSection />
 
       {/* Contact Section */}
       <ContactForm />

@@ -1,19 +1,16 @@
 
 import React from 'react';
-import HandDrawnIcon from './HandDrawnIcon';
 
 interface PortfolioSectionProps {
   id: string;
   title: string;
-  type: 'vinetas' | 'team' | 'ia' | 'firmas' | 'visual' | 'infantil' | 'editorial';
   images: { src: string; title: string; description: string }[];
 }
 
-const PortfolioSection: React.FC<PortfolioSectionProps> = ({ id, title, type, images }) => {
+const PortfolioSection: React.FC<PortfolioSectionProps> = ({ id, title, images }) => {
   return (
     <section id={id} className="py-16 px-4 md:px-8 max-w-6xl mx-auto">
-      <div className="flex items-center justify-center mb-12">
-        <HandDrawnIcon type={type} className="w-12 h-12 mr-4" />
+      <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">{title}</h2>
       </div>
       
