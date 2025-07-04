@@ -96,21 +96,21 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-16">
-        <div className="text-center mb-12">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 max-w-2xl mx-auto px-4">
+      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
+        <div className="text-center mb-8">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 max-w-2xl mx-auto px-4">
             Ilustro cosas. A veces hasta con sentido.
           </h1>
         </div>
         
-        {/* Lottie Animation Centered */}
-        <div className="w-80 h-80 md:w-96 md:h-96 mb-16">
+        {/* Lottie Animation - Tamaño reducido y responsive */}
+        <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mb-8">
           <LottieAnimation className="w-full h-full" />
         </div>
 
-        {/* Portfolio Cards Grid */}
-        <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Portfolio Cards Grid - Más compactas */}
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3 md:gap-4">
             {portfolioCategories.map((category, index) => (
               <PortfolioCard
                 key={index}
