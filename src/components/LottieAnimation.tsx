@@ -7,8 +7,8 @@ interface LottieAnimationProps {
 }
 
 const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => {
-  // URL específica proporcionada por el usuario
-  const animationUrl = 'https://lottie.host/embed/e85655a6-e3ca-42ca-81c7-9581e5b343e9/E5CaLHOHvE.json';
+  // URL JSON directa sin embed
+  const animationUrl = 'https://lottie.host/e85655a6-e3ca-42ca-81c7-9581e5b343e9/E5CaLHOHvE.json';
 
   const handleReady = () => {
     console.log('🎉 Lottie animation ready and playing!');
