@@ -9,23 +9,14 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
 
-  // Array de URLs para probar
-  const animationUrls = [
-    'https://lottie.host/e85655a6-e3ca-42ca-81c7-9581e5b343e9/E5CaLHOHvE.json',
-    'https://lottie.host/dac6cfae-4b24-47ef-a4ec-137f0a5ead65/fUbwz02KWT.json',
-    'https://lottie.host/embed/dac6cfae-4b24-47ef-a4ec-137f0a5ead65/fUbwz02KWT.json',
-    'https://lottie.host/c0d8d67b-72a7-4481-a47e-cec4f2a5535f/WzrawLDU47.lottie',
-    'https://lottie.host/embed/c0d8d67b-72a7-4481-a47e-cec4f2a5535f/WzrawLDU47.lottie'
-  ];
+  // URL específica proporcionada por el usuario
+  const animationUrl = 'https://lottie.host/embed/e85655a6-e3ca-42ca-81c7-9581e5b343e9/E5CaLHOHvE.json';
 
   useEffect(() => {
     let isMounted = true;
     
-    console.log('🎬 LottieAnimation: Starting to load animation...');
-    console.log('🔗 Current URL index:', currentUrlIndex);
-    console.log('🔗 Testing URL:', animationUrls[currentUrlIndex]);
+    console.log('🎬 LottieAnimation: Loading animation from:', animationUrl);
 
     const loadLottieScript = () => {
       return new Promise<void>((resolve, reject) => {
@@ -51,54 +42,17 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
       });
     };
 
-    const tryNextUrl = () => {
-      if (currentUrlIndex < animationUrls.length - 1) {
-        console.log('🔄 Trying next URL...');
-        setCurrentUrlIndex(prev => prev + 1);
-        setHasError(false);
-        setIsLoading(true);
-      } else {
-        console.log('❌ All URLs failed');
-        setHasError(true);
-        setIsLoading(false);
-      }
-    };
-
     const loadAnimation = async () => {
       try {
         await loadLottieScript();
         
         if (!isMounted || !containerRef.current) return;
 
-        const currentUrl = animationUrls[currentUrlIndex];
-        console.log('🔍 Testing animation URL:', currentUrl);
+        console.log('🔍 Testing animation URL:', animationUrl);
         
-        // Test if the URL is accessible
-        const response = await fetch(currentUrl);
-        console.log('📡 Fetch response status:', response.status);
-        
-        if (!response.ok) {
-          throw new Error(`Failed to fetch animation: ${response.status}`);
-        }
-
-        // Check content type
-        const contentType = response.headers.get('content-type');
-        console.log('📄 Content type:', contentType);
-
-        let animationData;
-        if (currentUrl.endsWith('.lottie')) {
-          // For .lottie files, we need to handle them differently
-          console.log('🎯 Detected .lottie file format');
-          animationData = await response.arrayBuffer();
-        } else {
-          // For JSON files
-          animationData = await response.json();
-          console.log('✅ Animation JSON loaded successfully:', Object.keys(animationData));
-        }
-
         // Create the lottie-player element
         const lottiePlayer = document.createElement('lottie-player');
-        lottiePlayer.setAttribute('src', currentUrl);
+        lottiePlayer.setAttribute('src', animationUrl);
         lottiePlayer.setAttribute('background', 'transparent');
         lottiePlayer.setAttribute('speed', '1');
         lottiePlayer.setAttribute('style', 'width: 100%; height: 100%;');
@@ -109,13 +63,14 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
         lottiePlayer.addEventListener('error', (e) => {
           console.error('❌ Lottie player error:', e);
           if (isMounted) {
-            tryNextUrl();
+            setHasError(true);
+            setIsLoading(false);
           }
         });
 
         lottiePlayer.addEventListener('ready', () => {
           console.log('🎉 Lottie animation ready and playing!');
-          console.log('✅ Successfully loaded URL:', currentUrl);
+          console.log('✅ Successfully loaded URL:', animationUrl);
           if (isMounted) {
             setIsLoading(false);
             setHasError(false);
@@ -132,7 +87,8 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
       } catch (error) {
         console.error('❌ Error loading Lottie animation:', error);
         if (isMounted) {
-          tryNextUrl();
+          setHasError(true);
+          setIsLoading(false);
         }
       }
     };
@@ -142,7 +98,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
     return () => {
       isMounted = false;
     };
-  }, [currentUrlIndex]);
+  }, [animationUrl]);
 
   // Fallback content when animation fails to load
   if (hasError) {
