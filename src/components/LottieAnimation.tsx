@@ -10,10 +10,6 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
   // URL específica proporcionada por el usuario
   const animationUrl = 'https://lottie.host/embed/e85655a6-e3ca-42ca-81c7-9581e5b343e9/E5CaLHOHvE.json';
 
-  const handleError = (error: any) => {
-    console.error('❌ Lottie animation error:', error);
-  };
-
   const handleReady = () => {
     console.log('🎉 Lottie animation ready and playing!');
     console.log('✅ Successfully loaded URL:', animationUrl);
@@ -27,11 +23,11 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
         src={animationUrl}
         style={{ height: '100%', width: '100%' }}
         onEvent={(event) => {
+          console.log('Lottie event:', event);
           if (event === 'ready') {
             handleReady();
           }
         }}
-        onError={handleError}
       >
         {/* Fallback content */}
         <div className="flex items-center justify-center bg-gray-50 rounded-lg w-full h-full">
