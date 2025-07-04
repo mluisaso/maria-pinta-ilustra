@@ -15,12 +15,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
         autoplay
         loop
         src={animationUrl}
-        style={{ height: '100%', width: '100%', maxHeight: '300px', maxWidth: '300px' }}
-        onEvent={(event) => {
-          if (event === 'ready') {
-            console.log('🎉 Lottie animation ready and playing!');
-          }
-        }}
+        style={{ height: '200px', width: '200px' }}
       />
     </div>
   );
