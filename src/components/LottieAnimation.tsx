@@ -15,7 +15,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => 
         autoplay
         loop
         src={animationUrl}
-        style={{ height: '200px', width: '200px' }}
+        style={{ height: '300px', width: '300px' }}
       />
     </div>
   );

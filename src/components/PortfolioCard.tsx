@@ -47,11 +47,13 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, onCli
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
-        <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3">
+        <div className="absolute bottom-0 left-0 right-0">
           <div className="relative">
-            <div className={`absolute inset-0 ${getColorForTitle(title)} opacity-0 group-hover:opacity-90 transition-opacity duration-300 rounded`}></div>
-            <h3 className="relative text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight z-10">{title}</h3>
-            <p className="relative text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block z-10">{description}</p>
+            <div className={`absolute inset-0 ${getColorForTitle(title)} opacity-0 group-hover:opacity-90 transition-opacity duration-300`}></div>
+            <div className="relative p-2 md:p-3 z-10">
+              <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">{title}</h3>
+              <p className="text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block">{description}</p>
+            </div>
           </div>
         </div>
       </div>
