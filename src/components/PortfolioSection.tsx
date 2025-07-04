@@ -8,18 +8,19 @@ interface PortfolioSectionProps {
 }
 
 const PortfolioSection: React.FC<PortfolioSectionProps> = ({ id, title, images }) => {
-  // Mapeo de colores para cada sección
-  const getColorForSection = (sectionTitle: string) => {
-    const colorMap: Record<string, string> = {
-      'Viñetas': 'bg-red-500',
-      'Team Building': 'bg-blue-500',
-      'IA': 'bg-green-500',
-      'Firmas Personalizadas': 'bg-orange-500',
-      'Visual Thinking': 'bg-cyan-500',
-      'Infantil': 'bg-pink-500',
-      'Editorial': 'bg-indigo-500'
+  // Mapeo de colores para cada sección - intercambiados
+  const getColorForSection = (sectionTitle: string, index: number) => {
+    const colors = ['bg-blue-500', 'bg-green-500', 'bg-orange-500', 'bg-cyan-500', 'bg-pink-500', 'bg-indigo-500', 'bg-red-500'];
+    const colorMap: Record<string, string[]> = {
+      'Viñetas': ['bg-blue-500', 'bg-green-500', 'bg-orange-500'],
+      'Team Building': ['bg-cyan-500', 'bg-pink-500', 'bg-indigo-500'],
+      'IA': ['bg-red-500', 'bg-blue-500', 'bg-green-500'],
+      'Firmas Personalizadas': ['bg-orange-500', 'bg-cyan-500', 'bg-pink-500'],
+      'Visual Thinking': ['bg-indigo-500', 'bg-red-500', 'bg-blue-500'],
+      'Infantil': ['bg-green-500', 'bg-orange-500', 'bg-cyan-500'],
+      'Editorial': ['bg-pink-500', 'bg-indigo-500', 'bg-red-500']
     };
-    return colorMap[sectionTitle] || 'bg-red-500';
+    return colorMap[sectionTitle]?.[index] || colors[index % colors.length];
   };
 
   return (
@@ -38,7 +39,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ id, title, images }
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className={`${getColorForSection(title)} rounded-lg p-4 max-w-xs text-center shadow-lg`}>
+                <div className={`${getColorForSection(title, index)} rounded-lg p-4 max-w-xs text-center shadow-lg`}>
                   <h3 className="font-bold text-white mb-2">{image.title}</h3>
                   <p className="text-sm text-white/90">{image.description}</p>
                 </div>

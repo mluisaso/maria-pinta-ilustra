@@ -97,7 +97,7 @@ const Index = () => {
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
         <div className="text-center mb-8">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 max-w-2xl mx-auto px-4">
-            Ilustro cosas. A veces hasta con sentido.
+            Dibujos a medida. Como los trajes, pero con lápices.
           </h1>
         </div>
         
