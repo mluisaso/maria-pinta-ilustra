@@ -1,11 +1,8 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
 import PortfolioCard from '../components/PortfolioCard';
 import PortfolioSection from '../components/PortfolioSection';
-import AboutSection from '../components/AboutSection';
-import ContactForm from '../components/ContactForm';
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -103,8 +100,8 @@ const Index = () => {
           </h1>
         </div>
         
-        {/* Lottie Animation - Tamaño reducido y responsive */}
-        <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mb-8">
+        {/* Lottie Animation - Tamaño más pequeño y contenido */}
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
 
@@ -132,12 +129,6 @@ const Index = () => {
           images={section.images}
         />
       ))}
-
-      {/* About Section */}
-      <AboutSection />
-
-      {/* Contact Section */}
-      <ContactForm />
 
       {/* Footer */}
       <footer className="bg-gray-50 py-8 px-4 text-center">

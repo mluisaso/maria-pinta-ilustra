@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface PortfolioCardProps {
@@ -24,21 +23,20 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, onCli
 
   return (
     <div 
-      className="group cursor-pointer bg-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-100"
+      className="group cursor-pointer bg-white rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-red-500 hover:scale-105"
       onClick={onClick}
     >
       <div className="relative aspect-square bg-gray-100 overflow-hidden">
         <img 
           src={getImageForTitle(title)}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-red-900/80 group-hover:via-red-800/40 transition-all duration-300"></div>
         <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3">
-          <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">{title}</h3>
-          <p className="text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block">{description}</p>
+          <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight group-hover:text-red-100 transition-colors duration-300">{title}</h3>
+          <p className="text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block group-hover:text-red-100/90 transition-colors duration-300">{description}</p>
         </div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 border-2 border-transparent group-hover:border-magenta-500 transition-colors duration-300 rounded-lg"></div>
       </div>
     </div>
   );
