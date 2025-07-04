@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -101,7 +102,7 @@ const Index = () => {
         </div>
         
         {/* Lottie Animation - Tamaño más pequeño y contenido */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 flex-shrink-0">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
 
