@@ -1,11 +1,13 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
 import PortfolioCard from '../components/PortfolioCard';
 import PortfolioSection from '../components/PortfolioSection';
+import PortfolioFilters from '../components/PortfolioFilters';
 
 const Index = () => {
+  const [activeFilter, setActiveFilter] = useState('all');
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -89,6 +91,12 @@ const Index = () => {
     },
   ];
 
+  const filteredSections = activeFilter === 'all' 
+    ? portfolioSections 
+    : portfolioSections.filter(section => section.title === activeFilter);
+
+  const categoryNames = portfolioCategories.map(cat => cat.title);
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -121,8 +129,17 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Filtros del Portfolio */}
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
+        <PortfolioFilters
+          categories={categoryNames}
+          activeCategory={activeFilter}
+          onCategoryChange={setActiveFilter}
+        />
+      </div>
+
       {/* Portfolio Sections */}
-      {portfolioSections.map((section, index) => (
+      {filteredSections.map((section, index) => (
         <PortfolioSection
           key={index}
           id={section.id}
