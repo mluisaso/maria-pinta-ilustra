@@ -12,12 +12,12 @@ const BenditaRutina = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white pt-8 md:pt-8 pb-12">
+      <section className="bg-white pt-2 md:pt-2 pb-12">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           {/* Ilustración y Logo arriba del todo */}
-          <div className="flex flex-col items-center mb-8">
+          <div className="flex flex-col items-center mb-6">
             {/* Imagen de la familia */}
-            <div className="w-60 lg:w-72 mb-3">
+            <div className="w-60 lg:w-72 mb-2">
               <img 
                 src="/lovable-uploads/5d82fc7e-a399-4da3-91e2-847688c97040.png" 
                 alt="Bendita Rutina" 
@@ -30,7 +30,7 @@ const BenditaRutina = () => {
               href="https://www.instagram.com/benditarrutina/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-1 hover:opacity-80 transition-opacity"
             >
               <div className="w-60 lg:w-72">
                 <img 
@@ -39,7 +39,15 @@ const BenditaRutina = () => {
                   className="w-full h-auto object-contain"
                 />
               </div>
-              <Instagram size={24} className="text-gray-600 hover:text-pink-500 transition-colors" />
+              <Instagram 
+                size={20} 
+                className="text-black transition-colors ml-1" 
+                style={{ 
+                  color: 'black'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#be1622'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'black'}
+              />
             </a>
           </div>
 
@@ -125,7 +133,7 @@ const BenditaRutina = () => {
                     </CardContent>
                   </Card>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl max-h-[90vh] p-0 bg-transparent border-0">
+                <DialogContent className="max-w-2xl max-h-[80vh] p-4 bg-white border border-gray-200 rounded-lg">
                   <div className="relative w-full h-full flex items-center justify-center">
                     <img 
                       src={imageSrc}
