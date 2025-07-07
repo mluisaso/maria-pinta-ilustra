@@ -2,7 +2,6 @@
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
 
 const Index = () => {
   // Todas las imágenes del portfolio organizadas por categorías
@@ -81,50 +80,48 @@ const Index = () => {
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
         {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 flex-shrink-0">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-12 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo rojo debajo de la animación - más grande */}
-        <div className="mb-4">
+        {/* Logo rojo debajo de la animación - más pequeño y separado */}
+        <div className="mb-8">
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
-            className="h-20 md:h-22 lg:h-24"
+            className="h-16 md:h-18 lg:h-20"
           />
         </div>
 
         {/* Portfolio Sections */}
-        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-6">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
           {portfolioSections.map((section) => (
-            <div key={section.id} id={section.id}>
-              <Carousel className="w-full">
-                <CarouselContent className="-ml-2 md:-ml-4">
-                  {section.images.map((image, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                      <div className="group cursor-pointer">
-                        <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                          <img 
-                            src={image.src} 
-                            alt={image.title}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className={`${getColorForIndex(index)} w-full h-full flex items-center justify-center`}>
-                              <div className="p-4 max-w-xs text-center">
-                                <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                                <p className="text-sm text-white/90">{image.description}</p>
-                              </div>
-                            </div>
+            <div key={section.id} id={section.id} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                {section.images.map((image, index) => (
+                  <div key={index} className="group cursor-pointer">
+                    <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                      <img 
+                        src={image.src} 
+                        alt={image.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className={`${getColorForIndex(index)} w-full h-full flex items-center justify-center`}>
+                          <div className="p-4 max-w-xs text-center">
+                            <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                            <p className="text-sm text-white/90">{image.description}</p>
                           </div>
                         </div>
                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="text-[#be1622] border-[#be1622] hover:bg-[#be1622] hover:text-white" />
-                <CarouselNext className="text-[#be1622] border-[#be1622] hover:bg-[#be1622] hover:text-white" />
-              </Carousel>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* Scroll horizontal rojo debajo de cada fila */}
+              <div className="flex justify-center mt-4">
+                <div className="w-12 h-1 bg-[#be1622] rounded-full"></div>
+              </div>
             </div>
           ))}
         </div>
