@@ -33,22 +33,14 @@ const Header: React.FC = () => {
       {/* Desktop Version */}
       <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col h-full p-6">
-          {/* Ilustración y Logo blanco en la banda roja */}
+          {/* Ilustración en desktop (sin logo) */}
           <div className="mb-16 flex flex-col items-center">
-            {/* Ilustración encima del logo */}
-            <div className="w-48 mb-4">
-              <img 
-                src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
-                alt="Ilustración Mariatepinta" 
-                className="w-full h-auto object-contain"
-              />
-            </div>
-            {/* Logo clickable para ir a home */}
+            {/* Solo ilustración en desktop */}
             <Link to="/">
               <div className="w-48">
                 <img 
-                  src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
-                  alt="Mariatepinta" 
+                  src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
+                  alt="Ilustración Mariatepinta" 
                   className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
                 />
               </div>
@@ -124,19 +116,10 @@ const Header: React.FC = () => {
       {/* Mobile Version - Header más alto */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-6" style={{ backgroundColor: '#be1622' }}>
         <div className="flex items-center justify-between">
-          {/* Logo e ilustración centrados */}
-          <div className="flex-1 flex flex-col items-center">
-            {/* Ilustración encima del logo */}
-            <div className="w-12 mb-2">
-              <img 
-                src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
-                alt="Ilustración Mariatepinta" 
-                className="w-full h-auto object-contain"
-              />
-            </div>
-            {/* Logo */}
+          {/* Solo logo centrado en móvil, más grande */}
+          <div className="flex-1 flex justify-center">
             <Link to="/">
-              <div className="w-12">
+              <div className="w-16">
                 <img 
                   src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
                   alt="Mariatepinta" 
