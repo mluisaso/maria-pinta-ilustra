@@ -24,7 +24,7 @@ const Header: React.FC = () => {
     { name: 'Infantil', id: 'infantil' }, 
     { name: 'Viñetas', id: 'vinetas' },
     { name: 'IA', id: 'ia' },
-    { name: 'Branded Content', id: 'team-building' },
+    { name: 'Para tu marca', id: 'team-building' },
     { name: 'Visual thinking', id: 'visual-thinking' }
   ];
 

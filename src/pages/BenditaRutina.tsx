@@ -78,12 +78,12 @@ const BenditaRutina = () => {
             <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div></div>
               <div></div>
-              <div className="flex justify-center">
+              <div className="flex justify-end">
                 <a 
                   href="https://www.instagram.com/benditarrutina/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-black hover:text-[#be1622] transition-colors duration-200"
+                  className="font-poppins font-semibold text-sm text-black hover:text-[#be1622] transition-colors duration-200 underline"
                 >
                   Ver en Instagram
                 </a>
