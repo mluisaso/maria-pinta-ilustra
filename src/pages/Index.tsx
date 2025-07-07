@@ -188,7 +188,7 @@ const Index = () => {
                         {image.type === 'logo' ? (
                           <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
                             <div className="w-full h-3/4 flex items-center justify-center">
-                              <LottieAnimation className="w-3/5 h-3/4" />
+                              <LottieAnimation className="w-3/5 h-2/3" />
                             </div>
                             <div className="w-full h-1/4 flex items-center justify-center">
                               <img 
@@ -230,7 +230,7 @@ const Index = () => {
                       {image.type === 'logo' ? (
                         <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
                           <div className="w-full h-3/4 flex items-center justify-center">
-                            <LottieAnimation className="w-3/5 h-3/4" />
+                            <LottieAnimation className="w-3/5 h-2/3" />
                           </div>
                           <div className="w-full h-1/4 flex items-center justify-center">
                             <img 
