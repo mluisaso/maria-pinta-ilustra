@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
+import { Instagram } from 'lucide-react';
 
 const BenditaRutina = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -16,7 +17,7 @@ const BenditaRutina = () => {
           {/* Ilustración y Logo arriba del todo */}
           <div className="flex flex-col items-center mb-8">
             {/* Imagen de la familia */}
-            <div className="w-80 lg:w-96 mb-4">
+            <div className="w-60 lg:w-72 mb-3">
               <img 
                 src="/lovable-uploads/5d82fc7e-a399-4da3-91e2-847688c97040.png" 
                 alt="Bendita Rutina" 
@@ -24,14 +25,22 @@ const BenditaRutina = () => {
               />
             </div>
             
-            {/* Logo Bendita Rutina */}
-            <div className="w-80 lg:w-96">
-              <img 
-                src="/lovable-uploads/97856221-927a-4e2b-9140-9da01925d648.png" 
-                alt="Bendita Rutina" 
-                className="w-full h-auto object-contain"
-              />
-            </div>
+            {/* Logo Bendita Rutina con Instagram */}
+            <a 
+              href="https://www.instagram.com/benditarrutina/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <div className="w-60 lg:w-72">
+                <img 
+                  src="/lovable-uploads/97856221-927a-4e2b-9140-9da01925d648.png" 
+                  alt="Bendita Rutina" 
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <Instagram size={24} className="text-gray-600 hover:text-pink-500 transition-colors" />
+            </a>
           </div>
 
           {/* Galería de imágenes */}
@@ -54,7 +63,7 @@ const BenditaRutina = () => {
                     <div className="absolute bottom-0 left-0 right-0">
                       <div className="relative p-2 md:p-3">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
-                          <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina</h3>
+                          <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina 2</h3>
                           <p className="text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block">Cómpralo en Amazon</p>
                         </div>
                       </div>
@@ -82,7 +91,7 @@ const BenditaRutina = () => {
                     <div className="absolute bottom-0 left-0 right-0">
                       <div className="relative p-2 md:p-3">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
-                          <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina 2</h3>
+                          <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina</h3>
                           <p className="text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block">Cómpralo en Amazon</p>
                         </div>
                       </div>
@@ -104,13 +113,13 @@ const BenditaRutina = () => {
             ].map((imageSrc, index) => (
               <Dialog key={index + 2}>
                 <DialogTrigger asChild>
-                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105">
+                  <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                     <CardContent className="p-0">
                       <div className="aspect-square bg-white">
                         <img 
                           src={imageSrc}
                           alt={`Bendita Rutina ilustración ${index + 1}`}
-                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                          className="w-full h-full object-cover"
                         />
                       </div>
                     </CardContent>
