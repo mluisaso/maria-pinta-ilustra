@@ -12,12 +12,12 @@ const BenditaRutina = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white pt-2 md:pt-2 pb-12">
+      <section className="bg-white pt-8 md:pt-12 pb-12">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           {/* Ilustración y Logo arriba del todo */}
           <div className="flex flex-col items-center mb-6">
             {/* Imagen de la familia */}
-            <div className="w-60 lg:w-72 mb-2">
+            <div className="w-60 lg:w-72 mb-4">
               <img 
                 src="/lovable-uploads/5d82fc7e-a399-4da3-91e2-847688c97040.png" 
                 alt="Bendita Rutina" 
@@ -25,29 +25,20 @@ const BenditaRutina = () => {
               />
             </div>
             
-            {/* Logo Bendita Rutina con Instagram */}
+            {/* Logo Bendita Rutina con enlace a Instagram */}
             <a 
               href="https://www.instagram.com/benditarrutina/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-baseline hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity"
             >
               <div className="w-60 lg:w-72">
                 <img 
-                  src="/lovable-uploads/97856221-927a-4e2b-9140-9da01925d648.png" 
+                  src="/lovable-uploads/254f3922-2ea8-4e4f-957d-79e70dc414d0.png" 
                   alt="Bendita Rutina" 
                   className="w-full h-auto object-contain"
                 />
               </div>
-              <Instagram 
-                size={28} 
-                className="text-black transition-colors -ml-2" 
-                style={{ 
-                  color: 'black'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#be1622'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'black'}
-              />
             </a>
           </div>
 
