@@ -30,7 +30,7 @@ const BenditaRutina = () => {
               href="https://www.instagram.com/benditarrutina/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 hover:opacity-80 transition-opacity"
+              className="flex items-end hover:opacity-80 transition-opacity"
             >
               <div className="w-60 lg:w-72">
                 <img 
@@ -40,8 +40,8 @@ const BenditaRutina = () => {
                 />
               </div>
               <Instagram 
-                size={20} 
-                className="text-black transition-colors ml-1" 
+                size={28} 
+                className="text-black transition-colors mb-1 -ml-1" 
                 style={{ 
                   color: 'black'
                 }}
