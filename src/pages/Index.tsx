@@ -111,31 +111,22 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-36 md:pt-0">
+    <div className="min-h-screen bg-white md:pr-64 pt-28 md:pt-0">
       <Header />
 
       {/* Hero Section */}
-      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-8 md:pt-20 pb-12">
+      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-12 md:pt-20 pb-12">
         {/* Lottie Animation */}
         <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 md:mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo rojo debajo de la animación - solo visible en desktop */}
+        {/* Logo nuevo - solo visible en desktop */}
         <div className="mb-16 hidden md:block">
           <img 
-            src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
+            src="/lovable-uploads/891d65b3-6ffe-46ae-b884-3bf1f2837148.png" 
             alt="Mariatepinta" 
-            className="h-8 md:h-10 lg:h-12"
-          />
-        </div>
-
-        {/* Nuevo logo manuscrito - solo visible en mobile */}
-        <div className="mb-12 block md:hidden">
-          <img 
-            src="/lovable-uploads/64640ac5-36e2-4d1e-9fc2-aee9ac5198f6.png" 
-            alt="Mariatepinta" 
-            className="h-8 w-auto object-contain"
+            className="h-auto w-80 lg:w-96"
           />
         </div>
 
