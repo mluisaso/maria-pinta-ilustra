@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from '../components/Header';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../components/ui/tooltip';
 import { Instagram } from 'lucide-react';
 
 const BenditaRutina = () => {
@@ -12,12 +13,12 @@ const BenditaRutina = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white pt-8 md:pt-12 pb-12">
+      <section className="bg-white pt-4 md:pt-8 pb-12">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           {/* Ilustración y Logo arriba del todo */}
           <div className="flex flex-col items-center mb-6">
             {/* Imagen de la familia */}
-            <div className="w-60 lg:w-72 mb-4">
+            <div className="w-60 lg:w-72 mb-3">
               <img 
                 src="/lovable-uploads/5d82fc7e-a399-4da3-91e2-847688c97040.png" 
                 alt="Bendita Rutina" 
@@ -25,21 +26,30 @@ const BenditaRutina = () => {
               />
             </div>
             
-            {/* Logo Bendita Rutina con enlace a Instagram */}
-            <a 
-              href="https://www.instagram.com/benditarrutina/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover-scale transition-transform duration-200"
-            >
-              <div className="w-60 lg:w-72">
-                <img 
-                  src="/lovable-uploads/254f3922-2ea8-4e4f-957d-79e70dc414d0.png" 
-                  alt="Bendita Rutina" 
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            </a>
+            {/* Logo Bendita Rutina con enlace a Instagram y tooltip */}
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="https://www.instagram.com/benditarrutina/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover-scale transition-transform duration-200"
+                  >
+                    <div className="w-60 lg:w-72">
+                      <img 
+                        src="/lovable-uploads/254f3922-2ea8-4e4f-957d-79e70dc414d0.png" 
+                        alt="Bendita Rutina" 
+                        className="w-full h-auto object-contain"
+                      />
+                    </div>
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Ver en Instagram</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
 
           {/* Galería de imágenes */}

@@ -119,7 +119,7 @@ const Header: React.FC = () => {
           {/* Solo logo centrado en móvil, mucho más grande */}
           <div className="flex-1 flex justify-center">
             <Link to="/">
-              <div className="w-24">
+              <div className="w-32">
                 <img 
                   src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
                   alt="Mariatepinta" 
