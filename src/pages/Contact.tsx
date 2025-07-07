@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Reemplaza con tu clave real
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pr-16">
       <Header />
       
       <section className="pt-24 pb-16 px-4 md:px-8 max-w-2xl mx-auto">

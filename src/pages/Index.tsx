@@ -90,23 +90,33 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pr-16">
       <Header />
 
       {/* Hero Section */}
-      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
-        <div className="text-center mb-8">
+      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-12 pb-12">
+        {/* Lottie Animation */}
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 flex-shrink-0">
+          <LottieAnimation className="w-full h-full" />
+        </div>
+        
+        {/* Logo rojo debajo de la animación */}
+        <div className="mb-8">
+          <img 
+            src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
+            alt="Mariatepinta" 
+            className="h-16 md:h-20 lg:h-24"
+          />
+        </div>
+        
+        {/* Título debajo del logo */}
+        <div className="text-center mb-16">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6 max-w-2xl mx-auto px-4">
             Dibujos a medida. Como los trajes, pero con lápices.
           </h1>
         </div>
-        
-        {/* Lottie Animation - Tamaño más pequeño y contenido */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 flex-shrink-0">
-          <LottieAnimation className="w-full h-full" />
-        </div>
 
-        {/* Portfolio Cards Grid - Más compactas */}
+        {/* Portfolio Cards Grid */}
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-3 md:gap-4">
             {portfolioCategories.map((category, index) => (
