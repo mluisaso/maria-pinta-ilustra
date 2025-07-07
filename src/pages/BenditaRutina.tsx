@@ -18,7 +18,7 @@ const BenditaRutina = () => {
           {/* Ilustración y Logo arriba del todo */}
           <div className="flex flex-col items-center mb-6">
             {/* Imagen de la familia */}
-            <div className="w-60 lg:w-72 mb-3">
+            <div className="w-52 lg:w-64 mb-3">
               <img 
                 src="/lovable-uploads/5d82fc7e-a399-4da3-91e2-847688c97040.png" 
                 alt="Bendita Rutina" 
@@ -36,7 +36,7 @@ const BenditaRutina = () => {
                     rel="noopener noreferrer"
                     className="hover-scale transition-transform duration-200"
                   >
-                    <div className="w-60 lg:w-72">
+                    <div className="w-52 lg:w-64">
                       <img 
                         src="/lovable-uploads/254f3922-2ea8-4e4f-957d-79e70dc414d0.png" 
                         alt="Bendita Rutina" 
@@ -45,7 +45,7 @@ const BenditaRutina = () => {
                     </div>
                   </a>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent style={{ backgroundColor: '#be1622', color: 'white' }}>
                   <p>Ver en Instagram</p>
                 </TooltipContent>
               </Tooltip>
@@ -118,7 +118,15 @@ const BenditaRutina = () => {
               "/lovable-uploads/bc1afce9-13ea-4da5-85dc-2a52eb7bb213.png",
               "/lovable-uploads/894f41b9-28ef-406a-a4ab-33cd8b8c4c18.png",
               "/lovable-uploads/2741e168-4afb-452d-8a12-37aa6cb14017.png",
-              "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png" // Duplicada
+              "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png",
+              // Duplicadas como placeholder
+              "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png",
+              "/lovable-uploads/876e423d-e39b-4dfd-b46e-23a558ef7de2.png",
+              "/lovable-uploads/0e446e95-8b87-431f-94c6-ab505851c658.png",
+              "/lovable-uploads/bc1afce9-13ea-4da5-85dc-2a52eb7bb213.png",
+              "/lovable-uploads/894f41b9-28ef-406a-a4ab-33cd8b8c4c18.png",
+              "/lovable-uploads/2741e168-4afb-452d-8a12-37aa6cb14017.png",
+              "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png"
             ].map((imageSrc, index) => (
               <Dialog key={index + 2}>
                 <DialogTrigger asChild>
