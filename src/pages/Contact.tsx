@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import { Button } from "@/components/ui/button";
@@ -62,7 +61,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pr-16">
+    <div className="min-h-screen bg-white md:pr-64 pt-24 md:pt-0">
       <Header />
       
       <section className="pt-24 pb-16 px-4 md:px-8 max-w-2xl mx-auto">

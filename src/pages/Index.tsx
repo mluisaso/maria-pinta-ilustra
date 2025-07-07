@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -90,7 +89,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white pr-16">
+    <div className="min-h-screen bg-white md:pr-64 pt-24 md:pt-0">
       <Header />
 
       {/* Hero Section */}
@@ -100,12 +99,12 @@ const Index = () => {
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo rojo debajo de la animación */}
+        {/* Logo rojo debajo de la animación - reducido de tamaño */}
         <div className="mb-8">
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
-            className="h-16 md:h-20 lg:h-24"
+            className="h-12 md:h-14 lg:h-16"
           />
         </div>
         
