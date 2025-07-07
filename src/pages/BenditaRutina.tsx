@@ -74,7 +74,7 @@ const BenditaRutina = () => {
                     />
                     <div className="absolute bottom-0 left-0 right-0">
                       <div className="relative p-2 md:p-3">
-                        <div className="opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
                           <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina 2</h3>
                           <p className="text-xs text-white/90 drop-shadow-md leading-tight">Cómpralo en Amazon</p>
                         </div>
@@ -102,7 +102,7 @@ const BenditaRutina = () => {
                     />
                     <div className="absolute bottom-0 left-0 right-0">
                       <div className="relative p-2 md:p-3">
-                        <div className="opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
                           <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina</h3>
                           <p className="text-xs text-white/90 drop-shadow-md leading-tight">Cómpralo en Amazon</p>
                         </div>
