@@ -60,22 +60,22 @@ const Index = () => {
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
         {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 flex-shrink-0">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
         {/* Logo rojo debajo de la animación - más grande */}
-        <div className="mb-16">
+        <div className="mb-8">
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
-            className="h-10 md:h-12 lg:h-16"
+            className="h-12 md:h-14 lg:h-18"
           />
         </div>
 
         {/* Portfolio Images Grid - Cards más juntas */}
         <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
             {allPortfolioImages.map((image, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="relative overflow-hidden bg-gray-100 aspect-square">
@@ -85,9 +85,11 @@ const Index = () => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className={`${getColorForIndex(index)} p-4 max-w-xs text-center shadow-lg`}>
-                      <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                      <p className="text-sm text-white/90">{image.description}</p>
+                    <div className={`${getColorForIndex(index)} w-full h-full flex items-center justify-center`}>
+                      <div className="p-4 max-w-xs text-center">
+                        <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                        <p className="text-sm text-white/90">{image.description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
