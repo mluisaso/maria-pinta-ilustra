@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -134,19 +132,19 @@ const Index = () => {
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
-            <div key={section.id} id={section.id} className="space-y-4 group">
+            <div key={section.id} id={section.id} className="space-y-4">
               {/* Navigation arrows positioned above the photos */}
               <div className="relative">
                 <button
                   onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] group-hover:bg-black rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
                 >
                   <ChevronLeft size={16} className="text-white" />
                 </button>
                 
                 <button
                   onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] group-hover:bg-black rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
                 >
                   <ChevronRight size={16} className="text-white" />
                 </button>
@@ -192,4 +190,3 @@ const Index = () => {
 };
 
 export default Index;
-
