@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import { Card, CardContent } from '../components/ui/card';
@@ -72,6 +71,24 @@ const BenditaRutina = () => {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
+          </div>
+
+          {/* Ver en Instagram - alineado con la tercera columna */}
+          <div className="flex justify-end mb-2">
+            <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div></div>
+              <div></div>
+              <div className="flex justify-center">
+                <a 
+                  href="https://www.instagram.com/benditarrutina/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-black hover:text-[#be1622] transition-colors duration-200"
+                >
+                  Ver en Instagram
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Galería de imágenes */}
