@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -99,20 +98,6 @@ const Index = () => {
     }
   ];
 
-  // Mapeo de colores aleatorios para cada imagen
-  const getRandomColorForIndex = (sectionIndex: number, imageIndex: number) => {
-    const colors = ['bg-blue-500', 'bg-green-500', 'bg-orange-500', 'bg-cyan-500', 'bg-pink-500', 'bg-indigo-500', 'bg-purple-500', 'bg-teal-500', 'bg-yellow-500', 'bg-red-500'];
-    const redColor = 'bg-[#be1622]'; // El rojo de la banda
-    
-    // Crear un índice pseudo-aleatorio basado en la posición
-    const pseudoRandomIndex = (sectionIndex * 7 + imageIndex * 3) % colors.length;
-    
-    // Usar el rojo de la banda ocasionalmente
-    if ((sectionIndex + imageIndex) % 5 === 0) return redColor;
-    
-    return colors[pseudoRandomIndex];
-  };
-
   const scrollHorizontal = (containerId: string, direction: 'left' | 'right') => {
     const container = document.getElementById(containerId);
     if (container) {
@@ -147,19 +132,19 @@ const Index = () => {
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
-            <div key={section.id} id={section.id} className="space-y-4">
+            <div key={section.id} id={section.id} className="space-y-4 group">
               {/* Navigation arrows positioned above the photos */}
               <div className="relative">
                 <button
                   onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] group-hover:bg-black rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
                 >
                   <ChevronLeft size={16} className="text-white" />
                 </button>
                 
                 <button
                   onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] group-hover:bg-black rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
                 >
                   <ChevronRight size={16} className="text-white" />
                 </button>
@@ -170,7 +155,7 @@ const Index = () => {
                   style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                   {section.images.map((image, index) => (
-                    <div key={index} className="group cursor-pointer flex-shrink-0 w-80">
+                    <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0">
                       <div className="relative overflow-hidden bg-gray-100 aspect-square">
                         <img 
                           src={image.src} 
@@ -178,7 +163,7 @@ const Index = () => {
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className={`${getRandomColorForIndex(sectionIndex, index)} w-full h-full flex items-center justify-center`}>
+                          <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
                             <div className="p-4 max-w-xs text-center">
                               <h3 className="font-normal text-white mb-2">{image.title}</h3>
                               <p className="text-sm text-white/90">{image.description}</p>
