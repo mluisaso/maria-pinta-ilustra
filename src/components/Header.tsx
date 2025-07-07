@@ -20,12 +20,12 @@ const Header: React.FC = () => {
   };
 
   const portfolioCategories = [
-    'EDITORIAL',
-    'INFANTIL', 
-    'VIÑETAS',
-    'IA',
-    'TEAM BUILDING',
-    'VISUAL THINKING'
+    'editorial',
+    'infantil', 
+    'viñetas',
+    'ia',
+    'team building',
+    'visual thinking'
   ];
 
   return (
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
       <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col h-full p-6">
           {/* Logo blanco en la banda roja - clickable para ir a home */}
-          <div className="mb-8 flex justify-center">
+          <div className="mb-12 flex justify-center">
             <Link to="/">
               <img 
                 src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
           
-          {/* Opciones del menú */}
+          {/* Opciones del menú - separadas del logo */}
           <nav className="flex flex-col space-y-6 mb-auto">
             {/* Portfolio siempre desplegado */}
             <div className="relative">
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                 PORTFOLIO
               </div>
               
-              {/* Submenu siempre visible */}
+              {/* Submenu siempre visible - en minúsculas */}
               <div className="mt-2 ml-4 space-y-3">
                 {portfolioCategories.map((category) => (
                   <button
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
             </a>
             <a href="#" className="text-white hover:text-gray-200 transition-colors">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M21 8.25c0-.414-.336-.75-.75-.75h-1.5c-.414 0-.75.336-.75.75v7.5c0 .414.336.75.75.75h1.5c.414 0 .75-.336.75-.75v-7.5zM12 4.25c-.414 0-.75.336-.75.75v14c0 .414.336.75.75.75s.75-.336.75-.75V5c0-.414-.336-.75-.75-.75zM3 12.25c-.414 0-.75.336-.75.75v2c0 .414.336.75.75.75s.75-.336.75-.75v-2c0-.414-.336-.75-.75-.75z"/>
+                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0zM9 21v-4.8l-1.4-1.2A6.97 6.97 0 0 1 4 9a8 8 0 1 1 16 0c0 2.4-1.2 4.5-3.6 6l-1.4 1.2V21l-3-2l-3 2z"/>
               </svg>
             </a>
           </div>
@@ -101,14 +101,14 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Version - Banda más grande */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-6" style={{ backgroundColor: '#be1622', height: '120px' }}>
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-6" style={{ backgroundColor: '#be1622', height: '150px' }}>
         <div className="flex items-center justify-between h-full">
           {/* Logo clickable para ir a home */}
           <Link to="/">
             <img 
               src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
               alt="Mariatepinta" 
-              className="h-12 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+              className="h-16 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
             />
           </Link>
           
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-white p-2"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
         
@@ -168,7 +168,7 @@ const Header: React.FC = () => {
                 </a>
                 <a href="#" className="text-white hover:text-gray-200 transition-colors">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 8.25c0-.414-.336-.75-.75-.75h-1.5c-.414 0-.75.336-.75.75v7.5c0 .414.336.75.75.75h1.5c.414 0 .75-.336.75-.75v-7.5zM12 4.25c-.414 0-.75.336-.75.75v14c0 .414.336.75.75.75s.75-.336.75-.75V5c0-.414-.336-.75-.75-.75zM3 12.25c-.414 0-.75.336-.75.75v2c0 .414.336.75.75.75s.75-.336.75-.75v-2c0-.414-.336-.75-.75-.75z"/>
+                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0zM9 21v-4.8l-1.4-1.2A6.97 6.97 0 0 1 4 9a8 8 0 1 1 16 0c0 2.4-1.2 4.5-3.6 6l-1.4 1.2V21l-3-2l-3 2z"/>
                   </svg>
                 </a>
               </div>

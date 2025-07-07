@@ -32,7 +32,7 @@ const Index = () => {
     { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Visual 3', description: 'Pensamiento en imágenes' },
     
     // Infantil
-    { src: '/lovable-uploads/dd0166fb-0ddd-4a35-8019-13069fd573ca.png', title: 'Infantil 1', description: 'Mundo de fantasía' },
+    { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Infantil 1', description: 'Mundo de fantasía' },
     { src: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500', title: 'Infantil 2', description: 'Aventuras dibujadas' },
     { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Infantil 3', description: 'Sonrisas garantizadas' },
     
@@ -60,22 +60,22 @@ const Index = () => {
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
         {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-12 flex-shrink-0">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo rojo debajo de la animación */}
-        <div className="mb-12">
+        {/* Logo rojo debajo de la animación - más grande */}
+        <div className="mb-16">
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
-            className="h-8 md:h-10 lg:h-12"
+            className="h-10 md:h-12 lg:h-16"
           />
         </div>
 
-        {/* Portfolio Images Grid - Cards con menos espacio entre ellas */}
+        {/* Portfolio Images Grid - Cards más juntas */}
         <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             {allPortfolioImages.map((image, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="relative overflow-hidden bg-gray-100 aspect-square">
