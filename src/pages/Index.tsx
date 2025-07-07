@@ -187,8 +187,8 @@ const Index = () => {
                       <div className="relative overflow-hidden aspect-square">
                         {image.type === 'logo' ? (
                           <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
-                            <div className="w-full h-3/4 flex items-center justify-center">
-                              <LottieAnimation className="w-3/5 h-2/3" />
+                            <div className="w-full h-3/4 flex items-center justify-center max-h-full overflow-hidden">
+                              <LottieAnimation className="w-full h-full max-w-full max-h-full" />
                             </div>
                             <div className="w-full h-1/4 flex items-center justify-center">
                               <img 
@@ -229,8 +229,8 @@ const Index = () => {
                     <div className="relative overflow-hidden bg-gray-100 aspect-square">
                       {image.type === 'logo' ? (
                         <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
-                          <div className="w-full h-3/4 flex items-center justify-center">
-                            <LottieAnimation className="w-3/5 h-2/3" />
+                          <div className="w-full h-3/4 flex items-center justify-center max-h-full overflow-hidden">
+                            <LottieAnimation className="w-full h-full max-w-full max-h-full" />
                           </div>
                           <div className="w-full h-1/4 flex items-center justify-center">
                             <img 
