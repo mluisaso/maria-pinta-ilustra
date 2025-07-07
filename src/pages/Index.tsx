@@ -186,15 +186,15 @@ const Index = () => {
                     <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
                       <div className="relative overflow-hidden aspect-square">
                         {image.type === 'logo' ? (
-                          <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
-                            <div className="w-full h-2/3 flex items-center justify-center max-h-full overflow-hidden">
+                          <div className="bg-white w-full h-full flex flex-col items-center justify-center p-3">
+                            <div className="w-full h-3/4 flex items-center justify-center">
                               <LottieAnimation className="w-full h-full" />
                             </div>
                             <div className="w-full h-1/4 flex items-center justify-center">
                               <img 
                                 src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
                                 alt="Mariatepinta" 
-                                className="h-auto max-h-full w-auto max-w-[60%] object-contain"
+                                className="h-auto max-h-full w-auto max-w-[80%] object-contain"
                               />
                             </div>
                           </div>
@@ -228,15 +228,15 @@ const Index = () => {
                   <div key={index} className="group cursor-pointer">
                     <div className="relative overflow-hidden bg-gray-100 aspect-square">
                       {image.type === 'logo' ? (
-                        <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
-                          <div className="w-full h-2/3 flex items-center justify-center max-h-full overflow-hidden">
+                        <div className="bg-white w-full h-full flex flex-col items-center justify-center p-3">
+                          <div className="w-full h-3/4 flex items-center justify-center">
                             <LottieAnimation className="w-full h-full" />
                           </div>
                           <div className="w-full h-1/4 flex items-center justify-center">
                             <img 
                               src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
                               alt="Mariatepinta" 
-                              className="h-auto max-h-full w-auto max-w-[60%] object-contain"
+                              className="h-auto max-h-full w-auto max-w-[80%] object-contain"
                             />
                           </div>
                         </div>
