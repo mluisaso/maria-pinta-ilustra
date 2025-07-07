@@ -8,7 +8,7 @@ import { Instagram } from 'lucide-react';
 const BenditaRutina = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
+    <div className="min-h-screen bg-white md:pr-64 pt-44 md:pt-0">
       <Header />
 
       {/* Hero Section */}

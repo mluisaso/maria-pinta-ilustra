@@ -34,14 +34,14 @@ const Header: React.FC = () => {
       <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col h-full p-6">
           {/* Ilustración en desktop (sin logo) */}
-          <div className="mb-16 flex flex-col items-center">
+          <div className="mb-8 flex flex-col items-center">
             {/* Solo ilustración en desktop */}
             <Link to="/">
               <div className="w-48">
                 <img 
                   src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
                   alt="Ilustración Mariatepinta" 
-                  className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                  className="w-full h-auto object-contain cursor-pointer"
                 />
               </div>
             </Link>
@@ -114,12 +114,12 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Version - Header más alto */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-6" style={{ backgroundColor: '#be1622' }}>
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-10" style={{ backgroundColor: '#be1622' }}>
         <div className="flex items-center justify-between">
-          {/* Solo logo centrado en móvil, más grande */}
+          {/* Solo logo centrado en móvil, mucho más grande */}
           <div className="flex-1 flex justify-center">
             <Link to="/">
-              <div className="w-16">
+              <div className="w-24">
                 <img 
                   src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
                   alt="Mariatepinta" 
