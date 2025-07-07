@@ -140,7 +140,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
-            className="h-12 md:h-14 lg:h-16"
+            className="h-8 md:h-10 lg:h-12"
           />
         </div>
 
@@ -195,7 +195,7 @@ const Index = () => {
         </div>
       </section>
 
-      <style jsx>{`
+      <style>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
