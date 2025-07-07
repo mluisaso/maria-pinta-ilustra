@@ -49,7 +49,7 @@ const Header: React.FC = () => {
             {/* Portfolio siempre desplegado */}
             <div className="relative">
               <div className="text-white text-left text-lg font-normal">
-                PORTFOLIO
+                QUÉ HAGO
               </div>
               
               {/* Submenu siempre visible - primera letra mayúscula */}
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
               to="/contact"
               className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
             >
-              CONTACTO
+              ¡HOLA!
             </Link>
           </nav>
 
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-[#be1622] p-4">
             <nav className="flex flex-col space-y-4">
-              <div className="text-white font-normal text-lg">PORTFOLIO</div>
+              <div className="text-white font-normal text-lg">QUÉ HAGO</div>
               <div className="ml-4 space-y-2">
                 {portfolioCategories.map((category) => (
                   <button
@@ -167,7 +167,7 @@ const Header: React.FC = () => {
                 className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                CONTACTO
+                ¡HOLA!
               </Link>
               
               {/* Redes sociales en móvil - alineadas a la izquierda */}

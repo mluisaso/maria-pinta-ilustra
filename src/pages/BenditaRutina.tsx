@@ -30,7 +30,7 @@ const BenditaRutina = () => {
               href="https://www.instagram.com/benditarrutina/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
+              className="hover-scale transition-transform duration-200"
             >
               <div className="w-60 lg:w-72">
                 <img 
