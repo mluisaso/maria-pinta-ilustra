@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -116,7 +117,7 @@ const Index = () => {
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
         {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-12 flex-shrink-0">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
@@ -133,47 +134,78 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={section.id} className="space-y-4">
-              {/* Navigation arrows positioned above the photos */}
-              <div className="relative">
-                <button
-                  onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                >
-                  <ChevronLeft size={16} className="text-white" />
-                </button>
-                
-                <button
-                  onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                >
-                  <ChevronRight size={16} className="text-white" />
-                </button>
+              {/* Section Title - only visible on mobile */}
+              <h2 className="text-lg font-normal text-black text-left font-poppins block md:hidden">
+                {section.title}
+              </h2>
 
-                <div 
-                  id={`scroll-container-${sectionIndex}`}
-                  className="flex gap-1 overflow-x-auto scrollbar-hide scroll-smooth"
-                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                >
-                  {section.images.map((image, index) => (
-                    <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0">
-                      <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                        <img 
-                          src={image.src} 
-                          alt={image.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
-                            <div className="p-4 max-w-xs text-center">
-                              <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                              <p className="text-sm text-white/90">{image.description}</p>
+              {/* Desktop layout with horizontal scroll */}
+              <div className="hidden md:block">
+                {/* Navigation arrows positioned above the photos */}
+                <div className="relative">
+                  <button
+                    onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                  >
+                    <ChevronLeft size={16} className="text-white" />
+                  </button>
+                  
+                  <button
+                    onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                  >
+                    <ChevronRight size={16} className="text-white" />
+                  </button>
+
+                  <div 
+                    id={`scroll-container-${sectionIndex}`}
+                    className="flex gap-1 overflow-x-auto scrollbar-hide scroll-smooth"
+                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                  >
+                    {section.images.map((image, index) => (
+                      <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0">
+                        <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                          <img 
+                            src={image.src} 
+                            alt={image.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
+                              <div className="p-4 max-w-xs text-center">
+                                <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                                <p className="text-sm text-white/90">{image.description}</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
+              </div>
+
+              {/* Mobile layout with vertical grid */}
+              <div className="md:hidden grid grid-cols-2 gap-1">
+                {section.images.map((image, index) => (
+                  <div key={index} className="group cursor-pointer">
+                    <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                      <img 
+                        src={image.src} 
+                        alt={image.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
+                          <div className="p-4 max-w-xs text-center">
+                            <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                            <p className="text-sm text-white/90">{image.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
