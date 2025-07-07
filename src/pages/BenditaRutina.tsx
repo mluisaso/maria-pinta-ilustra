@@ -9,11 +9,11 @@ import { Instagram } from 'lucide-react';
 const BenditaRutina = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-44 md:pt-0">
+    <div className="min-h-screen bg-white md:pr-64 pt-32 md:pt-0">
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-white pt-4 md:pt-8 pb-12">
+      <section className="bg-white pt-2 md:pt-8 pb-12">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           {/* Ilustración y Logo arriba del todo */}
           <div className="flex flex-col items-center mb-6">
