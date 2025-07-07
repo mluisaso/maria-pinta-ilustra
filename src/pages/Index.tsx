@@ -139,29 +139,6 @@ const Index = () => {
     }
   };
 
-  const shouldShowFloatingElement = () => {
-    const currentSectionData = portfolioSections[currentSection];
-    return currentSectionData?.showFloating === true;
-  };
-
-  const getFloatingElementPosition = () => {
-    const sectionElement = document.getElementById(`section-${currentSection}`);
-    if (!sectionElement || !shouldShowFloatingElement()) return { display: 'none' };
-    
-    const rect = sectionElement.getBoundingClientRect();
-    const sectionCenter = rect.top + rect.height / 2;
-    
-    // Solo mostrar si la sección está visible en pantalla
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-      return { 
-        top: `${sectionCenter}px`,
-        display: 'flex'
-      };
-    }
-    
-    return { display: 'none' };
-  };
-
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
@@ -179,7 +156,7 @@ const Index = () => {
           />
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-6 md:space-y-4 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-2 md:space-y-2 relative z-10">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={`section-${sectionIndex}`} className="space-y-4">
               <h2 className="text-lg font-normal text-black text-left font-poppins block md:hidden">
@@ -210,14 +187,14 @@ const Index = () => {
                     <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
                       <div className="relative overflow-hidden aspect-square">
                         {image.type === 'logo' ? (
-                          <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
-                            <div className="w-16 h-16 mb-4 flex-shrink-0">
+                          <div className="bg-white w-full h-full flex flex-col items-center justify-center p-6">
+                            <div className="w-12 h-12 mb-3 flex-shrink-0">
                               <LottieAnimation className="w-full h-full" />
                             </div>
                             <img 
                               src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
                               alt="Mariatepinta" 
-                              className="h-auto w-24"
+                              className="h-auto w-20"
                             />
                           </div>
                         ) : (
