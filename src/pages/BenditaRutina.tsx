@@ -105,26 +105,48 @@ const BenditaRutina = () => {
             </a>
 
             {/* Ver en Instagram text para la primera ilustración */}
-            <div className="flex flex-col items-center">
+            <div className="col-span-1 flex flex-col">
               <a 
                 href="https://www.instagram.com/benditarrutina/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-black hover:text-[#be1622] transition-colors duration-200 mb-2"
+                className="text-sm text-black hover:text-[#be1622] transition-colors duration-200 mb-2 text-center"
               >
                 Ver en Instagram
               </a>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                    <CardContent className="p-0">
+                      <div className="aspect-square bg-white">
+                        <img 
+                          src="/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png"
+                          alt="Bendita Rutina ilustración 1"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl max-h-[80vh] p-4 bg-white border border-gray-200 rounded-lg">
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <img 
+                      src="/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png"
+                      alt="Bendita Rutina ilustración 1"
+                      className="max-w-full max-h-full object-contain animate-scale-in"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
 
             {/* Resto de cards con ilustraciones */}
             {[
-              "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png",
               "/lovable-uploads/876e423d-e39b-4dfd-b46e-23a558ef7de2.png",
               "/lovable-uploads/0e446e95-8b87-431f-94c6-ab505851c658.png",
               "/lovable-uploads/bc1afce9-13ea-4da5-85dc-2a52eb7bb213.png",
               "/lovable-uploads/894f41b9-28ef-406a-a4ab-33cd8b8c4c18.png",
               "/lovable-uploads/2741e168-4afb-452d-8a12-37aa6cb14017.png",
-              "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png",
-              // Duplicadas como placeholder
               "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png",
               "/lovable-uploads/876e423d-e39b-4dfd-b46e-23a558ef7de2.png",
               "/lovable-uploads/0e446e95-8b87-431f-94c6-ab505851c658.png",
@@ -132,14 +154,14 @@ const BenditaRutina = () => {
               "/lovable-uploads/894f41b9-28ef-406a-a4ab-33cd8b8c4c18.png",
               "/lovable-uploads/2741e168-4afb-452d-8a12-37aa6cb14017.png"
             ].map((imageSrc, index) => (
-              <Dialog key={index + 1}>
+              <Dialog key={index + 2}>
                 <DialogTrigger asChild>
                   <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                     <CardContent className="p-0">
                       <div className="aspect-square bg-white">
                         <img 
                           src={imageSrc}
-                          alt={`Bendita Rutina ilustración ${index + 1}`}
+                          alt={`Bendita Rutina ilustración ${index + 2}`}
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -150,14 +172,13 @@ const BenditaRutina = () => {
                   <div className="relative w-full h-full flex items-center justify-center">
                     <img 
                       src={imageSrc}
-                      alt={`Bendita Rutina ilustración ${index + 1}`}
+                      alt={`Bendita Rutina ilustración ${index + 2}`}
                       className="max-w-full max-h-full object-contain animate-scale-in"
                     />
                   </div>
                 </DialogContent>
               </Dialog>
             ))}
-            </div>
           </div>
         </div>
       </section>
