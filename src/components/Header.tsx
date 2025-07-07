@@ -102,12 +102,12 @@ const Header: React.FC = () => {
       {/* Mobile Version - Header más alto */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
         <div className="flex items-center justify-between">
-          {/* Logo alineado a la izquierda */}
+          {/* Logo alineado a la izquierda - tamaño reducido */}
           <Link to="/">
             <img 
               src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
               alt="Mariatepinta" 
-              className="h-8 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+              className="h-6 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
             />
           </Link>
           
