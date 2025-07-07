@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -187,14 +186,11 @@ const Index = () => {
                     <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
                       <div className="relative overflow-hidden aspect-square">
                         {image.type === 'logo' ? (
-                          <div className="bg-white w-full h-full flex flex-col items-center justify-center p-6">
-                            <div className="w-12 h-12 mb-3 flex-shrink-0">
-                              <LottieAnimation className="w-full h-full" />
-                            </div>
+                          <div className="bg-white w-full h-full flex items-center justify-center p-6">
                             <img 
-                              src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
-                              alt="Mariatepinta" 
-                              className="h-auto w-20"
+                              src="/lovable-uploads/c553cbda-86b8-4898-8620-3b389ae10b73.png" 
+                              alt="Mariatepinta Illustration" 
+                              className="h-auto w-full max-w-[80%] object-contain"
                             />
                           </div>
                         ) : (
@@ -227,14 +223,11 @@ const Index = () => {
                   <div key={index} className="group cursor-pointer">
                     <div className="relative overflow-hidden bg-gray-100 aspect-square">
                       {image.type === 'logo' ? (
-                        <div className="bg-white w-full h-full flex flex-col items-center justify-center p-4">
-                          <div className="w-16 h-16 mb-4 flex-shrink-0">
-                            <LottieAnimation className="w-full h-full" />
-                          </div>
+                        <div className="bg-white w-full h-full flex items-center justify-center p-4">
                           <img 
-                            src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
-                            alt="Mariatepinta" 
-                            className="h-auto w-24"
+                            src="/lovable-uploads/c553cbda-86b8-4898-8620-3b389ae10b73.png" 
+                            alt="Mariatepinta Illustration" 
+                            className="h-auto w-full max-w-[80%] object-contain"
                           />
                         </div>
                       ) : (
