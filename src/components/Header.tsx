@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, ChevronDown } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const location = useLocation();
-  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Desktop Version */}
-      <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col font-normal" style={{ backgroundColor: '#be1622' }}>
+      <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col h-full p-6">
           {/* Logo blanco en la banda roja - clickable para ir a home */}
           <div className="mb-8 flex justify-center">
@@ -46,43 +46,37 @@ const Header: React.FC = () => {
           
           {/* Opciones del menú */}
           <nav className="flex flex-col space-y-6 mb-auto">
-            {/* Portfolio con submenu */}
+            {/* Portfolio siempre desplegado */}
             <div className="relative">
-              <button 
-                onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
-                className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg flex items-center justify-between w-full"
-              >
-                Portfolio
-                <ChevronDown className={`ml-2 h-4 w-4 transition-transform ${isPortfolioOpen ? 'rotate-180' : ''}`} />
-              </button>
+              <div className="text-white text-left text-lg font-normal">
+                PORTFOLIO
+              </div>
               
-              {/* Submenu */}
-              {isPortfolioOpen && (
-                <div className="mt-2 ml-4 space-y-3">
-                  {portfolioCategories.map((category) => (
-                    <button
-                      key={category}
-                      onClick={() => scrollToSection('portfolio')}
-                      className="block text-white/90 hover:text-white transition-colors font-light text-sm"
-                    >
-                      {category}
-                    </button>
-                  ))}
-                </div>
-              )}
+              {/* Submenu siempre visible */}
+              <div className="mt-2 ml-4 space-y-3">
+                {portfolioCategories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => scrollToSection('portfolio')}
+                    className="block text-white/90 hover:text-white transition-colors text-sm"
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
             
             <Link 
               to="/about"
-              className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg"
+              className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
             >
-              Sobre mí
+              SOBRE MÍ
             </Link>
             <Link 
               to="/contact"
-              className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg"
+              className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
             >
-              Contacto
+              CONTACTO
             </Link>
           </nav>
 
@@ -99,65 +93,88 @@ const Header: React.FC = () => {
             </a>
             <a href="#" className="text-white hover:text-gray-200 transition-colors">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-2.08v5.73a3.87 3.87 0 01-3.14 3.78 3.77 3.77 0 01-4.85-3.5A4.09 4.09 0 019.8 4.1a4.1 4.1 0 01.31-.05 4.47 4.47 0 01.2-1.94 6.27 6.27 0 00-2.13.35 6.06 6.06 0 00-4.08 5.78 5.84 5.84 0 007.66 5.55 5.89 5.89 0 004.13-5.55v-2.8a8.14 8.14 0 004.77 1.2z"/>
+                <path d="M21 8.25c0-.414-.336-.75-.75-.75h-1.5c-.414 0-.75.336-.75.75v7.5c0 .414.336.75.75.75h1.5c.414 0 .75-.336.75-.75v-7.5zM12 4.25c-.414 0-.75.336-.75.75v14c0 .414.336.75.75.75s.75-.336.75-.75V5c0-.414-.336-.75-.75-.75zM3 12.25c-.414 0-.75.336-.75.75v2c0 .414.336.75.75.75s.75-.336.75-.75v-2c0-.414-.336-.75-.75-.75z"/>
               </svg>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Mobile Version */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-4 font-normal" style={{ backgroundColor: '#be1622' }}>
-        <div className="flex items-center justify-between">
+      {/* Mobile Version - Banda más grande */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-6" style={{ backgroundColor: '#be1622', height: '120px' }}>
+        <div className="flex items-center justify-between h-full">
           {/* Logo clickable para ir a home */}
           <Link to="/">
             <img 
               src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
               alt="Mariatepinta" 
-              className="h-8 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+              className="h-12 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
             />
           </Link>
           
-          {/* Navigation links */}
-          <div className="flex space-x-4 text-sm">
-            <button 
-              onClick={() => scrollToSection('portfolio')}
-              className="text-white hover:text-gray-200 transition-colors font-normal"
-            >
-              Portfolio
-            </button>
-            <Link 
-              to="/about"
-              className="text-white hover:text-gray-200 transition-colors font-normal"
-            >
-              Sobre mí
-            </Link>
-            <Link 
-              to="/contact"
-              className="text-white hover:text-gray-200 transition-colors font-normal"
-            >
-              Contacto
-            </Link>
-          </div>
-          
-          {/* Social icons */}
-          <div className="flex space-x-2">
-            <a href="#" className="text-white hover:text-gray-200 transition-colors">
-              <Facebook size={16} />
-            </a>
-            <a href="#" className="text-white hover:text-gray-200 transition-colors">
-              <Instagram size={16} />
-            </a>
-            <a href="#" className="text-white hover:text-gray-200 transition-colors">
-              <Linkedin size={16} />
-            </a>
-            <a href="#" className="text-white hover:text-gray-200 transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-2.08v5.73a3.87 3.87 0 01-3.14 3.78 3.77 3.77 0 01-4.85-3.5A4.09 4.09 0 019.8 4.1a4.1 4.1 0 01.31-.05 4.47 4.47 0 01.2-1.94 6.27 6.27 0 00-2.13.35 6.06 6.06 0 00-4.08 5.78 5.84 5.84 0 007.66 5.55 5.89 5.89 0 004.13-5.55v-2.8a8.14 8.14 0 004.77 1.2z"/>
-              </svg>
-            </a>
-          </div>
+          {/* Menú hamburguesa */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-2"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+        
+        {/* Menú desplegable móvil */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-[#be1622] border-t border-white/20 p-4">
+            <nav className="flex flex-col space-y-4">
+              <div className="text-white font-normal text-lg">PORTFOLIO</div>
+              <div className="ml-4 space-y-2">
+                {portfolioCategories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => {
+                      scrollToSection('portfolio');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="block text-white/90 hover:text-white transition-colors text-sm"
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+              <Link 
+                to="/about"
+                className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                SOBRE MÍ
+              </Link>
+              <Link 
+                to="/contact"
+                className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                CONTACTO
+              </Link>
+              
+              {/* Redes sociales en móvil */}
+              <div className="flex justify-center space-x-4 pt-4 border-t border-white/20">
+                <a href="#" className="text-white hover:text-gray-200 transition-colors">
+                  <Facebook size={20} />
+                </a>
+                <a href="#" className="text-white hover:text-gray-200 transition-colors">
+                  <Instagram size={20} />
+                </a>
+                <a href="#" className="text-white hover:text-gray-200 transition-colors">
+                  <Linkedin size={20} />
+                </a>
+                <a href="#" className="text-white hover:text-gray-200 transition-colors">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M21 8.25c0-.414-.336-.75-.75-.75h-1.5c-.414 0-.75.336-.75.75v7.5c0 .414.336.75.75.75h1.5c.414 0 .75-.336.75-.75v-7.5zM12 4.25c-.414 0-.75.336-.75.75v14c0 .414.336.75.75.75s.75-.336.75-.75V5c0-.414-.336-.75-.75-.75zM3 12.25c-.414 0-.75.336-.75.75v2c0 .414.336.75.75.75s.75-.336.75-.75v-2c0-.414-.336-.75-.75-.75z"/>
+                  </svg>
+                </a>
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </>
   );

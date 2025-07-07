@@ -32,7 +32,7 @@ const Index = () => {
     { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Visual 3', description: 'Pensamiento en imágenes' },
     
     // Infantil
-    { src: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=500', title: 'Infantil 1', description: 'Mundo de fantasía' },
+    { src: '/lovable-uploads/dd0166fb-0ddd-4a35-8019-13069fd573ca.png', title: 'Infantil 1', description: 'Mundo de fantasía' },
     { src: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500', title: 'Infantil 2', description: 'Aventuras dibujadas' },
     { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Infantil 3', description: 'Sonrisas garantizadas' },
     
@@ -54,18 +54,18 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-24 md:pt-0 font-light">
+    <div className="min-h-screen bg-white md:pr-64 pt-32 md:pt-0">
       <Header />
 
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
-        {/* Lottie Animation - más separada del top */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 flex-shrink-0">
+        {/* Lottie Animation */}
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-12 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo rojo debajo de la animación - más separado */}
-        <div className="mb-16">
+        {/* Logo rojo debajo de la animación */}
+        <div className="mb-12">
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
@@ -73,9 +73,9 @@ const Index = () => {
           />
         </div>
 
-        {/* Portfolio Images Grid - Cards justo debajo del logo sin título */}
+        {/* Portfolio Images Grid - Cards con menos espacio entre ellas */}
         <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {allPortfolioImages.map((image, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="relative overflow-hidden bg-gray-100 aspect-square">
@@ -87,7 +87,7 @@ const Index = () => {
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className={`${getColorForIndex(index)} p-4 max-w-xs text-center shadow-lg`}>
                       <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                      <p className="text-sm text-white/90 font-light">{image.description}</p>
+                      <p className="text-sm text-white/90">{image.description}</p>
                     </div>
                   </div>
                 </div>
