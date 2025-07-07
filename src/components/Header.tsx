@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const location = useLocation();
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
@@ -17,6 +18,15 @@ const Header: React.FC = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const portfolioCategories = [
+    'EDITORIAL',
+    'INFANTIL', 
+    'VIÑETAS',
+    'IA',
+    'TEAM BUILDING',
+    'VISUAL THINKING'
+  ];
 
   return (
     <>
@@ -36,12 +46,32 @@ const Header: React.FC = () => {
           
           {/* Opciones del menú */}
           <nav className="flex flex-col space-y-6 mb-auto">
-            <button 
-              onClick={() => scrollToSection('portfolio')}
-              className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg"
-            >
-              Portfolio
-            </button>
+            {/* Portfolio con submenu */}
+            <div className="relative">
+              <button 
+                onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
+                className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg flex items-center justify-between w-full"
+              >
+                Portfolio
+                <ChevronDown className={`ml-2 h-4 w-4 transition-transform ${isPortfolioOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {/* Submenu */}
+              {isPortfolioOpen && (
+                <div className="mt-2 ml-4 space-y-3">
+                  {portfolioCategories.map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => scrollToSection('portfolio')}
+                      className="block text-white/90 hover:text-white transition-colors font-light text-sm"
+                    >
+                      {category}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+            
             <Link 
               to="/about"
               className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg"

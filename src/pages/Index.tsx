@@ -32,7 +32,7 @@ const Index = () => {
     { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Visual 3', description: 'Pensamiento en imágenes' },
     
     // Infantil
-    { src: 'https://images.unsplash.com/photo-1530325553146-0b2a0f9a6b7c?w=500', title: 'Infantil 1', description: 'Mundo de fantasía' },
+    { src: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=500', title: 'Infantil 1', description: 'Mundo de fantasía' },
     { src: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500', title: 'Infantil 2', description: 'Aventuras dibujadas' },
     { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Infantil 3', description: 'Sonrisas garantizadas' },
     
@@ -42,9 +42,14 @@ const Index = () => {
     { src: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500', title: 'Editorial 3', description: 'Páginas con alma' },
   ];
 
-  // Mapeo de colores para cada imagen
+  // Mapeo de colores para cada imagen - usando el rojo de la banda para algunos
   const getColorForIndex = (index: number) => {
-    const colors = ['bg-blue-500', 'bg-green-500', 'bg-orange-500', 'bg-cyan-500', 'bg-pink-500', 'bg-indigo-500', 'bg-red-500'];
+    const colors = ['bg-blue-500', 'bg-green-500', 'bg-orange-500', 'bg-cyan-500', 'bg-pink-500', 'bg-indigo-500'];
+    const redColor = 'bg-[#be1622]'; // El rojo de la banda
+    
+    // Usar el rojo de la banda para algunos índices específicos
+    if (index % 4 === 0) return redColor;
+    
     return colors[index % colors.length];
   };
 
@@ -53,41 +58,34 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-12 pb-12">
-        {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 flex-shrink-0">
+      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-12">
+        {/* Lottie Animation - más separada del top */}
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
         {/* Logo rojo debajo de la animación - más separado */}
-        <div className="mb-12">
+        <div className="mb-16">
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
             className="h-8 md:h-10 lg:h-12"
           />
         </div>
-        
-        {/* Título debajo del logo */}
-        <div className="text-center mb-16">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-800 mb-6 max-w-2xl mx-auto px-4">
-            Dibujos a medida. Como los trajes, pero con lápices.
-          </h1>
-        </div>
 
-        {/* Portfolio Images Grid - All images directly */}
+        {/* Portfolio Images Grid - Cards justo debajo del logo sin título */}
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allPortfolioImages.map((image, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg bg-gray-100 aspect-square">
+                <div className="relative overflow-hidden bg-gray-100 aspect-square">
                   <img 
                     src={image.src} 
                     alt={image.title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className={`${getColorForIndex(index)} rounded-lg p-4 max-w-xs text-center shadow-lg`}>
+                    <div className={`${getColorForIndex(index)} p-4 max-w-xs text-center shadow-lg`}>
                       <h3 className="font-normal text-white mb-2">{image.title}</h3>
                       <p className="text-sm text-white/90 font-light">{image.description}</p>
                     </div>
@@ -98,21 +96,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-50 py-8 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-center mb-4">
-            <span className="text-gray-600 mr-2 font-light">Hecho a boli</span>
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-            </svg>
-          </div>
-          <p className="text-sm text-gray-500 font-light">
-            © 2024 Mariatepinta. Todos los derechos reservados (incluso los torcidos).
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };
