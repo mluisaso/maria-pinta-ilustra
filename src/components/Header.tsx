@@ -24,7 +24,7 @@ const Header: React.FC = () => {
     { name: 'Infantil', id: 'infantil' }, 
     { name: 'Viñetas', id: 'vinetas' },
     { name: 'IA', id: 'ia' },
-    { name: 'Team building', id: 'team-building' },
+    { name: 'Branded Content', id: 'team-building' },
     { name: 'Visual thinking', id: 'visual-thinking' }
   ];
 
@@ -33,14 +33,25 @@ const Header: React.FC = () => {
       {/* Desktop Version */}
       <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col h-full p-6">
-          {/* Logo blanco en la banda roja - clickable para ir a home */}
-          <div className="mb-16 flex justify-center">
-            <Link to="/">
+          {/* Ilustración y Logo blanco en la banda roja */}
+          <div className="mb-16 flex flex-col items-center">
+            {/* Ilustración encima del logo */}
+            <div className="w-48 mb-4">
               <img 
-                src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
-                alt="Mariatepinta" 
-                className="h-16 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
+                alt="Ilustración Mariatepinta" 
+                className="w-full h-auto object-contain"
               />
+            </div>
+            {/* Logo clickable para ir a home */}
+            <Link to="/">
+              <div className="w-48">
+                <img 
+                  src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
+                  alt="Mariatepinta" 
+                  className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </div>
             </Link>
           </div>
           
@@ -93,16 +104,16 @@ const Header: React.FC = () => {
 
           {/* Redes sociales */}
           <div className="flex justify-center space-x-4">
-            <a href="#" className="text-white hover:text-gray-200 transition-colors">
+            <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
               <Instagram size={20} />
             </a>
-            <a href="#" className="text-white hover:text-gray-200 transition-colors">
+            <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="#" className="text-white hover:text-gray-200 transition-colors">
+            <a href="https://www.tiktok.com/@mariatepinta" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
               <img 
                 src="/lovable-uploads/bb8002d5-0962-4d3a-9301-9603bec5426c.png" 
-                alt="Social Media" 
+                alt="TikTok" 
                 className="w-5 h-5 object-contain"
               />
             </a>
@@ -111,16 +122,29 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Version - Header más alto */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-6" style={{ backgroundColor: '#be1622' }}>
         <div className="flex items-center justify-between">
-          {/* Logo alineado a la izquierda - tamaño reducido */}
-          <Link to="/">
-            <img 
-              src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
-              alt="Mariatepinta" 
-              className="h-6 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
-            />
-          </Link>
+          {/* Logo e ilustración centrados */}
+          <div className="flex-1 flex flex-col items-center">
+            {/* Ilustración encima del logo */}
+            <div className="w-12 mb-2">
+              <img 
+                src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
+                alt="Ilustración Mariatepinta" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            {/* Logo */}
+            <Link to="/">
+              <div className="w-12">
+                <img 
+                  src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
+                  alt="Mariatepinta" 
+                  className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </div>
+            </Link>
+          </div>
           
           {/* Menú hamburguesa */}
           <button
@@ -172,16 +196,16 @@ const Header: React.FC = () => {
               
               {/* Redes sociales en móvil - alineadas a la izquierda */}
               <div className="flex space-x-4 pt-4">
-                <a href="#" className="text-white hover:text-gray-200 transition-colors">
+                <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="text-white hover:text-gray-200 transition-colors">
+                <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
                   <Linkedin size={20} />
                 </a>
-                <a href="#" className="text-white hover:text-gray-200 transition-colors">
+                <a href="https://www.tiktok.com/@mariatepinta" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
                   <img 
                     src="/lovable-uploads/bb8002d5-0962-4d3a-9301-9603bec5426c.png" 
-                    alt="Social Media" 
+                    alt="TikTok" 
                     className="w-5 h-5 object-contain"
                   />
                 </a>
