@@ -20,8 +20,8 @@ const BenditaRutina = () => {
           <div className="w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200">
             <ChevronLeft size={16} className="text-white" />
           </div>
-          {/* Logo de mariatepinta en negro - mucho más grande */}
-          <div className="w-20">
+          {/* Logo de mariatepinta en negro - más grande en desktop, oculto en mobile */}
+          <div className="w-24 hidden md:block">
             <img 
               src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
               alt="Mariatepinta" 
