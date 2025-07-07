@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -113,33 +114,13 @@ const Index = () => {
     <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
 
-      {/* Fixed Central Elements - Only visible on desktop */}
-      <div className="hidden md:block fixed inset-0 pointer-events-none z-30" style={{ left: '264px' }}>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-          {/* Reduced Lottie Animation */}
-          <div className="w-24 h-24 lg:w-28 lg:h-28 mb-4 flex-shrink-0">
-            <LottieAnimation className="w-full h-full" />
-          </div>
-          
-          {/* Reduced Logo */}
-          <div className="mb-4">
-            <img 
-              src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
-              alt="Mariatepinta" 
-              className="h-auto w-48 lg:w-56"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Section - Mobile Animation and Logo */}
+      {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 md:pt-20 pb-12">
-        {/* Mobile Lottie Animation */}
+        {/* Mobile Lottie Animation and Logo */}
         <div className="md:hidden w-32 h-32 sm:w-40 sm:h-40 mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Mobile Logo */}
         <div className="mb-16 md:hidden">
           <img 
             src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
@@ -157,7 +138,7 @@ const Index = () => {
                 {section.title}
               </h2>
 
-              {/* Desktop layout with horizontal scroll and central gap */}
+              {/* Desktop layout with horizontal scroll */}
               <div className="hidden md:block">
                 {/* Navigation arrows positioned above the photos */}
                 <div className="relative">
@@ -181,26 +162,47 @@ const Index = () => {
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                   >
                     {section.images.map((image, index) => {
-                      // Create a gap in the center for the fixed elements
-                      const isMiddleSection = index >= Math.floor(section.images.length / 3) && index < Math.floor(section.images.length * 2 / 3);
-                      const shouldShowGap = sectionIndex === 2 && isMiddleSection; // Show gap in the middle section (IA)
+                      // Card central de la sección IA (índice 3, card central)
+                      const isCentralCard = sectionIndex === 3 && index === 4;
                       
                       return (
-                        <div key={index} className={`group cursor-pointer flex-shrink-0 w-1/3 min-w-0 ${shouldShowGap ? 'opacity-30' : ''}`}>
+                        <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
                           <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                            <img 
-                              src={image.src} 
-                              alt={image.title}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
-                                <div className="p-4 max-w-xs text-center">
-                                  <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                                  <p className="text-sm text-white/90">{image.description}</p>
+                            {/* Contenido de la imagen desplazado a la derecha en la card central */}
+                            <div className={`w-full h-full ${isCentralCard ? 'transform translate-x-16' : ''}`}>
+                              <img 
+                                src={image.src} 
+                                alt={image.title}
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              />
+                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
+                                  <div className="p-4 max-w-xs text-center">
+                                    <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                                    <p className="text-sm text-white/90">{image.description}</p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
+
+                            {/* Animación y logo fijos en la card central con fondo blanco */}
+                            {isCentralCard && (
+                              <div className="absolute top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center pointer-events-none z-30">
+                                {/* Animación Lottie reducida */}
+                                <div className="w-16 h-16 mb-2 flex-shrink-0">
+                                  <LottieAnimation className="w-full h-full" />
+                                </div>
+                                
+                                {/* Logo reducido */}
+                                <div>
+                                  <img 
+                                    src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
+                                    alt="Mariatepinta" 
+                                    className="h-auto w-32"
+                                  />
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
                       );
