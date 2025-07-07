@@ -1,11 +1,11 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Index = () => {
-  // Todas las imágenes del portfolio organizadas por categorías
+  const [currentSection, setCurrentSection] = useState(0);
+
   const portfolioSections = [
     {
       id: 'editorial',
@@ -99,10 +99,38 @@ const Index = () => {
     }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = portfolioSections.map((_, index) => 
+        document.getElementById(`section-${index}`)
+      );
+      
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+            setCurrentSection(i);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Ejecutar una vez al montar
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollHorizontal = (containerId: string, direction: 'left' | 'right') => {
     const container = document.getElementById(containerId);
     if (container) {
-      const cardWidth = container.offsetWidth / 3; // Width of one card (1/3 of container)
+      const cardWidth = container.offsetWidth / 3;
       container.scrollBy({
         left: direction === 'left' ? -cardWidth : cardWidth,
         behavior: 'smooth'
@@ -110,34 +138,47 @@ const Index = () => {
     }
   };
 
+  const getFloatingElementPosition = () => {
+    const sectionElement = document.getElementById(`section-${currentSection}`);
+    if (!sectionElement) return { top: '50%' };
+    
+    const rect = sectionElement.getBoundingClientRect();
+    const sectionCenter = rect.top + rect.height / 2;
+    const viewportHeight = window.innerHeight;
+    
+    if (rect.top >= 0 && rect.bottom <= viewportHeight) {
+      return { top: `${sectionCenter}px` };
+    }
+    
+    return { top: '50vh' };
+  };
+
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
 
-      {/* Fixed floating element with Lottie animation and logo - Desktop only */}
-      <div className="hidden md:flex fixed top-1/2 z-50 bg-white rounded-lg shadow-lg p-3 flex-col items-center pointer-events-none" 
-           style={{ 
-             left: 'calc(50% - 8rem)', 
-             transform: 'translate(-50%, -50%)' 
-           }}>
-        {/* Lottie Animation - reduced size */}
-        <div className="w-12 h-12 mb-2 flex-shrink-0">
+      <div 
+        className="hidden md:flex fixed z-50 bg-white rounded-lg shadow-lg p-6 flex-col items-center pointer-events-none transition-all duration-500 ease-in-out" 
+        style={{ 
+          left: 'calc(50% - 8rem)', 
+          transform: 'translate(-50%, -50%)',
+          ...getFloatingElementPosition()
+        }}
+      >
+        <div className="w-20 h-20 mb-4 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo - reduced size */}
         <div>
           <img 
             src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
             alt="Mariatepinta" 
-            className="h-auto w-24"
+            className="h-auto w-32"
           />
         </div>
       </div>
 
-      {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 md:pt-20 pb-12">
-        {/* Mobile Lottie Animation and Logo */}
         <div className="md:hidden w-32 h-32 sm:w-40 sm:h-40 mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
@@ -150,62 +191,55 @@ const Index = () => {
           />
         </div>
 
-        {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8 relative z-10">
           {portfolioSections.map((section, sectionIndex) => (
-            <div key={section.id} id={section.id} className="space-y-4">
-              {/* Section Title - only visible on mobile */}
+            <div key={section.id} id={`section-${sectionIndex}`} className="space-y-4">
               <h2 className="text-lg font-normal text-black text-left font-poppins block md:hidden">
                 {section.title}
               </h2>
 
-              {/* Desktop layout with horizontal scroll */}
               <div className="hidden md:block">
-                {/* Navigation arrows positioned above the photos */}
-                <div className="relative">
-                  <button
-                    onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                  >
-                    <ChevronLeft size={16} className="text-white" />
-                  </button>
-                  
-                  <button
-                    onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                  >
-                    <ChevronRight size={16} className="text-white" />
-                  </button>
+                <button
+                  onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                >
+                  <ChevronLeft size={16} className="text-white" />
+                </button>
+                
+                <button
+                  onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                >
+                  <ChevronRight size={16} className="text-white" />
+                </button>
 
-                  <div 
-                    id={`scroll-container-${sectionIndex}`}
-                    className="flex gap-1 overflow-x-auto scrollbar-hide scroll-smooth"
-                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                  >
-                    {section.images.map((image, index) => (
-                      <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
-                        <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                          <img 
-                            src={image.src} 
-                            alt={image.title}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
-                              <div className="p-4 max-w-xs text-center">
-                                <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                                <p className="text-sm text-white/90">{image.description}</p>
-                              </div>
+                <div 
+                  id={`scroll-container-${sectionIndex}`}
+                  className="flex gap-1 overflow-x-auto scrollbar-hide scroll-smooth"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                  {section.images.map((image, index) => (
+                    <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
+                      <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                        <img 
+                          src={image.src} 
+                          alt={image.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
+                            <div className="p-4 max-w-xs text-center">
+                              <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                              <p className="text-sm text-white/90">{image.description}</p>
                             </div>
                           </div>
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Mobile layout with vertical grid */}
               <div className="md:hidden grid grid-cols-2 gap-1">
                 {section.images.map((image, index) => (
                   <div key={index} className="group cursor-pointer">
