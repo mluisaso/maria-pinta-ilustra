@@ -99,19 +99,17 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Version - Header más pequeño */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-6" style={{ backgroundColor: '#be1622' }}>
+      {/* Mobile Version - Header más alto */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
         <div className="flex items-center justify-between">
-          {/* Logo centrado y más pequeño */}
-          <div className="flex-1 flex justify-center">
-            <Link to="/">
-              <img 
-                src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
-                alt="Mariatepinta" 
-                className="h-8 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
-              />
-            </Link>
-          </div>
+          {/* Logo alineado a la izquierda */}
+          <Link to="/">
+            <img 
+              src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
+              alt="Mariatepinta" 
+              className="h-8 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+            />
+          </Link>
           
           {/* Menú hamburguesa */}
           <button
@@ -124,7 +122,7 @@ const Header: React.FC = () => {
         
         {/* Menú desplegable móvil */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-[#be1622] border-t border-white/20 p-4">
+          <div className="absolute top-full left-0 right-0 bg-[#be1622] p-4">
             <nav className="flex flex-col space-y-4">
               <div className="text-white font-normal text-lg">PORTFOLIO</div>
               <div className="ml-4 space-y-2">
@@ -156,8 +154,8 @@ const Header: React.FC = () => {
                 CONTACTO
               </Link>
               
-              {/* Redes sociales en móvil */}
-              <div className="flex justify-center space-x-4 pt-4 border-t border-white/20">
+              {/* Redes sociales en móvil - alineadas a la izquierda */}
+              <div className="flex space-x-4 pt-4">
                 <a href="#" className="text-white hover:text-gray-200 transition-colors">
                   <Instagram size={20} />
                 </a>

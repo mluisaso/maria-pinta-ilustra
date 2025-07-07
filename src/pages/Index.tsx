@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -111,27 +110,27 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-28 md:pt-0">
+    <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
 
       {/* Hero Section */}
-      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-12 md:pt-20 pb-12">
+      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 md:pt-20 pb-12">
         {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 md:mb-16 flex-shrink-0">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 md:mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
         {/* Logo nuevo - solo visible en desktop */}
         <div className="mb-16 hidden md:block">
           <img 
-            src="/lovable-uploads/891d65b3-6ffe-46ae-b884-3bf1f2837148.png" 
+            src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
             alt="Mariatepinta" 
             className="h-auto w-80 lg:w-96"
           />
         </div>
 
         {/* Portfolio Sections */}
-        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={section.id} className="space-y-4">
               {/* Section Title - only visible on mobile */}
