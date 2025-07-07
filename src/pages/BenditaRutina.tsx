@@ -1,9 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import { Card, CardContent } from '../components/ui/card';
+import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
 
 const BenditaRutina = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
@@ -51,7 +53,7 @@ const BenditaRutina = () => {
                     />
                     <div className="absolute bottom-0 left-0 right-0">
                       <div className="relative p-2 md:p-3">
-                        <div className="bg-red-500 rounded-md px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
                           <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina</h3>
                           <p className="text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block">Cómpralo en Amazon</p>
                         </div>
@@ -79,7 +81,7 @@ const BenditaRutina = () => {
                     />
                     <div className="absolute bottom-0 left-0 right-0">
                       <div className="relative p-2 md:p-3">
-                        <div className="bg-red-500 rounded-md px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md px-3 py-2" style={{ backgroundColor: '#be1622' }}>
                           <h3 className="text-xs md:text-sm font-bold text-white mb-1 drop-shadow-lg leading-tight">Libro de viñetas Bendita Rutina 2</h3>
                           <p className="text-xs text-white/90 drop-shadow-md leading-tight hidden sm:block">Cómpralo en Amazon</p>
                         </div>
@@ -100,17 +102,30 @@ const BenditaRutina = () => {
               "/lovable-uploads/2741e168-4afb-452d-8a12-37aa6cb14017.png",
               "/lovable-uploads/a37fd13b-9c26-4c01-9bc0-1925c90cdabd.png" // Duplicada
             ].map((imageSrc, index) => (
-              <Card key={index + 2} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-0">
-                  <div className="aspect-square bg-gray-100">
+              <Dialog key={index + 2}>
+                <DialogTrigger asChild>
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105">
+                    <CardContent className="p-0">
+                      <div className="aspect-square bg-white">
+                        <img 
+                          src={imageSrc}
+                          alt={`Bendita Rutina ilustración ${index + 1}`}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] p-0 bg-transparent border-0">
+                  <div className="relative w-full h-full flex items-center justify-center">
                     <img 
                       src={imageSrc}
                       alt={`Bendita Rutina ilustración ${index + 1}`}
-                      className="w-full h-full object-contain p-4"
+                      className="max-w-full max-h-full object-contain animate-scale-in"
                     />
                   </div>
-                </CardContent>
-              </Card>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
