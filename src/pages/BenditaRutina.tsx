@@ -4,13 +4,32 @@ import Header from '../components/Header';
 import { Card, CardContent } from '../components/ui/card';
 import { Dialog, DialogContent, DialogTrigger } from '../components/ui/dialog';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../components/ui/tooltip';
-import { Instagram } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const BenditaRutina = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-32 md:pt-0">
+    <div className="min-h-screen bg-white md:pr-64 pt-32 md:pt-0 relative">
       <Header />
+
+      {/* Botón de regreso - posicionado arriba a la izquierda */}
+      <div className="fixed top-4 left-4 z-50 md:absolute md:top-8 md:left-8">
+        <Link to="/" className="flex items-center space-x-2 group">
+          {/* Flecha con círculo rojo */}
+          <div className="w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200">
+            <ChevronLeft size={16} className="text-white" />
+          </div>
+          {/* Logo de mariatepinta en negro */}
+          <div className="w-12">
+            <img 
+              src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
+              alt="Mariatepinta" 
+              className="w-full h-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-200"
+            />
+          </div>
+        </Link>
+      </div>
 
       {/* Hero Section */}
       <section className="bg-white pt-2 md:pt-8 pb-12">
