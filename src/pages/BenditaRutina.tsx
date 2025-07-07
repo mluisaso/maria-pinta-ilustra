@@ -83,7 +83,7 @@ const BenditaRutina = () => {
                   href="https://www.instagram.com/benditarrutina/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-poppins font-semibold text-sm text-black hover:text-[#be1622] transition-colors duration-200 underline"
+                  className="font-poppins font-normal text-sm text-[#be1622] hover:text-black transition-colors duration-200 underline"
                 >
                   Ver en Instagram
                 </a>
