@@ -13,6 +13,9 @@ const Index = () => {
         { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500', title: 'Editorial 1', description: 'Narrativa visual' },
         { src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=500', title: 'Editorial 2', description: 'Historias ilustradas' },
         { src: 'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500', title: 'Editorial 3', description: 'Páginas con alma' },
+        { src: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500', title: 'Editorial 4', description: 'Literatura visual' },
+        { src: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500', title: 'Editorial 5', description: 'Cuentos dibujados' },
+        { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Editorial 6', description: 'Mundos ilustrados' },
       ]
     },
     {
@@ -21,7 +24,10 @@ const Index = () => {
       images: [
         { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Infantil 1', description: 'Mundo de fantasía' },
         { src: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500', title: 'Infantil 2', description: 'Aventuras dibujadas' },
-        { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Infantil 3', description: 'Sonrisas garantizadas' },
+        { src: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=500', title: 'Infantil 3', description: 'Sonrisas garantizadas' },
+        { src: 'https://images.unsplash.com/photo-1519340333755-56e9c1d4a3c2?w=500', title: 'Infantil 4', description: 'Diversión colorida' },
+        { src: 'https://images.unsplash.com/photo-1515524738708-327f6b0037a7?w=500', title: 'Infantil 5', description: 'Pequeños héroes' },
+        { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500', title: 'Infantil 6', description: 'Magia infantil' },
       ]
     },
     {
@@ -31,6 +37,9 @@ const Index = () => {
         { src: 'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?w=500', title: 'Viñeta 1', description: 'Una historia dibujada con gracia' },
         { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500', title: 'Viñeta 2', description: 'Momentos cotidianos con humor' },
         { src: 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=500', title: 'Viñeta 3', description: 'Expresiones que hablan solas' },
+        { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500', title: 'Viñeta 4', description: 'Humor gráfico' },
+        { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Viñeta 5', description: 'Reflexiones visuales' },
+        { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', title: 'Viñeta 6', description: 'Historias cortas' },
       ]
     },
     {
@@ -40,6 +49,9 @@ const Index = () => {
         { src: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500', title: 'IA 1', description: 'Robots con personalidad' },
         { src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500', title: 'IA 2', description: 'Futuro dibujado a mano' },
         { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500', title: 'IA 3', description: 'Tecnología humanizada' },
+        { src: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=500', title: 'IA 4', description: 'Ciencia ficción' },
+        { src: 'https://images.unsplash.com/photo-1555255707-c07966088b7b?w=500', title: 'IA 5', description: 'Inteligencia visual' },
+        { src: 'https://images.unsplash.com/photo-1551808525-51a94da548ce?w=500', title: 'IA 6', description: 'Mundo digital' },
       ]
     },
     {
@@ -49,6 +61,9 @@ const Index = () => {
         { src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500', title: 'Equipo 1', description: 'Dinámicas grupales ilustradas' },
         { src: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=500', title: 'Equipo 2', description: 'Colaboración visual' },
         { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500', title: 'Equipo 3', description: 'Unión en trazos' },
+        { src: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=500', title: 'Equipo 4', description: 'Trabajo en equipo' },
+        { src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500', title: 'Equipo 5', description: 'Sinergia grupal' },
+        { src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=500', title: 'Equipo 6', description: 'Conexión humana' },
       ]
     },
     {
@@ -58,19 +73,25 @@ const Index = () => {
         { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', title: 'Visual 1', description: 'Ideas complejas, dibujos simples' },
         { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500', title: 'Visual 2', description: 'Conceptos visualizados' },
         { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Visual 3', description: 'Pensamiento en imágenes' },
+        { src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500', title: 'Visual 4', description: 'Mapas conceptuales' },
+        { src: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500', title: 'Visual 5', description: 'Esquemas creativos' },
+        { src: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?w=500', title: 'Visual 6', description: 'Diagramas únicos' },
       ]
     }
   ];
 
-  // Mapeo de colores para cada imagen - usando el rojo de la banda para algunos
-  const getColorForIndex = (index: number) => {
-    const colors = ['bg-blue-500', 'bg-green-500', 'bg-orange-500', 'bg-cyan-500', 'bg-pink-500', 'bg-indigo-500'];
+  // Mapeo de colores aleatorios para cada imagen
+  const getRandomColorForIndex = (sectionIndex: number, imageIndex: number) => {
+    const colors = ['bg-blue-500', 'bg-green-500', 'bg-orange-500', 'bg-cyan-500', 'bg-pink-500', 'bg-indigo-500', 'bg-purple-500', 'bg-teal-500', 'bg-yellow-500', 'bg-red-500'];
     const redColor = 'bg-[#be1622]'; // El rojo de la banda
     
-    // Usar el rojo de la banda para algunos índices específicos
-    if (index % 4 === 0) return redColor;
+    // Crear un índice pseudo-aleatorio basado en la posición
+    const pseudoRandomIndex = (sectionIndex * 7 + imageIndex * 3) % colors.length;
     
-    return colors[index % colors.length];
+    // Usar el rojo de la banda ocasionalmente
+    if ((sectionIndex + imageIndex) % 5 === 0) return redColor;
+    
+    return colors[pseudoRandomIndex];
   };
 
   return (
@@ -95,7 +116,7 @@ const Index = () => {
 
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-8">
-          {portfolioSections.map((section) => (
+          {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={section.id} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
                 {section.images.map((image, index) => (
@@ -107,7 +128,7 @@ const Index = () => {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className={`${getColorForIndex(index)} w-full h-full flex items-center justify-center`}>
+                        <div className={`${getRandomColorForIndex(sectionIndex, index)} w-full h-full flex items-center justify-center`}>
                           <div className="p-4 max-w-xs text-center">
                             <h3 className="font-normal text-white mb-2">{image.title}</h3>
                             <p className="text-sm text-white/90">{image.description}</p>
@@ -118,9 +139,13 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-              {/* Scroll horizontal rojo debajo de cada fila */}
+              {/* Indicador de scroll horizontal rojo debajo de cada fila - más intuitivo */}
               <div className="flex justify-center mt-4">
-                <div className="w-12 h-1 bg-[#be1622] rounded-full"></div>
+                <div className="flex items-center space-x-1">
+                  <div className="w-2 h-2 bg-[#be1622]"></div>
+                  <div className="w-8 h-1 bg-[#be1622]"></div>
+                  <div className="w-2 h-2 bg-[#be1622]"></div>
+                </div>
               </div>
             </div>
           ))}
