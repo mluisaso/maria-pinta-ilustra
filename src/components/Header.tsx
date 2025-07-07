@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Desktop Version */}
-      <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
+      <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col font-normal" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col h-full p-6">
           {/* Logo blanco en la banda roja - clickable para ir a home */}
           <div className="mb-8 flex justify-center">
@@ -38,19 +38,19 @@ const Header: React.FC = () => {
           <nav className="flex flex-col space-y-6 mb-auto">
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="text-white hover:text-gray-200 transition-colors font-medium text-left text-lg"
+              className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg"
             >
               Portfolio
             </button>
             <Link 
               to="/about"
-              className="text-white hover:text-gray-200 transition-colors font-medium text-left text-lg"
+              className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg"
             >
               Sobre mí
             </Link>
             <Link 
               to="/contact"
-              className="text-white hover:text-gray-200 transition-colors font-medium text-left text-lg"
+              className="text-white hover:text-gray-200 transition-colors font-normal text-left text-lg"
             >
               Contacto
             </Link>
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Version */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-4" style={{ backgroundColor: '#be1622' }}>
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-4 font-normal" style={{ backgroundColor: '#be1622' }}>
         <div className="flex items-center justify-between">
           {/* Logo clickable para ir a home */}
           <Link to="/">
@@ -92,19 +92,19 @@ const Header: React.FC = () => {
           <div className="flex space-x-4 text-sm">
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="text-white hover:text-gray-200 transition-colors font-medium"
+              className="text-white hover:text-gray-200 transition-colors font-normal"
             >
               Portfolio
             </button>
             <Link 
               to="/about"
-              className="text-white hover:text-gray-200 transition-colors font-medium"
+              className="text-white hover:text-gray-200 transition-colors font-normal"
             >
               Sobre mí
             </Link>
             <Link 
               to="/contact"
-              className="text-white hover:text-gray-200 transition-colors font-medium"
+              className="text-white hover:text-gray-200 transition-colors font-normal"
             >
               Contacto
             </Link>
