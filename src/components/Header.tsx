@@ -66,12 +66,23 @@ const Header: React.FC = () => {
               </div>
             </div>
             
-            <Link 
-              to="/about"
-              className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
-            >
-              SOBRE MÍ
-            </Link>
+            {/* MI ALTER EGO siempre desplegado */}
+            <div className="relative">
+              <div className="text-white text-left text-lg font-normal">
+                MI ALTER EGO
+              </div>
+              
+              {/* Submenu siempre visible */}
+              <div className="mt-2 ml-4 space-y-3">
+                <Link
+                  to="/bendita-rutina"
+                  className="block text-white/90 hover:text-white transition-colors text-sm"
+                >
+                  Bendita Rutina
+                </Link>
+              </div>
+            </div>
+            
             <Link 
               to="/contact"
               className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
@@ -139,13 +150,18 @@ const Header: React.FC = () => {
                   </button>
                 ))}
               </div>
-              <Link 
-                to="/about"
-                className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                SOBRE MÍ
-              </Link>
+              
+              <div className="text-white font-normal text-lg">MI ALTER EGO</div>
+              <div className="ml-4 space-y-2">
+                <Link 
+                  to="/bendita-rutina"
+                  className="block text-white/90 hover:text-white transition-colors text-sm"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Bendita Rutina
+                </Link>
+              </div>
+              
               <Link 
                 to="/contact"
                 className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
