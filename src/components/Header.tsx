@@ -23,12 +23,12 @@ const Header: React.FC = () => {
       {/* Desktop Version */}
       <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col h-full p-6">
-          {/* Logo blanco en la banda roja */}
+          {/* Logo blanco en la banda roja - con proporción correcta */}
           <div className="mb-8 flex justify-center">
             <img 
               src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
               alt="Mariatepinta" 
-              className="h-16 w-auto"
+              className="h-16 w-auto object-contain"
             />
           </div>
           
@@ -53,13 +53,6 @@ const Header: React.FC = () => {
               Contacto
             </Link>
           </nav>
-
-          {/* Newsletter button */}
-          <div className="mb-8">
-            <button className="w-full bg-white text-red-600 font-bold py-3 px-6 hover:bg-gray-100 transition-colors">
-              JOIN MY NEWSLETTER!
-            </button>
-          </div>
 
           {/* Redes sociales */}
           <div className="flex justify-center space-x-4">
@@ -89,7 +82,7 @@ const Header: React.FC = () => {
             <img 
               src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
               alt="Mariatepinta" 
-              className="h-12 w-auto mx-auto mb-2"
+              className="h-12 w-auto mx-auto mb-2 object-contain"
             />
           </div>
           
@@ -101,11 +94,6 @@ const Header: React.FC = () => {
               <div className="w-8 h-1 bg-white"></div>
             </div>
           </div>
-
-          {/* Newsletter button */}
-          <button className="bg-white text-red-600 font-bold py-2 px-6 text-sm hover:bg-gray-100 transition-colors">
-            JOIN MY NEWSLETTER!
-          </button>
         </div>
       </div>
     </>

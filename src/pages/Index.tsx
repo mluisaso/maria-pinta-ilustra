@@ -95,16 +95,16 @@ const Index = () => {
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-12 pb-12">
         {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-8 flex-shrink-0">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-12 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo rojo debajo de la animación - reducido de tamaño */}
+        {/* Logo rojo debajo de la animación - más separado */}
         <div className="mb-8">
           <img 
             src="/lovable-uploads/8db84594-1fe6-42bc-94fe-55ac7bbea2ef.png" 
             alt="Mariatepinta" 
-            className="h-12 md:h-14 lg:h-16"
+            className="h-10 md:h-12 lg:h-14"
           />
         </div>
         

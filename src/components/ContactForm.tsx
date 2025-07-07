@@ -25,7 +25,7 @@ const ContactForm: React.FC = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Reemplaza con tu clave real
+          access_key: 'cebe667b-b31b-4160-a9ec-62094f39a74f',
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -80,7 +80,7 @@ const ContactForm: React.FC = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full border-2 border-gray-300 focus:border-orange-400 focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg"
+            className="w-full border-2 border-gray-300 focus:border-[#be1622] focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg"
           />
         </div>
         
@@ -92,7 +92,7 @@ const ContactForm: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full border-2 border-gray-300 focus:border-orange-400 focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg"
+            className="w-full border-2 border-gray-300 focus:border-[#be1622] focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg"
           />
         </div>
         
@@ -104,33 +104,36 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full border-2 border-gray-300 focus:border-orange-400 focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg resize-none"
+            className="w-full border-2 border-gray-300 focus:border-[#be1622] focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg resize-none"
           />
         </div>
         
         <Button 
           type="submit"
           disabled={isLoading}
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+          className="w-full text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+          style={{ backgroundColor: '#be1622' }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#a01018'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#be1622'}
         >
           {isLoading ? 'Enviando...' : 'Enviar mensaje'}
         </Button>
       </form>
 
       <div className="flex justify-center space-x-6 mt-8">
-        <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-300">
+        <a href="#" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </a>
-        <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-300">
+        <a href="#" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
           </svg>
         </a>
-        <a href="#" className="text-gray-600 hover:text-orange-500 transition-colors duration-300">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+        <a href="#" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
+          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
           </svg>
         </a>
       </div>
