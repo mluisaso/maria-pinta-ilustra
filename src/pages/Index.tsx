@@ -114,6 +114,27 @@ const Index = () => {
     <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
 
+      {/* Fixed floating element with Lottie animation and logo - Desktop only */}
+      <div className="hidden md:flex fixed top-1/2 z-50 bg-white rounded-lg shadow-lg p-3 flex-col items-center pointer-events-none" 
+           style={{ 
+             left: 'calc(50% - 8rem)', 
+             transform: 'translate(-50%, -50%)' 
+           }}>
+        {/* Lottie Animation - reduced size */}
+        <div className="w-12 h-12 mb-2 flex-shrink-0">
+          <LottieAnimation className="w-full h-full" />
+        </div>
+        
+        {/* Logo - reduced size */}
+        <div>
+          <img 
+            src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
+            alt="Mariatepinta" 
+            className="h-auto w-24"
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 md:pt-20 pb-12">
         {/* Mobile Lottie Animation and Logo */}
@@ -161,52 +182,25 @@ const Index = () => {
                     className="flex gap-1 overflow-x-auto scrollbar-hide scroll-smooth"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                   >
-                    {section.images.map((image, index) => {
-                      // Card central de la sección IA (índice 3, card central)
-                      const isCentralCard = sectionIndex === 3 && index === 4;
-                      
-                      return (
-                        <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
-                          <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                            {/* Contenido de la imagen desplazado a la derecha en la card central */}
-                            <div className={`w-full h-full ${isCentralCard ? 'transform translate-x-16' : ''}`}>
-                              <img 
-                                src={image.src} 
-                                alt={image.title}
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                              />
-                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
-                                  <div className="p-4 max-w-xs text-center">
-                                    <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                                    <p className="text-sm text-white/90">{image.description}</p>
-                                  </div>
-                                </div>
+                    {section.images.map((image, index) => (
+                      <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0 relative">
+                        <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                          <img 
+                            src={image.src} 
+                            alt={image.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
+                              <div className="p-4 max-w-xs text-center">
+                                <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                                <p className="text-sm text-white/90">{image.description}</p>
                               </div>
                             </div>
-
-                            {/* Animación y logo fijos en la card central con fondo blanco */}
-                            {isCentralCard && (
-                              <div className="absolute top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center pointer-events-none z-30">
-                                {/* Animación Lottie reducida */}
-                                <div className="w-16 h-16 mb-2 flex-shrink-0">
-                                  <LottieAnimation className="w-full h-full" />
-                                </div>
-                                
-                                {/* Logo reducido */}
-                                <div>
-                                  <img 
-                                    src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
-                                    alt="Mariatepinta" 
-                                    className="h-auto w-32"
-                                  />
-                                </div>
-                              </div>
-                            )}
                           </div>
                         </div>
-                      );
-                    })}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
