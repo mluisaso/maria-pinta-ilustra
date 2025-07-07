@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
@@ -25,6 +26,7 @@ const Index = () => {
     {
       id: 'infantil',
       title: 'Infantil',
+      showFloating: true,
       images: [
         { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500', title: 'Infantil 1', description: 'Mundo de fantasía' },
         { src: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500', title: 'Infantil 2', description: 'Aventuras dibujadas' },
@@ -70,6 +72,7 @@ const Index = () => {
     {
       id: 'team-building',
       title: 'Team Building',
+      showFloating: true,
       images: [
         { src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500', title: 'Equipo 1', description: 'Dinámicas grupales ilustradas' },
         { src: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=500', title: 'Equipo 2', description: 'Colaboración visual' },
@@ -122,7 +125,7 @@ const Index = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Ejecutar una vez al montar
+    handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -138,25 +141,34 @@ const Index = () => {
     }
   };
 
+  const shouldShowFloatingElement = () => {
+    const currentSectionData = portfolioSections[currentSection];
+    return currentSectionData?.showFloating === true;
+  };
+
   const getFloatingElementPosition = () => {
     const sectionElement = document.getElementById(`section-${currentSection}`);
-    if (!sectionElement) return { top: '50%' };
+    if (!sectionElement || !shouldShowFloatingElement()) return { display: 'none' };
     
     const rect = sectionElement.getBoundingClientRect();
     const sectionCenter = rect.top + rect.height / 2;
-    const viewportHeight = window.innerHeight;
     
-    if (rect.top >= 0 && rect.bottom <= viewportHeight) {
-      return { top: `${sectionCenter}px` };
+    // Solo mostrar si la sección está visible en pantalla
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      return { 
+        top: `${sectionCenter}px`,
+        display: 'flex'
+      };
     }
     
-    return { top: '50vh' };
+    return { display: 'none' };
   };
 
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
 
+      {/* Elemento flotante fijo - solo aparece en secciones específicas */}
       <div 
         className="hidden md:flex fixed z-50 bg-white rounded-lg shadow-lg p-6 flex-col items-center pointer-events-none transition-all duration-500 ease-in-out" 
         style={{ 
@@ -198,7 +210,7 @@ const Index = () => {
                 {section.title}
               </h2>
 
-              <div className="hidden md:block">
+              <div className="hidden md:block relative">
                 <button
                   onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
