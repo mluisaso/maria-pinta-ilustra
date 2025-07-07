@@ -113,15 +113,34 @@ const Index = () => {
     <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
       <Header />
 
-      {/* Hero Section */}
+      {/* Fixed Central Elements - Only visible on desktop */}
+      <div className="hidden md:block fixed inset-0 pointer-events-none z-30" style={{ left: '264px' }}>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          {/* Reduced Lottie Animation */}
+          <div className="w-24 h-24 lg:w-28 lg:h-28 mb-4 flex-shrink-0">
+            <LottieAnimation className="w-full h-full" />
+          </div>
+          
+          {/* Reduced Logo */}
+          <div className="mb-4">
+            <img 
+              src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
+              alt="Mariatepinta" 
+              className="h-auto w-48 lg:w-56"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Hero Section - Mobile Animation and Logo */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 md:pt-20 pb-12">
-        {/* Lottie Animation */}
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-16 md:mb-16 flex-shrink-0">
+        {/* Mobile Lottie Animation */}
+        <div className="md:hidden w-32 h-32 sm:w-40 sm:h-40 mb-16 flex-shrink-0">
           <LottieAnimation className="w-full h-full" />
         </div>
         
-        {/* Logo nuevo - solo visible en desktop */}
-        <div className="mb-16 hidden md:block">
+        {/* Mobile Logo */}
+        <div className="mb-16 md:hidden">
           <img 
             src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
             alt="Mariatepinta" 
@@ -130,7 +149,7 @@ const Index = () => {
         </div>
 
         {/* Portfolio Sections */}
-        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8 relative z-10">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={section.id} className="space-y-4">
               {/* Section Title - only visible on mobile */}
@@ -138,20 +157,20 @@ const Index = () => {
                 {section.title}
               </h2>
 
-              {/* Desktop layout with horizontal scroll */}
+              {/* Desktop layout with horizontal scroll and central gap */}
               <div className="hidden md:block">
                 {/* Navigation arrows positioned above the photos */}
                 <div className="relative">
                   <button
                     onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
                   >
                     <ChevronLeft size={16} className="text-white" />
                   </button>
                   
                   <button
                     onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
                   >
                     <ChevronRight size={16} className="text-white" />
                   </button>
@@ -161,25 +180,31 @@ const Index = () => {
                     className="flex gap-1 overflow-x-auto scrollbar-hide scroll-smooth"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                   >
-                    {section.images.map((image, index) => (
-                      <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0">
-                        <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                          <img 
-                            src={image.src} 
-                            alt={image.title}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
-                              <div className="p-4 max-w-xs text-center">
-                                <h3 className="font-normal text-white mb-2">{image.title}</h3>
-                                <p className="text-sm text-white/90">{image.description}</p>
+                    {section.images.map((image, index) => {
+                      // Create a gap in the center for the fixed elements
+                      const isMiddleSection = index >= Math.floor(section.images.length / 3) && index < Math.floor(section.images.length * 2 / 3);
+                      const shouldShowGap = sectionIndex === 2 && isMiddleSection; // Show gap in the middle section (IA)
+                      
+                      return (
+                        <div key={index} className={`group cursor-pointer flex-shrink-0 w-1/3 min-w-0 ${shouldShowGap ? 'opacity-30' : ''}`}>
+                          <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                            <img 
+                              src={image.src} 
+                              alt={image.title}
+                              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <div className="bg-[#be1622] w-full h-full flex items-center justify-center">
+                                <div className="p-4 max-w-xs text-center">
+                                  <h3 className="font-normal text-white mb-2">{image.title}</h3>
+                                  <p className="text-sm text-white/90">{image.description}</p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               </div>
