@@ -100,14 +100,14 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Version - Banda más grande */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-6" style={{ backgroundColor: '#be1622', height: '150px' }}>
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 p-4" style={{ backgroundColor: '#be1622', height: '120px' }}>
         <div className="flex items-center justify-between h-full">
-          {/* Logo clickable para ir a home */}
+          {/* Logo clickable para ir a home - más pequeño */}
           <Link to="/">
             <img 
               src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
               alt="Mariatepinta" 
-              className="h-16 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+              className="h-12 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
             />
           </Link>
           
