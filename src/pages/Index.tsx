@@ -118,9 +118,9 @@ const Index = () => {
         {/* Logo - hidden on mobile */}
         <div className="mb-8 hidden md:flex justify-center">
           <img 
-            src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
+            src="/lovable-uploads/e27c95ab-eb40-4ab3-ac43-b70d39b9ed96.png" 
             alt="Mariatepinta" 
-            className="h-auto w-80 lg:w-96"
+            className="h-auto w-64 lg:w-80"
           />
         </div>
 
