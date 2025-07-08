@@ -35,6 +35,16 @@ const Index = () => {
         { src: '/lovable-uploads/f2935822-cd37-4cbe-9e38-b97bbbf701b1.png', title: 'Infantil 8', description: 'Aventuras dibujadas' },
         { src: '/lovable-uploads/5edca1f5-e1c4-4658-b640-b5dfadfd1c71.png', title: 'Infantil 9', description: 'Sonrisas garantizadas' },
         { src: '/lovable-uploads/d2de8bfa-c7e3-4b74-aded-0e1aaa60e368.png', title: 'Infantil 10', description: 'Magia infantil' },
+        { src: '/lovable-uploads/356fdd84-a0c1-4420-a4e6-50b389818aff.png', title: 'Infantil 11', description: 'Aventuras al aire libre' },
+        { src: '/lovable-uploads/2ddfb707-ce87-43f9-937d-8e1523a17c19.png', title: 'Infantil 12', description: 'Diversión en la nieve' },
+        { src: '/lovable-uploads/28e4e61d-852c-4e0c-ac6e-16d326a572de.png', title: 'Infantil 13', description: 'Aventuras submarinas' },
+        { src: '/lovable-uploads/e2573526-5c53-4a48-9727-af5a45878642.png', title: 'Infantil 14', description: 'Días de lluvia' },
+        { src: '/lovable-uploads/5bd218db-aa39-41b4-8790-601df714af23.png', title: 'Infantil 15', description: 'Jugando en inglés' },
+        { src: '/lovable-uploads/58be4680-6fab-4334-846d-bd0a6dd395fc.png', title: 'Infantil 16', description: 'Deportes divertidos' },
+        { src: '/lovable-uploads/814fe137-2633-47e6-9948-7876b20108c0.png', title: 'Infantil 17', description: 'Amigos del corral' },
+        { src: '/lovable-uploads/a7feb34d-50a3-4ef8-82af-fc916d2cc2cd.png', title: 'Infantil 18', description: 'Aventuras del oeste' },
+        { src: '/lovable-uploads/c3083f1d-74ca-4768-9190-b771d0518660.png', title: 'Infantil 19', description: 'Yoga para niños' },
+        { src: '/lovable-uploads/5197131f-8534-4001-9d3e-7d6858c25884.png', title: 'Infantil 20', description: 'Cuentos de princesas' },
       ]
     },
     {
