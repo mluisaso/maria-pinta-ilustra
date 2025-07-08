@@ -97,7 +97,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Redes sociales */}
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-4 mb-6">
             <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
               <Instagram size={20} />
             </a>
@@ -111,6 +111,14 @@ const Header: React.FC = () => {
                 className="w-5 h-5 object-contain"
               />
             </a>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center">
+            <p className="text-xs text-white/80">
+              Copyright © 2025 Mariatepinta.<br />
+              Todos los derechos reservados.
+            </p>
           </div>
         </div>
       </div>

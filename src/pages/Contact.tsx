@@ -69,10 +69,10 @@ const Contact: React.FC = () => {
       <section className="pt-24 pb-16 px-4 md:px-8 max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            ¿Y ahora qué? Escríbeme.
+            ¡Hola! Soy Mària.
           </h1>
           <p className="text-xl text-gray-600">
-            Me llamo Mària, pero me llaman cuando hay que dibujar cosas raras
+            Ilustradora, creadora de mundos imposibles y especialista en dar vida a ideas raras. Si necesitas que algo cobre vida con un lápiz, estás en el lugar correcto.
           </p>
         </div>
 
@@ -142,20 +142,6 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-50 py-8 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-center mb-4">
-            <span className="text-gray-600 mr-2">Hecho a boli</span>
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-            </svg>
-          </div>
-          <p className="text-sm text-gray-500">
-            © 2024 Mariatepinta. Todos los derechos reservados (incluso los torcidos).
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };
