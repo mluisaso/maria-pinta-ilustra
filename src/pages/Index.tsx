@@ -114,9 +114,9 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-20 md:pt-20 pb-12">
-        {/* Logo */}
-        <div className="mb-8 flex justify-center">
+      <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-4 md:pt-20 pb-12">
+        {/* Logo - hidden on mobile */}
+        <div className="mb-8 hidden md:flex justify-center">
           <img 
             src="/lovable-uploads/dfa29db0-5b18-4143-90b8-7f84bdc6a082.png" 
             alt="Mariatepinta" 
@@ -125,7 +125,7 @@ const Index = () => {
         </div>
 
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
-        <div className="w-full mb-16 md:mb-16 -mx-4 md:-mx-8">
+        <div className="w-full mb-16 md:mb-16 -mx-4 md:-mx-64">
           <LottieAnimation className="w-full h-auto" />
         </div>
 
