@@ -32,7 +32,7 @@ const Header: React.FC = () => {
     <>
       {/* Desktop Version */}
       <div className="hidden md:block fixed top-0 right-0 h-full w-64 z-50 flex flex-col" style={{ backgroundColor: '#be1622' }}>
-        <div className="flex flex-col h-full p-6">
+        <div className="flex flex-col h-full p-6 pt-20">
           {/* Ilustración en desktop (sin logo) */}
           <div className="mb-8 flex flex-col items-center">
             {/* Solo ilustración en desktop */}
