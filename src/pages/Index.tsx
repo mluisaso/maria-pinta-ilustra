@@ -145,7 +145,7 @@ const Index = () => {
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={section.id} className="space-y-4">
               {/* Section Title - visible on all screen sizes */}
-              <h2 className="text-lg font-semibold text-black text-left font-poppins border-b-4 border-[#be1622] pb-2 w-full">
+              <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
                 {section.title}
               </h2>
 
