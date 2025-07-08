@@ -136,16 +136,16 @@ const Index = () => {
         </div>
 
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
-        <div className="w-full mb-16 md:mb-16 -mx-4 md:-mx-64">
+        <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64">
           <LottieAnimation className="w-full h-auto" />
         </div>
 
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
-            <div key={section.id} id={section.id} className="space-y-4">
+            <div key={section.id} className="space-y-4">
               {/* Section Title - visible on all screen sizes */}
-              <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
+              <h2 id={section.id} className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
                 {section.title}
               </h2>
 
