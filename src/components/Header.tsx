@@ -119,7 +119,7 @@ const Header: React.FC = () => {
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
         <div className="flex flex-col items-center space-y-4">
           {/* Ilustración arriba */}
-          <div className="w-20">
+          <div className="w-32 flex justify-center">
             <img 
               src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
               alt="Ilustración Mariatepinta" 
