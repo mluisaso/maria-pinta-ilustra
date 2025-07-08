@@ -110,7 +110,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-40 md:pt-0">
+    <div className="min-h-screen bg-white md:pr-64 pt-48 md:pt-0">
       <Header />
 
       {/* Hero Section */}
@@ -133,8 +133,8 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={section.id} className="space-y-4">
-              {/* Section Title - only visible on mobile */}
-              <h2 className="text-lg font-normal text-black text-left font-poppins block md:hidden">
+              {/* Section Title - visible on all screen sizes */}
+              <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
                 {section.title}
               </h2>
 

@@ -77,12 +77,14 @@ const Header: React.FC = () => {
               
               {/* Submenu siempre visible */}
               <div className="mt-2 ml-4 space-y-3">
-                <Link
-                  to="/bendita-rutina"
+                <a
+                  href="https://www.instagram.com/benditarrutina/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-white/90 hover:text-white transition-colors text-sm"
                 >
                   Bendita Rutina
-                </Link>
+                </a>
               </div>
             </div>
             
@@ -114,28 +116,39 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Version - Header más alto */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-10" style={{ backgroundColor: '#be1622' }}>
-        <div className="flex items-center justify-between">
-          {/* Solo logo centrado en móvil, mucho más grande */}
-          <div className="flex-1 flex justify-center">
-            <Link to="/">
-              <div className="w-32">
-                <img 
-                  src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
-                  alt="Mariatepinta" 
-                  className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
-                />
-              </div>
-            </Link>
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
+        <div className="flex flex-col items-center space-y-4">
+          {/* Ilustración arriba */}
+          <div className="w-20">
+            <img 
+              src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
+              alt="Ilustración Mariatepinta" 
+              className="w-full h-auto object-contain"
+            />
           </div>
           
-          {/* Menú hamburguesa */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white p-2"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Logo más grande */}
+          <div className="flex items-center justify-between w-full">
+            <div className="flex-1 flex justify-center">
+              <Link to="/">
+                <div className="w-40">
+                  <img 
+                    src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
+                    alt="Mariatepinta" 
+                    className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                  />
+                </div>
+              </Link>
+            </div>
+          
+            {/* Menú hamburguesa */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white p-2"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
         
         {/* Menú desplegable móvil */}
@@ -160,13 +173,15 @@ const Header: React.FC = () => {
               
               <div className="text-white font-normal text-lg">MI ALTER EGO</div>
               <div className="ml-4 space-y-2">
-                <Link 
-                  to="/bendita-rutina"
+                <a 
+                  href="https://www.instagram.com/benditarrutina/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-white/90 hover:text-white transition-colors text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Bendita Rutina
-                </Link>
+                </a>
               </div>
               
               <Link 
