@@ -117,38 +117,26 @@ const Header: React.FC = () => {
 
       {/* Mobile Version - Header más alto */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
-        <div className="flex flex-col items-center space-y-4">
-          {/* Ilustración arriba */}
-          <div className="w-32 flex justify-center">
-            <img 
-              src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
-              alt="Ilustración Mariatepinta" 
-              className="w-full h-auto object-contain"
-            />
+        <div className="flex items-center justify-center w-full">
+          <div className="flex-1 flex justify-center">
+            <Link to="/">
+              <div className="w-40">
+                <img 
+                  src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
+                  alt="Mariatepinta" 
+                  className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </div>
+            </Link>
           </div>
-          
-          {/* Logo más grande */}
-          <div className="flex items-center justify-between w-full">
-            <div className="flex-1 flex justify-center">
-              <Link to="/">
-                <div className="w-40">
-                  <img 
-                    src="/lovable-uploads/84f0becf-8cb0-4c0e-9769-54240476447c.png" 
-                    alt="Mariatepinta" 
-                    className="w-full h-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
-                  />
-                </div>
-              </Link>
-            </div>
-          
-            {/* Menú hamburguesa */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white p-2"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+        
+          {/* Menú hamburguesa */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-2"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
         
         {/* Menú desplegable móvil */}
