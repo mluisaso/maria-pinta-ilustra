@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Index = () => {
+  const navigate = useNavigate();
+  const [showFloatingButton, setShowFloatingButton] = useState(false);
+
+  // Detectar scroll para mostrar el botón flotante
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setShowFloatingButton(scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Todas las imágenes del portfolio organizadas por categorías
   const portfolioSections = [
     {
@@ -120,9 +135,28 @@ const Index = () => {
     }
   };
 
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-48 md:pt-0">
       <Header />
+
+      {/* Floating Contact Button - Solo desktop */}
+      <div className={`fixed left-6 top-24 z-50 hidden md:block transition-all duration-500 ease-out ${
+        showFloatingButton 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 -translate-y-4 pointer-events-none'
+      }`}>
+        <button
+          onClick={handleContactClick}
+          className="w-16 h-16 bg-[#be1622] rounded-full flex items-center justify-center text-white font-poppins font-medium text-sm shadow-lg hover:bg-[#a01420] hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+          aria-label="Ir a contacto"
+        >
+          ¡Hola!
+        </button>
+      </div>
 
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-4 md:pt-20 pb-12">
