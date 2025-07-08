@@ -124,8 +124,8 @@ const Index = () => {
           />
         </div>
 
-        {/* Lottie Animation - mismo ancho que las filas de cards */}
-        <div className="w-full max-w-6xl mx-auto px-4 md:px-8 mb-16 md:mb-16">
+        {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
+        <div className="w-full mb-16 md:mb-16 -mx-4 md:-mx-8">
           <LottieAnimation className="w-full h-auto" />
         </div>
 
