@@ -39,14 +39,14 @@ const Index = () => {
 
   // Todas las imágenes del portfolio organizadas por categorías
   const portfolioSections = [
-    {
-      id: 'editorial',
-      title: 'Editorial',
-      images: [
-        { src: '/lovable-uploads/8f39fdf2-d3ab-40a9-a4eb-770676d87907.png', title: 'Editorial', description: 'Narrativa visual' },
-        { src: '/lovable-uploads/9c384225-b123-4cd6-9d02-d69a3e27c8c6.png', title: 'Editorial', description: 'Historias ilustradas' },
-        { src: '/lovable-uploads/c1b1a71b-7bb3-4047-963b-69928a6f0951.png', title: 'Editorial', description: 'Páginas con alma' },
-        { src: '/lovable-uploads/e05faa9f-a8c8-4bba-bbc1-25f4a5fcee12.png', title: 'Editorial', description: 'Literatura visual' },
+      {
+        id: 'editorial',
+        title: 'Editorial',
+        images: [
+          { src: '/lovable-uploads/8f39fdf2-d3ab-40a9-a4eb-770676d87907.png', title: 'Cosmopolitan', description: '' },
+          { src: '/lovable-uploads/9c384225-b123-4cd6-9d02-d69a3e27c8c6.png', title: 'Telva', description: '' },
+          { src: '/lovable-uploads/c1b1a71b-7bb3-4047-963b-69928a6f0951.png', title: 'Buenavida, El País', description: '' },
+          { src: '/lovable-uploads/e05faa9f-a8c8-4bba-bbc1-25f4a5fcee12.png', title: 'Venca', description: '' },
         { src: '/lovable-uploads/4ea5836b-5421-4c44-a53a-90749dcc2cad.png', title: 'Editorial', description: 'Cuentos dibujados' },
         { src: '/lovable-uploads/4073dda1-49a8-4fd0-85ac-5e890e4342e8.png', title: 'Editorial', description: 'Mundos ilustrados' },
         { src: '/lovable-uploads/fe4b1e8c-394b-48c3-a4d2-a8f0bd0baeb8.png', title: 'Editorial', description: 'Narrativa visual' },
@@ -197,8 +197,8 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} className="space-y-4">
-              {/* Section Title - visible on all screen sizes */}
-              <h2 id={section.id} className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
+              {/* Section Title - visible on desktop only */}
+              <h2 id={section.id} className="hidden md:block text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
                 {section.title}
               </h2>
 
@@ -236,8 +236,8 @@ const Index = () => {
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                               <div className="p-4 max-w-xs text-center">
-                                <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                <p className="text-sm text-black/70">{image.description}</p>
+                                 <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                 {section.id !== 'editorial' && <p className="text-sm text-black/70">{image.description}</p>}
                               </div>
                             </div>
                           </div>
@@ -254,17 +254,22 @@ const Index = () => {
                   open={openSections[section.id]}
                   onOpenChange={() => toggleSection(section.id)}
                 >
-                  <CollapsibleTrigger className="flex items-center justify-between w-full p-2 -mt-2 mb-2">
-                    <span className="sr-only">
-                      {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
-                    </span>
-                    <ChevronDown 
-                      size={20} 
-                      className={`text-[#be1622] transition-transform duration-200 ${
-                        openSections[section.id] ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </CollapsibleTrigger>
+                  <div className="flex items-center justify-between mb-2">
+                    <h2 className="text-lg font-normal text-black font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4 flex-1">
+                      {section.title}
+                    </h2>
+                    <CollapsibleTrigger className="p-2">
+                      <span className="sr-only">
+                        {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
+                      </span>
+                      <ChevronDown 
+                        size={20} 
+                        className={`text-[#be1622] transition-transform duration-200 ${
+                          openSections[section.id] ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </CollapsibleTrigger>
+                  </div>
                   
                   <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                     <div className="grid grid-cols-2 gap-1">
@@ -279,8 +284,8 @@ const Index = () => {
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                               <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                 <div className="p-4 max-w-xs text-center">
-                                  <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                  <p className="text-sm text-black/70">{image.description}</p>
+                                   <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                   {section.id !== 'editorial' && <p className="text-sm text-black/70">{image.description}</p>}
                                 </div>
                               </div>
                             </div>
