@@ -7,7 +7,7 @@ interface LottieAnimationProps {
 }
 
 const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "" }) => {
-  const animationUrl = 'https://lottie.host/8d1c71a2-7d0b-4383-b1e2-fd8f12a416a3/Co9ewEeXFk.json';
+  const animationUrl = 'https://lottie.host/957340c6-76c6-4058-9d0b-3d5529dc779f/VJhR8RxEg0.json';
 
   return (
     <div className={`${className} flex items-center justify-center`}>
