@@ -60,6 +60,13 @@ const Index = () => {
         { src: '/lovable-uploads/c156198e-405c-4268-b9e5-175b7f575677.png', title: 'Las estrellitas de Malekin', description: 'Libro infantil' },
         { src: '/lovable-uploads/47188929-30bb-4254-b206-adca732a6331.png', title: 'Alois', description: 'Libro ilustrado' },
         { src: '/lovable-uploads/2fc5a8a3-e9f5-4c46-bf37-5e8be56aabab.png', title: 'Banco Santander', description: '' },
+        { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Armonía de Hogar' },
+        { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Equidieta' },
+        { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Estrés oxidativo' },
+        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'La macrobiota' },
+        { src: '/lovable-uploads/8e717832-7494-49ab-9f14-6638e7bebc41.png', title: 'Banco Santander', description: '' },
+        { src: '/lovable-uploads/de6dafae-05d9-4ee9-8104-1a5df337ca2d.png', title: 'Banco Santander', description: '' },
+        { src: '/lovable-uploads/48ca83aa-8f43-4bb8-a9e6-c5144db9efb9.png', title: 'Banco Santander', description: '' },
       ]
     },
     {
