@@ -88,12 +88,14 @@ const Header: React.FC = () => {
               </div>
             </div>
             
-            <Link 
-              to="/contact"
+            <a 
+              href="/contact"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
             >
               ¡HOLA!
-            </Link>
+            </a>
           </nav>
 
           {/* Redes sociales */}
@@ -180,13 +182,15 @@ const Header: React.FC = () => {
                 </a>
               </div>
               
-              <Link 
-                to="/contact"
+              <a 
+                href="/contact"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 ¡HOLA!
-              </Link>
+              </a>
               
               {/* Redes sociales en móvil - alineadas a la izquierda */}
               <div className="flex space-x-4 pt-4">
