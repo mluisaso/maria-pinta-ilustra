@@ -4,13 +4,11 @@ import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../components/ui/collapsible";
-import ContactModal from '../components/ContactModal';
 
 const Index = () => {
   const navigate = useNavigate();
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   // Initialize all sections as open
   useEffect(() => {
@@ -41,22 +39,46 @@ const Index = () => {
 
   // Todas las imágenes del portfolio organizadas por categorías
   const portfolioSections = [
-      {
-        id: 'editorial',
-        title: 'Editorial',
-        images: [
-          { src: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&h=300&fit=crop', title: 'Placeholder 1', description: '' },
-          { src: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=300&h=300&fit=crop', title: 'Placeholder 2', description: '' },
-          { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=300&fit=crop', title: 'Placeholder 3', description: '' }
+    {
+      id: 'editorial',
+      title: 'Editorial',
+      images: [
+        { src: '/lovable-uploads/8f39fdf2-d3ab-40a9-a4eb-770676d87907.png', title: 'Editorial', description: 'Narrativa visual' },
+        { src: '/lovable-uploads/9c384225-b123-4cd6-9d02-d69a3e27c8c6.png', title: 'Editorial', description: 'Historias ilustradas' },
+        { src: '/lovable-uploads/c1b1a71b-7bb3-4047-963b-69928a6f0951.png', title: 'Editorial', description: 'Páginas con alma' },
+        { src: '/lovable-uploads/e05faa9f-a8c8-4bba-bbc1-25f4a5fcee12.png', title: 'Editorial', description: 'Literatura visual' },
+        { src: '/lovable-uploads/4ea5836b-5421-4c44-a53a-90749dcc2cad.png', title: 'Editorial', description: 'Cuentos dibujados' },
+        { src: '/lovable-uploads/4073dda1-49a8-4fd0-85ac-5e890e4342e8.png', title: 'Editorial', description: 'Mundos ilustrados' },
+        { src: '/lovable-uploads/fe4b1e8c-394b-48c3-a4d2-a8f0bd0baeb8.png', title: 'Editorial', description: 'Narrativa visual' },
+        { src: '/lovable-uploads/335c11ff-b9b6-48a5-a941-4256a21d6b34.png', title: 'Editorial', description: 'Historias ilustradas' },
+        { src: '/lovable-uploads/382edbb9-3dff-4d92-b5ed-8dab10fc76d7.png', title: 'Editorial', description: 'Páginas con alma' },
+        { src: '/lovable-uploads/5662438c-47c4-40e3-b11a-89a9ef11cc8f.png', title: 'Editorial', description: 'Literatura visual' },
       ]
     },
     {
       id: 'infantil',
       title: 'Infantil',
       images: [
-        { src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=300&fit=crop', title: 'Placeholder 1', description: 'Imagen temporal' },
-        { src: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=300&h=300&fit=crop', title: 'Placeholder 2', description: 'Imagen temporal' },
-        { src: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=300&fit=crop', title: 'Placeholder 3', description: 'Imagen temporal' }
+        { src: '/lovable-uploads/9bd32076-a65b-406d-ab49-18cef19f7bf8.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/79ee57e3-9840-49f9-93fe-dee7ce32eb1a.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/e442ad7c-c1ec-4ae6-be7f-1df559903532.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/f912a082-1ad7-45d4-8f63-4e84354ccdc8.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/d6b0ca1a-d20e-48e2-bead-d4b8d67ef67e.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/e21d6183-5c61-483a-9ba3-70ee5a0f87c4.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/4dff3c5d-06e5-4a8b-aac2-51e5ed2f3bcf.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/f2935822-cd37-4cbe-9e38-b97bbbf701b1.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/5edca1f5-e1c4-4658-b640-b5dfadfd1c71.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/d2de8bfa-c7e3-4b74-aded-0e1aaa60e368.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/356fdd84-a0c1-4420-a4e6-50b389818aff.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/2ddfb707-ce87-43f9-937d-8e1523a17c19.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/28e4e61d-852c-4e0c-ac6e-16d326a572de.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/e2573526-5c53-4a48-9727-af5a45878642.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/5bd218db-aa39-41b4-8790-601df714af23.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/58be4680-6fab-4334-846d-bd0a6dd395fc.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/814fe137-2633-47e6-9948-7876b20108c0.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/a7feb34d-50a3-4ef8-82af-fc916d2cc2cd.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/c3083f1d-74ca-4768-9190-b771d0518660.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/5197131f-8534-4001-9d3e-7d6858c25884.png', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
       ]
     },
     {
@@ -166,16 +188,6 @@ const Index = () => {
           />
         </div>
 
-        {/* Circle ¡Hola! button - only desktop */}
-        <div className="hidden md:flex absolute right-80 top-1/2 transform -translate-y-1/2 z-20">
-          <div 
-            className="bg-red-600 text-white rounded-full w-32 h-32 flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors shadow-lg"
-            onClick={() => setIsContactModalOpen(true)}
-          >
-            <span className="text-lg font-bold">¡Hola!</span>
-          </div>
-        </div>
-
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
         <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64">
           <LottieAnimation className="w-full h-auto" />
@@ -185,8 +197,8 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} className="space-y-4">
-              {/* Section Title - visible on desktop only */}
-              <h2 id={section.id} className="hidden md:block text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
+              {/* Section Title - visible on all screen sizes */}
+              <h2 id={section.id} className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
                 {section.title}
               </h2>
 
@@ -224,8 +236,8 @@ const Index = () => {
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                               <div className="p-4 max-w-xs text-center">
-                                 <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                 {section.id !== 'editorial' && <p className="text-sm text-black/70">{image.description}</p>}
+                                <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                <p className="text-sm text-black/70">{image.description}</p>
                               </div>
                             </div>
                           </div>
@@ -242,22 +254,17 @@ const Index = () => {
                   open={openSections[section.id]}
                   onOpenChange={() => toggleSection(section.id)}
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <h2 className="text-lg font-normal text-black font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4 flex-1">
-                      {section.title}
-                    </h2>
-                    <CollapsibleTrigger className="p-2">
-                      <span className="sr-only">
-                        {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
-                      </span>
-                      <ChevronDown 
-                        size={20} 
-                        className={`text-[#be1622] transition-transform duration-200 ${
-                          openSections[section.id] ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </CollapsibleTrigger>
-                  </div>
+                  <CollapsibleTrigger className="flex items-center justify-between w-full p-2 -mt-2 mb-2">
+                    <span className="sr-only">
+                      {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
+                    </span>
+                    <ChevronDown 
+                      size={20} 
+                      className={`text-[#be1622] transition-transform duration-200 ${
+                        openSections[section.id] ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </CollapsibleTrigger>
                   
                   <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                     <div className="grid grid-cols-2 gap-1">
@@ -272,8 +279,8 @@ const Index = () => {
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                               <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                 <div className="p-4 max-w-xs text-center">
-                                   <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                   {section.id !== 'editorial' && <p className="text-sm text-black/70">{image.description}</p>}
+                                  <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                  <p className="text-sm text-black/70">{image.description}</p>
                                 </div>
                               </div>
                             </div>
@@ -294,12 +301,6 @@ const Index = () => {
           display: none;
         }
       `}</style>
-
-      {/* Contact Modal */}
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={() => setIsContactModalOpen(false)} 
-      />
     </div>
   );
 };
