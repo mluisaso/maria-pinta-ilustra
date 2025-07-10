@@ -60,8 +60,8 @@ const Index = () => {
         { src: '/lovable-uploads/c156198e-405c-4268-b9e5-175b7f575677.png', title: 'Las estrellitas de Malekin', description: 'Libro infantil' },
         { src: '/lovable-uploads/47188929-30bb-4254-b206-adca732a6331.png', title: 'Alois', description: 'Libro ilustrado' },
         { src: '/lovable-uploads/2fc5a8a3-e9f5-4c46-bf37-5e8be56aabab.png', title: 'Banco Santander', description: '' },
-        { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Armonía de Hogar' },
-        { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Equidieta' },
+        { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Equidieta' },
+        { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Armonía de Hogar' },
         { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Estrés oxidativo' },
         { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'La macrobiota' },
         { src: '/lovable-uploads/8e717832-7494-49ab-9f14-6638e7bebc41.png', title: 'Banco Santander', description: '' },
@@ -73,12 +73,16 @@ const Index = () => {
       id: 'infantil',
       title: 'Infantil',
       images: [
-        { src: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
-        { src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
-        { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
-        { src: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=500', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
-        { src: 'https://images.unsplash.com/photo-1555255707-c07966088b7b?w=500', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
-        { src: 'https://images.unsplash.com/photo-1551808525-51a94da548ce?w=500', title: 'Infantil', description: 'Cuadros, láminas y publicaciones' },
+        { src: '/lovable-uploads/16b71bc6-e77e-4c39-b5d6-c01bb272dd5c.png', title: '', description: '' },
+        { src: '/lovable-uploads/2247035a-f2a8-47ec-8acb-e86a76d7c8c2.png', title: '', description: '' },
+        { src: '/lovable-uploads/6f34d969-10be-4b2d-b4b5-7226766d3238.png', title: '', description: '' },
+        { src: '/lovable-uploads/e0e1331f-023b-4c56-8217-292ec90afb7a.png', title: '', description: '' },
+        { src: '/lovable-uploads/46eb03b3-43d3-4e91-aa2c-bc302afb974d.png', title: '', description: '' },
+        { src: '/lovable-uploads/ee0795ab-d68e-4944-8626-90283bee013a.png', title: '', description: '' },
+        { src: '/lovable-uploads/d7ebac4b-8956-41d9-860a-3428aba5baf1.png', title: '', description: '' },
+        { src: '/lovable-uploads/273877fe-4229-408e-a266-9ca348799652.png', title: '', description: '' },
+        { src: '/lovable-uploads/9111f584-d8c5-4127-a2ea-943c83abec57.png', title: '', description: '' },
+        { src: '/lovable-uploads/93769978-c658-47ca-8eb1-f3ade0f9a771.png', title: '', description: '' },
       ]
     },
     {
@@ -243,14 +247,16 @@ const Index = () => {
                               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                             />
                           )}
-                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
-                              <div className="p-4 max-w-xs text-center">
-                                <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                <p className="text-sm text-black/70">{image.description}</p>
-                              </div>
-                            </div>
-                          </div>
+                           {section.id !== 'infantil' && (
+                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                               <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
+                                 <div className="p-4 max-w-xs text-center">
+                                   <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                   <p className="text-sm text-black/70">{image.description}</p>
+                                 </div>
+                               </div>
+                             </div>
+                           )}
                         </div>
                       </div>
                     ))}
@@ -293,14 +299,16 @@ const Index = () => {
                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                               />
                             )}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                              <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
-                                <div className="p-4 max-w-xs text-center">
-                                  <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                  <p className="text-sm text-black/70">{image.description}</p>
-                                </div>
-                              </div>
-                            </div>
+                             {section.id !== 'infantil' && (
+                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
+                                   <div className="p-4 max-w-xs text-center">
+                                     <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                     <p className="text-sm text-black/70">{image.description}</p>
+                                   </div>
+                                 </div>
+                               </div>
+                             )}
                           </div>
                         </div>
                       ))}
