@@ -103,17 +103,14 @@ const Index = () => {
     },
     {
       id: 'ia',
-      title: 'IA',
+      title: 'Personalización con IA',
       images: [
-        { src: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500', title: 'IA', description: 'Robots con personalidad' },
-        { src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500', title: 'IA', description: 'Futuro dibujado a mano' },
-        { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500', title: 'IA', description: 'Tecnología humanizada' },
-        { src: 'https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=500', title: 'IA', description: 'Ciencia ficción' },
-        { src: 'https://images.unsplash.com/photo-1555255707-c07966088b7b?w=500', title: 'IA', description: 'Inteligencia visual' },
-        { src: 'https://images.unsplash.com/photo-1551808525-51a94da548ce?w=500', title: 'IA', description: 'Mundo digital' },
-        { src: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500', title: 'IA', description: 'Robots con personalidad' },
-        { src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500', title: 'IA', description: 'Futuro dibujado a mano' },
-        { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500', title: 'IA', description: 'Tecnología humanizada' },
+        { src: '/lovable-uploads/bab3a667-ae55-4bf3-b15f-69b09134d712.png', title: 'IA', description: 'Robots con personalidad' },
+        { src: '/lovable-uploads/f24ba6cd-1c32-432a-b26a-77d93a529259.png', title: 'IA', description: 'Futuro dibujado a mano' },
+        { src: '/lovable-uploads/950c5cba-5c71-4bd4-9dbe-92bf9378cc03.png', title: 'IA', description: 'Tecnología humanizada' },
+        { src: '/lovable-uploads/a9e262e4-7fa1-4a72-88b1-d333da84764c.png', title: 'IA', description: 'Ciencia ficción' },
+        { src: '/lovable-uploads/ff564f31-ef86-44b1-8029-f9c718cb089e.png', title: 'IA', description: 'Inteligencia visual' },
+        { src: '/lovable-uploads/eb48130d-d8df-4b7f-a088-dd618e939fc2.png', title: 'IA', description: 'Mundo digital' },
       ]
     },
     {
