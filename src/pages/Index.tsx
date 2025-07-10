@@ -50,12 +50,16 @@ const Index = () => {
       id: 'editorial',
       title: 'Editorial',
       images: [
-        { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500', title: 'Editorial', description: 'Narrativa visual' },
-        { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', title: 'Editorial', description: 'Historias ilustradas' },
-        { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500', title: 'Editorial', description: 'Páginas con alma' },
-        { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Editorial', description: 'Literatura visual' },
-        { src: 'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?w=500', title: 'Editorial', description: 'Cuentos dibujados' },
-        { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500', title: 'Editorial', description: 'Mundos ilustrados' },
+        { src: '/lovable-uploads/9215e25a-a54a-4515-892f-3508fcba19c2.png', title: 'Cosmpolitan', description: '' },
+        { src: '/lovable-uploads/a87ac013-0aec-48a1-a067-4ffa4d6906e6.png', title: 'Buenavida', description: 'El País' },
+        { src: '/lovable-uploads/fe5a575c-bbd6-4738-a9ae-7409a7c81bda.png', title: 'Renfe', description: '' },
+        { src: '/lovable-uploads/40bddeb8-fe16-4370-96ac-4337ad6cfd4a.png', title: 'Telva', description: '' },
+        { src: '/lovable-uploads/2553f794-e0ab-4c19-a506-864771b8628e.png', title: 'Lifestyle', description: 'La Razón' },
+        { src: '/lovable-uploads/c30215de-34e4-488b-bcb3-6895af63ea01.png', title: 'Lifestyle', description: 'La Razón' },
+        { src: '/lovable-uploads/c3293026-934e-46b8-97ae-87426fa24f74.png', title: 'Cosmopolitan', description: '' },
+        { src: '/lovable-uploads/c156198e-405c-4268-b9e5-175b7f575677.png', title: 'Las estrellitas de Malekin', description: 'Libro infantil' },
+        { src: '/lovable-uploads/47188929-30bb-4254-b206-adca732a6331.png', title: 'Alois', description: 'Libro ilustrado' },
+        { src: '/lovable-uploads/2fc5a8a3-e9f5-4c46-bf37-5e8be56aabab.png', title: 'Banco Santander', description: '' },
       ]
     },
     {
@@ -107,14 +111,14 @@ const Index = () => {
         { 
           type: 'lottie', 
           src: 'https://lottie.host/d621c91a-d410-45a2-873d-258fe7517caf/TQ1MQIWlDj.json', 
-          title: 'Animación Corporativa', 
-          description: 'Contenido animado para tu marca' 
+          title: 'Firma animada', 
+          description: 'Correos personalizados' 
         },
         { 
           type: 'lottie', 
           src: 'https://lottie.host/35cee8a6-3c2b-4d7e-9361-53a2955bcbd8/S3eks5Jr7X.json', 
-          title: 'Storytelling Visual', 
-          description: 'Narrativas animadas únicas' 
+          title: 'Firma animada', 
+          description: 'Correos personalizados' 
         },
       ]
     },
