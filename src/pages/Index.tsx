@@ -60,10 +60,10 @@ const Index = () => {
         { src: '/lovable-uploads/c156198e-405c-4268-b9e5-175b7f575677.png', title: 'Las estrellitas de Malekin', description: 'Libro infantil' },
         { src: '/lovable-uploads/47188929-30bb-4254-b206-adca732a6331.png', title: 'Alois', description: 'Libro ilustrado' },
         { src: '/lovable-uploads/2fc5a8a3-e9f5-4c46-bf37-5e8be56aabab.png', title: 'Banco Santander', description: '' },
+        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'La macrobiota' },
         { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Equidieta' },
         { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Armonía de Hogar' },
         { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Estrés oxidativo' },
-        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'La macrobiota' },
         { src: '/lovable-uploads/8e717832-7494-49ab-9f14-6638e7bebc41.png', title: 'Banco Santander', description: '' },
         { src: '/lovable-uploads/de6dafae-05d9-4ee9-8104-1a5df337ca2d.png', title: 'Banco Santander', description: '' },
         { src: '/lovable-uploads/48ca83aa-8f43-4bb8-a9e6-c5144db9efb9.png', title: 'Banco Santander', description: '' },
@@ -89,15 +89,16 @@ const Index = () => {
       id: 'vinetas',
       title: 'Viñetas',
       images: [
-        { src: 'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?w=500', title: 'Viñeta', description: 'Una historia dibujada con gracia' },
-        { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500', title: 'Viñeta', description: 'Momentos cotidianos con humor' },
-        { src: 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=500', title: 'Viñeta', description: 'Expresiones que hablan solas' },
-        { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500', title: 'Viñeta', description: 'Humor gráfico' },
-        { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Viñeta', description: 'Reflexiones visuales' },
-        { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', title: 'Viñeta', description: 'Historias cortas' },
-        { src: 'https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?w=500', title: 'Viñeta', description: 'Una historia dibujada con gracia' },
-        { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500', title: 'Viñeta', description: 'Momentos cotidianos con humor' },
-        { src: 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=500', title: 'Viñeta', description: 'Expresiones que hablan solas' },
+        { src: '/lovable-uploads/af6fe3e8-731b-42cc-916f-ec30191c88f2.png', title: '', description: '' },
+        { src: '/lovable-uploads/43b7775c-5b62-4e2e-9bb9-29005cb6c74f.png', title: '', description: '' },
+        { src: '/lovable-uploads/be52a4a3-d4f6-49dc-9bbe-2eeb96b6ebf2.png', title: '', description: '' },
+        { src: '/lovable-uploads/af6f2cdc-cd6a-444e-a85f-20414dd904f0.png', title: '', description: '' },
+        { src: '/lovable-uploads/652b5821-7047-496d-940c-19b294d72e9d.png', title: '', description: '' },
+        { src: '/lovable-uploads/3764098a-b9ec-49a6-9bfb-09ebf115315a.png', title: '', description: '' },
+        { src: '/lovable-uploads/91412baa-26aa-4773-8624-16f876fcf788.png', title: '', description: '' },
+        { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '' },
+        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
+        { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '' },
       ]
     },
     {
@@ -247,7 +248,7 @@ const Index = () => {
                               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                             />
                           )}
-                           {section.id !== 'infantil' && (
+                           {section.id !== 'infantil' && section.id !== 'vinetas' && (
                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                  <div className="p-4 max-w-xs text-center">
@@ -299,7 +300,7 @@ const Index = () => {
                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                               />
                             )}
-                             {section.id !== 'infantil' && (
+                             {section.id !== 'infantil' && section.id !== 'vinetas' && (
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                    <div className="p-4 max-w-xs text-center">
