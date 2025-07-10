@@ -60,12 +60,12 @@ const Index = () => {
         { src: '/lovable-uploads/c156198e-405c-4268-b9e5-175b7f575677.png', title: 'Las estrellitas de Malekin', description: 'Libro infantil' },
         { src: '/lovable-uploads/47188929-30bb-4254-b206-adca732a6331.png', title: 'Alois', description: 'Libro ilustrado' },
         { src: '/lovable-uploads/2fc5a8a3-e9f5-4c46-bf37-5e8be56aabab.png', title: 'Banco Santander', description: '' },
-        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'La macrobiota' },
+        { src: '/lovable-uploads/de6dafae-05d9-4ee9-8104-1a5df337ca2d.png', title: 'Banco Santander', description: '' },
         { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Equidieta' },
         { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Armonía de Hogar' },
         { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Estrés oxidativo' },
+        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'La macrobiota' },
         { src: '/lovable-uploads/8e717832-7494-49ab-9f14-6638e7bebc41.png', title: 'Banco Santander', description: '' },
-        { src: '/lovable-uploads/de6dafae-05d9-4ee9-8104-1a5df337ca2d.png', title: 'Banco Santander', description: '' },
         { src: '/lovable-uploads/48ca83aa-8f43-4bb8-a9e6-c5144db9efb9.png', title: 'Banco Santander', description: '' },
       ]
     },
@@ -102,6 +102,20 @@ const Index = () => {
       ]
     },
     {
+      id: 'team-building',
+      title: 'Para tu marca',
+      images: [
+        { src: '/lovable-uploads/316fa1c4-0611-4fb8-b240-fa6e0c025a61.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/fab72f2e-11bb-4fea-8e5c-d403f4f617d5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/854602ed-4c4b-4b2f-ad85-dea3fffc16be.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/127badf1-9cf3-4f2b-9484-24eca5ac41b3.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+      ]
+    },
+    {
       id: 'ia',
       title: 'Personalización con IA',
       images: [
@@ -111,24 +125,6 @@ const Index = () => {
         { src: '/lovable-uploads/a9e262e4-7fa1-4a72-88b1-d333da84764c.png', title: 'IA', description: 'Ciencia ficción' },
         { src: '/lovable-uploads/ff564f31-ef86-44b1-8029-f9c718cb089e.png', title: 'IA', description: 'Inteligencia visual' },
         { src: '/lovable-uploads/eb48130d-d8df-4b7f-a088-dd618e939fc2.png', title: 'IA', description: 'Mundo digital' },
-      ]
-    },
-    {
-      id: 'team-building',
-      title: 'Para tu marca',
-      images: [
-        { 
-          type: 'lottie', 
-          src: 'https://lottie.host/d621c91a-d410-45a2-873d-258fe7517caf/TQ1MQIWlDj.json', 
-          title: 'Firma animada', 
-          description: 'Correos personalizados' 
-        },
-        { 
-          type: 'lottie', 
-          src: 'https://lottie.host/35cee8a6-3c2b-4d7e-9361-53a2955bcbd8/S3eks5Jr7X.json', 
-          title: 'Firma animada', 
-          description: 'Correos personalizados' 
-        },
       ]
     },
     {
