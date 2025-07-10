@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Linkedin, Menu, X } from 'lucide-react';
+import ContactModal from './ContactModal';
 
 const Header: React.FC = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
@@ -88,13 +90,12 @@ const Header: React.FC = () => {
               </div>
             </div>
             
-            <Link 
-              to="/contact"
-              target="_blank"
+            <button
+              onClick={() => setIsContactModalOpen(true)}
               className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
             >
               ¡HOLA!
-            </Link>
+            </button>
           </nav>
 
           {/* Redes sociales */}
@@ -181,14 +182,15 @@ const Header: React.FC = () => {
                 </a>
               </div>
               
-              <Link 
-                to="/contact"
-                target="_blank"
+              <button
+                onClick={() => {
+                  setIsContactModalOpen(true);
+                  setIsMobileMenuOpen(false);
+                }}
                 className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 ¡HOLA!
-              </Link>
+              </button>
               
               {/* Redes sociales en móvil - alineadas a la izquierda */}
               <div className="flex space-x-4 pt-4">
@@ -210,6 +212,12 @@ const Header: React.FC = () => {
           </div>
         )}
       </div>
+      
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </>
   );
 };
