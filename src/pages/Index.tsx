@@ -4,11 +4,13 @@ import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../components/ui/collapsible";
+import AboutPopup from '../components/AboutPopup';
 
 const Index = () => {
   const navigate = useNavigate();
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
+  const [isAboutPopupOpen, setIsAboutPopupOpen] = useState(false);
 
   // Initialize all sections as open
   useEffect(() => {
@@ -188,6 +190,16 @@ const Index = () => {
           />
         </div>
 
+        {/* Circle ¡Hola! button - only desktop */}
+        <div className="hidden md:flex absolute right-80 top-1/2 transform -translate-y-1/2 z-20">
+          <div 
+            className="bg-red-600 text-white rounded-full w-32 h-32 flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors shadow-lg"
+            onClick={() => setIsAboutPopupOpen(true)}
+          >
+            <span className="text-lg font-bold">¡Hola!</span>
+          </div>
+        </div>
+
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
         <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64">
           <LottieAnimation className="w-full h-auto" />
@@ -306,6 +318,12 @@ const Index = () => {
           display: none;
         }
       `}</style>
+
+      {/* About Popup */}
+      <AboutPopup 
+        isOpen={isAboutPopupOpen} 
+        onClose={() => setIsAboutPopupOpen(false)} 
+      />
     </div>
   );
 };

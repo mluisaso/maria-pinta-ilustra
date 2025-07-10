@@ -90,6 +90,7 @@ const Header: React.FC = () => {
             
             <Link 
               to="/contact"
+              target="_blank"
               className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
             >
               ¡HOLA!
@@ -182,6 +183,7 @@ const Header: React.FC = () => {
               
               <Link 
                 to="/contact"
+                target="_blank"
                 className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
