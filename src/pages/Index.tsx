@@ -97,9 +97,9 @@ const Index = () => {
         { src: '/lovable-uploads/3764098a-b9ec-49a6-9bfb-09ebf115315a.png', title: '', description: '' },
         { src: '/lovable-uploads/91412baa-26aa-4773-8624-16f876fcf788.png', title: '', description: '' },
         { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '' },
-        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
         { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '' },
         { src: '/lovable-uploads/776614fa-73b7-4c84-95ef-61845f90a4d7.png', title: '', description: '' },
+        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
       ]
     },
     {
@@ -134,7 +134,7 @@ const Index = () => {
     const container = document.getElementById(containerId);
     if (container) {
       const canScrollLeft = container.scrollLeft > 0;
-      const canScrollRight = container.scrollLeft < (container.scrollWidth - container.clientWidth);
+      const canScrollRight = container.scrollLeft < (container.scrollWidth - container.clientWidth - 1); // -1 to handle rounding
       
       setScrollStates(prev => ({
         ...prev,
@@ -237,9 +237,65 @@ const Index = () => {
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} className="space-y-4">
               {/* Section Title - visible on all screen sizes */}
-              <h2 id={section.id} className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
+              <h2 id={section.id} className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4 md:block hidden">
                 {section.title}
               </h2>
+
+              {/* Mobile section title with inline collapsible arrow */}
+              <div className="md:hidden">
+                <Collapsible
+                  open={openSections[section.id]}
+                  onOpenChange={() => toggleSection(section.id)}
+                >
+                  <CollapsibleTrigger className="flex items-center w-full p-2 -mt-2 mb-2">
+                    <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
+                      {section.title}
+                    </h2>
+                    <ChevronDown 
+                      size={20} 
+                      className={`text-[#be1622] transition-transform duration-200 ml-2 ${
+                        openSections[section.id] ? 'rotate-180' : ''
+                      }`}
+                    />
+                    <span className="sr-only">
+                      {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
+                    </span>
+                  </CollapsibleTrigger>
+                  
+                  <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                    <div className="grid grid-cols-2 gap-1">
+                      {section.images.map((image, index) => (
+                        <div key={index} className="group cursor-pointer">
+                          <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                            {image.type === 'lottie' ? (
+                              <LottieAnimation 
+                                src={image.src}
+                                className="w-full h-full"
+                              />
+                            ) : (
+                              <img 
+                                src={image.src} 
+                                alt={image.title}
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              />
+                            )}
+                             {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
+                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
+                                   <div className="p-4 max-w-xs text-center">
+                                     <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                     <p className="text-sm text-black/70">{image.description}</p>
+                                   </div>
+                                 </div>
+                               </div>
+                             )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </div>
 
               {/* Desktop layout with horizontal scroll */}
               <div className="hidden md:block">
@@ -282,17 +338,17 @@ const Index = () => {
                               alt={image.title}
                               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                             />
-                          )}
-                           {section.id !== 'infantil' && section.id !== 'vinetas' && (
-                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                               <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
-                                 <div className="p-4 max-w-xs text-center">
-                                   <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                   <p className="text-sm text-black/70">{image.description}</p>
-                                 </div>
-                               </div>
-                             </div>
                            )}
+                            {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
+                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
+                                  <div className="p-4 max-w-xs text-center">
+                                    <h3 className="font-normal text-black mb-2">{image.title}</h3>
+                                    <p className="text-sm text-black/70">{image.description}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
                         </div>
                       </div>
                     ))}
@@ -300,58 +356,6 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Mobile layout with collapsible sections */}
-              <div className="md:hidden">
-                <Collapsible
-                  open={openSections[section.id]}
-                  onOpenChange={() => toggleSection(section.id)}
-                >
-                  <CollapsibleTrigger className="flex items-center justify-end w-full p-2 -mt-2 mb-2">
-                    <span className="sr-only">
-                      {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
-                    </span>
-                    <ChevronDown 
-                      size={20} 
-                      className={`text-[#be1622] transition-transform duration-200 ${
-                        openSections[section.id] ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </CollapsibleTrigger>
-                  
-                  <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                    <div className="grid grid-cols-2 gap-1">
-                      {section.images.map((image, index) => (
-                        <div key={index} className="group cursor-pointer">
-                          <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                            {image.type === 'lottie' ? (
-                              <LottieAnimation 
-                                src={image.src}
-                                className="w-full h-full"
-                              />
-                            ) : (
-                              <img 
-                                src={image.src} 
-                                alt={image.title}
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                              />
-                            )}
-                             {section.id !== 'infantil' && section.id !== 'vinetas' && (
-                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
-                                   <div className="p-4 max-w-xs text-center">
-                                     <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                     <p className="text-sm text-black/70">{image.description}</p>
-                                   </div>
-                                 </div>
-                               </div>
-                             )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CollapsibleContent>
-                </Collapsible>
-              </div>
             </div>
           ))}
         </div>
