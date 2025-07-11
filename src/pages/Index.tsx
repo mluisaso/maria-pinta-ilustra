@@ -233,7 +233,7 @@ const Index = () => {
         </div>
 
         {/* Portfolio Sections */}
-        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-12 md:space-y-8">
+        <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-4 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} className="space-y-4">
               {/* Section Title - visible on all screen sizes */}
@@ -248,15 +248,15 @@ const Index = () => {
                   onOpenChange={() => toggleSection(section.id)}
                 >
                   <CollapsibleTrigger className="flex items-center w-full p-2 -mt-2 mb-2">
-                    <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4">
-                      {section.title}
-                    </h2>
-                    <ChevronDown 
-                      size={20} 
-                      className={`text-[#be1622] transition-transform duration-200 ml-2 ${
-                        openSections[section.id] ? 'rotate-180' : ''
-                      }`}
-                    />
+                     <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4 inline">
+                       {section.title}
+                       <ChevronDown 
+                         size={20} 
+                         className={`text-[#be1622] transition-transform duration-200 ml-1 inline ${
+                           openSections[section.id] ? 'rotate-180' : ''
+                         }`}
+                       />
+                     </h2>
                     <span className="sr-only">
                       {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
                     </span>
