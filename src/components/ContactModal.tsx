@@ -90,10 +90,10 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         <div className="p-8 pt-12">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              ¡Hola! Soy Mària.
+              ¡Hola! Soy "Mària", no María. Es la forma corta de MariaLuisa.
             </h1>
             <p className="text-lg text-gray-600">
-              Ilustradora, creadora de mundos imposibles y especialista en dar vida a ideas raras. Si necesitas que algo cobre vida con un lápiz, estás en el lugar correcto.
+              Mis ilustraciones son originales y expresivas. Utilizo distintos estilos que se adaptan a un encargo personal o de empresa, pero sobre todo, ofrezco ideas. ¿No sabes muy bien lo que quieres? Estupendo, ahí empiezo yo. ¿Hablamos?
             </p>
           </div>
 

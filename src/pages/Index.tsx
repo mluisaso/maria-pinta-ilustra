@@ -105,7 +105,7 @@ const Index = () => {
       id: 'team-building',
       title: 'Para tu marca',
       images: [
-        { src: '/lovable-uploads/316fa1c4-0611-4fb8-b240-fa6e0c025a61.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/c6b5df98-2727-437c-9509-7a3a5cdf6ae0.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
@@ -127,21 +127,6 @@ const Index = () => {
         { src: '/lovable-uploads/eb48130d-d8df-4b7f-a088-dd618e939fc2.png', title: 'IA', description: 'Mundo digital' },
       ]
     },
-    {
-      id: 'visual-thinking',
-      title: 'Visual Thinking',
-      images: [
-        { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', title: 'Visual', description: 'Ideas complejas, dibujos simples' },
-        { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500', title: 'Visual', description: 'Conceptos visualizados' },
-        { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Visual', description: 'Pensamiento en imágenes' },
-        { src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500', title: 'Visual', description: 'Mapas conceptuales' },
-        { src: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500', title: 'Visual', description: 'Esquemas creativos' },
-        { src: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?w=500', title: 'Visual', description: 'Diagramas únicos' },
-        { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', title: 'Visual', description: 'Ideas complejas, dibujos simples' },
-        { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500', title: 'Visual', description: 'Conceptos visualizados' },
-        { src: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=500', title: 'Visual', description: 'Pensamiento en imágenes' },
-      ]
-    }
   ];
 
   const scrollHorizontal = (containerId: string, direction: 'left' | 'right') => {
@@ -181,12 +166,15 @@ const Index = () => {
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-4 md:pt-20 pb-12">
         {/* Logo - hidden on mobile */}
-        <div className="mb-8 hidden md:flex justify-center">
+        <div className="mb-8 hidden md:flex flex-col items-center justify-center">
           <img 
             src="/lovable-uploads/e27c95ab-eb40-4ab3-ac43-b70d39b9ed96.png" 
             alt="Mariatepinta" 
             className="h-auto w-64 lg:w-80"
           />
+          <p className="text-black font-poppins font-semibold text-lg mt-4">
+            Ilustro ideas.
+          </p>
         </div>
 
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
