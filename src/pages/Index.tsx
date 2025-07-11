@@ -16,6 +16,7 @@ const Index = () => {
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [scrollStates, setScrollStates] = useState<{ [key: string]: { canScrollLeft: boolean; canScrollRight: boolean } }>({});
 
   // Initialize all sections as open
   useEffect(() => {
@@ -63,10 +64,9 @@ const Index = () => {
         { src: '/lovable-uploads/de6dafae-05d9-4ee9-8104-1a5df337ca2d.png', title: 'Banco Santander', description: '' },
         { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Equidieta' },
         { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Armonía de Hogar' },
-        { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Estrés oxidativo' },
-        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'La macrobiota' },
+        { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Cómo llegar joven a viejo' },
+        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'Toma las riendas de tu salud' },
         { src: '/lovable-uploads/8e717832-7494-49ab-9f14-6638e7bebc41.png', title: 'Banco Santander', description: '' },
-        { src: '/lovable-uploads/48ca83aa-8f43-4bb8-a9e6-c5144db9efb9.png', title: 'Banco Santander', description: '' },
       ]
     },
     {
@@ -99,6 +99,7 @@ const Index = () => {
         { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '' },
         { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
         { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '' },
+        { src: '/lovable-uploads/776614fa-73b7-4c84-95ef-61845f90a4d7.png', title: '', description: '' },
       ]
     },
     {
@@ -129,6 +130,19 @@ const Index = () => {
     },
   ];
 
+  const checkScrollState = (containerId: string) => {
+    const container = document.getElementById(containerId);
+    if (container) {
+      const canScrollLeft = container.scrollLeft > 0;
+      const canScrollRight = container.scrollLeft < (container.scrollWidth - container.clientWidth);
+      
+      setScrollStates(prev => ({
+        ...prev,
+        [containerId]: { canScrollLeft, canScrollRight }
+      }));
+    }
+  };
+
   const scrollHorizontal = (containerId: string, direction: 'left' | 'right') => {
     const container = document.getElementById(containerId);
     if (container) {
@@ -137,8 +151,47 @@ const Index = () => {
         left: direction === 'left' ? -cardWidth : cardWidth,
         behavior: 'smooth'
       });
+      
+      // Check scroll state after a brief delay to allow for smooth scrolling
+      setTimeout(() => checkScrollState(containerId), 100);
     }
   };
+
+  // Initialize scroll states
+  useEffect(() => {
+    const initializeScrollStates = () => {
+      portfolioSections.forEach((_, index) => {
+        const containerId = `scroll-container-${index}`;
+        checkScrollState(containerId);
+      });
+    };
+
+    // Initialize after a brief delay to ensure elements are rendered
+    setTimeout(initializeScrollStates, 100);
+  }, []);
+
+  // Add scroll listeners to each container
+  useEffect(() => {
+    const containers = portfolioSections.map((_, index) => {
+      const containerId = `scroll-container-${index}`;
+      const container = document.getElementById(containerId);
+      
+      if (container) {
+        const handleScroll = () => checkScrollState(containerId);
+        container.addEventListener('scroll', handleScroll);
+        return { container, handleScroll };
+      }
+      return null;
+    }).filter(Boolean);
+
+    return () => {
+      containers.forEach(item => {
+        if (item && item.container && item.handleScroll) {
+          item.container.removeEventListener('scroll', item.handleScroll);
+        }
+      });
+    };
+  }, []);
 
   const handleContactClick = () => {
     setIsContactModalOpen(true);
@@ -172,9 +225,6 @@ const Index = () => {
             alt="Mariatepinta" 
             className="h-auto w-64 lg:w-80"
           />
-          <p className="text-black font-poppins font-semibold text-lg mt-4">
-            Ilustro ideas.
-          </p>
         </div>
 
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
@@ -195,19 +245,23 @@ const Index = () => {
               <div className="hidden md:block">
                 {/* Navigation arrows positioned above the photos */}
                 <div className="relative">
-                  <button
-                    onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                  >
-                    <ChevronLeft size={16} className="text-white" />
-                  </button>
+                  {scrollStates[`scroll-container-${sectionIndex}`]?.canScrollLeft !== false && (
+                    <button
+                      onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                    >
+                      <ChevronLeft size={16} className="text-white" />
+                    </button>
+                  )}
                   
-                  <button
-                    onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                  >
-                    <ChevronRight size={16} className="text-white" />
-                  </button>
+                  {scrollStates[`scroll-container-${sectionIndex}`]?.canScrollRight !== false && (
+                    <button
+                      onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                    >
+                      <ChevronRight size={16} className="text-white" />
+                    </button>
+                  )}
 
                   <div 
                     id={`scroll-container-${sectionIndex}`}
@@ -252,7 +306,7 @@ const Index = () => {
                   open={openSections[section.id]}
                   onOpenChange={() => toggleSection(section.id)}
                 >
-                  <CollapsibleTrigger className="flex items-center justify-between w-full p-2 -mt-2 mb-2">
+                  <CollapsibleTrigger className="flex items-center justify-end w-full p-2 -mt-2 mb-2">
                     <span className="sr-only">
                       {openSections[section.id] ? 'Colapsar' : 'Expandir'} sección {section.title}
                     </span>
