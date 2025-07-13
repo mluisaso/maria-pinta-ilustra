@@ -89,8 +89,9 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         {/* Content */}
         <div className="p-8 pt-12">
           <div className="text-center mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              ¡Hola! Soy "Mària". Es la forma corta de MariaLuisa.
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              ¡Hola! Soy "Mària".<br />
+              Es la forma corta de MariaLuisa.
             </h1>
             <p className="text-lg text-gray-600">
               Mis ilustraciones son originales y expresivas. Utilizo distintos estilos que se adaptan a un encargo personal o de empresa, pero sobre todo, ofrezco ideas. ¿No sabes muy bien lo que quieres? Estupendo, ahí empiezo yo. ¿Hablamos?

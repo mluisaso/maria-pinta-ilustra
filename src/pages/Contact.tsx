@@ -68,8 +68,9 @@ const Contact: React.FC = () => {
       
       <section className="pt-24 pb-16 px-4 md:px-8 max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            ¡Hola! Soy Mària.
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            ¡Hola! Soy "Mària".<br />
+            Es la forma corta de MariaLuisa.
           </h1>
           <p className="text-xl text-gray-600">
             Ilustradora, creadora de mundos imposibles y especialista en dar vida a ideas raras. Si necesitas que algo cobre vida con un lápiz, estás en el lugar correcto.

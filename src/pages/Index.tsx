@@ -66,7 +66,7 @@ const Index = () => {
         { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Armonía de Hogar' },
         { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Cómo llegar joven a viejo' },
         { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'Toma las riendas de tu salud' },
-        { src: '/lovable-uploads/8e717832-7494-49ab-9f14-6638e7bebc41.png', title: 'Banco Santander', description: '' },
+        
       ]
     },
     {
@@ -97,9 +97,9 @@ const Index = () => {
         { src: '/lovable-uploads/3764098a-b9ec-49a6-9bfb-09ebf115315a.png', title: '', description: '' },
         { src: '/lovable-uploads/91412baa-26aa-4773-8624-16f876fcf788.png', title: '', description: '' },
         { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '' },
+        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
         { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '' },
         { src: '/lovable-uploads/776614fa-73b7-4c84-95ef-61845f90a4d7.png', title: '', description: '' },
-        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
       ]
     },
     {
@@ -113,7 +113,7 @@ const Index = () => {
         { src: '/lovable-uploads/fab72f2e-11bb-4fea-8e5c-d403f4f617d5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/854602ed-4c4b-4b2f-ad85-dea3fffc16be.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/127badf1-9cf3-4f2b-9484-24eca5ac41b3.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        
       ]
     },
     {
@@ -198,7 +198,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-48 md:pt-0">
+    <div className="min-h-screen bg-white md:pr-64 pt-48 md:pt-0" suppressHydrationWarning>
       <Header />
 
       {/* Floating Contact Button - Solo desktop */}
@@ -218,13 +218,20 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-4 md:pt-20 pb-12">
-        {/* Logo - hidden on mobile */}
+        {/* Logo y texto - hidden on mobile */}
         <div className="mb-8 hidden md:flex flex-col items-center justify-center">
           <img 
             src="/lovable-uploads/e27c95ab-eb40-4ab3-ac43-b70d39b9ed96.png" 
             alt="Mariatepinta" 
-            className="h-auto w-64 lg:w-80"
+            className="h-auto w-64 lg:w-80 mb-6"
           />
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6 font-poppins text-center">
+            ¡Hola! Soy "Mària".<br />
+            Es la forma corta de MariaLuisa.
+          </h1>
+          <p className="text-lg text-gray-600 text-center max-w-2xl">
+            Mis ilustraciones son originales y expresivas. Utilizo distintos estilos que se adaptan a un encargo personal o de empresa, pero sobre todo, ofrezco ideas. ¿No sabes muy bien lo que quieres? Estupendo, ahí empiezo yo. ¿Hablamos?
+          </p>
         </div>
 
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
@@ -301,23 +308,23 @@ const Index = () => {
               <div className="hidden md:block">
                 {/* Navigation arrows positioned above the photos */}
                 <div className="relative">
-                  {scrollStates[`scroll-container-${sectionIndex}`]?.canScrollLeft !== false && (
-                    <button
-                      onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                    >
-                      <ChevronLeft size={16} className="text-white" />
-                    </button>
-                  )}
-                  
-                  {scrollStates[`scroll-container-${sectionIndex}`]?.canScrollRight !== false && (
-                    <button
-                      onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
-                    >
-                      <ChevronRight size={16} className="text-white" />
-                    </button>
-                  )}
+                   {scrollStates[`scroll-container-${sectionIndex}`]?.canScrollLeft && (
+                     <button
+                       onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'left')}
+                       className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                     >
+                       <ChevronLeft size={16} className="text-white" />
+                     </button>
+                   )}
+                   
+                   {scrollStates[`scroll-container-${sectionIndex}`]?.canScrollRight && (
+                     <button
+                       onClick={() => scrollHorizontal(`scroll-container-${sectionIndex}`, 'right')}
+                       className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-[#be1622] rounded-full flex items-center justify-center hover:bg-[#a01420] transition-colors duration-200"
+                     >
+                       <ChevronRight size={16} className="text-white" />
+                     </button>
+                   )}
 
                   <div 
                     id={`scroll-container-${sectionIndex}`}
