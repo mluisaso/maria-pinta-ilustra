@@ -218,20 +218,13 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="portfolio" className="relative min-h-screen flex flex-col items-center justify-center bg-white pt-4 md:pt-20 pb-12">
-        {/* Logo y texto - hidden on mobile */}
+        {/* Logo */}
         <div className="mb-8 hidden md:flex flex-col items-center justify-center">
           <img 
             src="/lovable-uploads/e27c95ab-eb40-4ab3-ac43-b70d39b9ed96.png" 
             alt="Mariatepinta" 
             className="h-auto w-64 lg:w-80 mb-6"
           />
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6 font-poppins text-center">
-            ¡Hola! Soy "Mària".<br />
-            Es la forma corta de MariaLuisa.
-          </h1>
-          <p className="text-lg text-gray-600 text-center max-w-2xl">
-            Mis ilustraciones son originales y expresivas. Utilizo distintos estilos que se adaptan a un encargo personal o de empresa, pero sobre todo, ofrezco ideas. ¿No sabes muy bien lo que quieres? Estupendo, ahí empiezo yo. ¿Hablamos?
-          </p>
         </div>
 
         {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
