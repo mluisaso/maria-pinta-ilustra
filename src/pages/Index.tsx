@@ -15,6 +15,7 @@ interface ImageItem {
 const Index = () => {
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [scrollStates, setScrollStates] = useState<{ [key: string]: { canScrollLeft: boolean; canScrollRight: boolean } }>({});
@@ -43,12 +44,17 @@ const Index = () => {
       const documentHeight = document.documentElement.scrollHeight;
       
       setShowFloatingButton(scrollY > 300);
-      // Mostrar "Volver arriba" solo al final del scroll
-      setShowBackToTop(scrollY + windowHeight >= documentHeight - 50);
+      // Mostrar "Volver arriba" cuando se esté en la parte inferior del 80% de la página
+      setShowBackToTop(scrollY > windowHeight * 0.5 && scrollY + windowHeight >= documentHeight * 0.8);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Evitar parpadeo en la carga inicial
+  useEffect(() => {
+    setIsLoaded(true);
   }, []);
 
   // Todas las imágenes del portfolio organizadas por categorías
@@ -208,7 +214,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-24 md:pt-0" suppressHydrationWarning>
+    <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
       <Header />
 
       {/* Floating Contact Button - Solo desktop */}
