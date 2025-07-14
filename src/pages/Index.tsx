@@ -243,8 +243,8 @@ const Index = () => {
           />
         </div>
 
-        {/* Lottie Animation - llena toda la pantalla hasta la banda roja */}
-        <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64">
+        {/* Lottie Animation - solo desktop */}
+        <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64 hidden md:block">
           <LottieAnimation className="w-full h-auto" />
         </div>
 
