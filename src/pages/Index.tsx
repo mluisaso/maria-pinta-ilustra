@@ -298,13 +298,13 @@ const Index = () => {
                     <div className="grid grid-cols-2 gap-1">
                       {section.images.map((image, index) => (
                          <div key={index} className="group cursor-pointer">
-                           <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                           <div className="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
                              {image.src.startsWith('lottie:') ? (
                                <Player
                                  autoplay
                                  loop
                                  src={image.src.replace('lottie:', '')}
-                                 style={{ width: '100%', height: '100%' }}
+                                 style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                />
                              ) : (
                                <img 
@@ -360,13 +360,13 @@ const Index = () => {
                   >
                     {section.images.map((image, index) => (
                       <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0">
-                         <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                         <div className="relative overflow-hidden bg-gray-100 aspect-square flex items-center justify-center">
                            {image.src.startsWith('lottie:') ? (
                              <Player
                                autoplay
                                loop
                                src={image.src.replace('lottie:', '')}
-                               style={{ width: '100%', height: '100%' }}
+                               style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                              />
                            ) : (
                              <img 
