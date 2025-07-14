@@ -127,7 +127,16 @@ const Header: React.FC = () => {
       {/* Mobile Version - Header más alto */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
         <div className="flex items-center justify-between w-full">
-          <div className="flex">
+          {/* Menú hamburguesa - izquierda */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-2"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        
+          {/* Logo centrado */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
             <Link to="/">
               <div className="w-40">
                 <img 
@@ -138,14 +147,9 @@ const Header: React.FC = () => {
               </div>
             </Link>
           </div>
-        
-          {/* Menú hamburguesa */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white p-2"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          
+          {/* Espacio vacío para equilibrar */}
+          <div className="w-10"></div>
         </div>
         
         {/* Menú desplegable móvil */}

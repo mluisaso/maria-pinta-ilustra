@@ -43,8 +43,8 @@ const Index = () => {
       const documentHeight = document.documentElement.scrollHeight;
       
       setShowFloatingButton(scrollY > 300);
-      // Mostrar "Volver arriba" cuando se haya hecho scroll considerable o se esté cerca del final
-      setShowBackToTop(scrollY > windowHeight * 0.8 || scrollY + windowHeight >= documentHeight - 100);
+      // Mostrar "Volver arriba" solo al final del scroll
+      setShowBackToTop(scrollY + windowHeight >= documentHeight - 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -372,7 +372,7 @@ const Index = () => {
       </section>
 
       
-      {/* Back to Top Button */}
+      {/* Back to Top Button - Desktop y Mobile */}
       <div className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ease-out ${
         showBackToTop 
           ? 'opacity-100 translate-y-0' 
