@@ -97,8 +97,8 @@ const Index = () => {
         { src: '/lovable-uploads/3764098a-b9ec-49a6-9bfb-09ebf115315a.png', title: '', description: '' },
         { src: '/lovable-uploads/91412baa-26aa-4773-8624-16f876fcf788.png', title: '', description: '' },
         { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '' },
-        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
         { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '' },
+        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
         { src: '/lovable-uploads/776614fa-73b7-4c84-95ef-61845f90a4d7.png', title: '', description: '' },
       ]
     },
@@ -108,11 +108,11 @@ const Index = () => {
       images: [
         { src: '/lovable-uploads/c6b5df98-2727-437c-9509-7a3a5cdf6ae0.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/fab72f2e-11bb-4fea-8e5c-d403f4f617d5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/854602ed-4c4b-4b2f-ad85-dea3fffc16be.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         
       ]
     },
@@ -198,7 +198,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-48 md:pt-0" suppressHydrationWarning>
+    <div className="min-h-screen bg-white md:pr-64 pt-20 md:pt-0" suppressHydrationWarning>
       <Header />
 
       {/* Floating Contact Button - Solo desktop */}

@@ -126,8 +126,8 @@ const Header: React.FC = () => {
 
       {/* Mobile Version - Header más alto */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-4 py-8" style={{ backgroundColor: '#be1622' }}>
-        <div className="flex items-center justify-center w-full">
-          <div className="flex-1 flex justify-center">
+        <div className="flex items-center justify-between w-full">
+          <div className="flex">
             <Link to="/">
               <div className="w-40">
                 <img 
