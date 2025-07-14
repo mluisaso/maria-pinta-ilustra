@@ -14,6 +14,7 @@ interface ImageItem {
 
 const Index = () => {
   const [showFloatingButton, setShowFloatingButton] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [scrollStates, setScrollStates] = useState<{ [key: string]: { canScrollLeft: boolean; canScrollRight: boolean } }>({});
@@ -34,11 +35,16 @@ const Index = () => {
     }));
   };
 
-  // Detectar scroll para mostrar el botón flotante
+  // Detectar scroll para mostrar los botones flotantes
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
       setShowFloatingButton(scrollY > 300);
+      // Mostrar "Volver arriba" cuando se haya hecho scroll considerable o se esté cerca del final
+      setShowBackToTop(scrollY > windowHeight * 0.8 || scrollY + windowHeight >= documentHeight - 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -98,8 +104,8 @@ const Index = () => {
         { src: '/lovable-uploads/91412baa-26aa-4773-8624-16f876fcf788.png', title: '', description: '' },
         { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '' },
         { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '' },
-        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
         { src: '/lovable-uploads/776614fa-73b7-4c84-95ef-61845f90a4d7.png', title: '', description: '' },
+        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
       ]
     },
     {
@@ -197,8 +203,12 @@ const Index = () => {
     setIsContactModalOpen(true);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen bg-white md:pr-64 pt-20 md:pt-0" suppressHydrationWarning>
+    <div className="min-h-screen bg-white md:pr-64 pt-24 md:pt-0" suppressHydrationWarning>
       <Header />
 
       {/* Floating Contact Button - Solo desktop */}
@@ -360,6 +370,25 @@ const Index = () => {
           ))}
         </div>
       </section>
+
+      
+      {/* Back to Top Button */}
+      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ease-out ${
+        showBackToTop 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-4 pointer-events-none'
+      }`}>
+        <button
+          onClick={scrollToTop}
+          className="bg-[#be1622] hover:bg-[#a01420] text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2 text-sm font-medium"
+          aria-label="Volver arriba"
+        >
+          <span>Volver arriba</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      </div>
 
       {/* Contact Modal */}
       <ContactModal 
