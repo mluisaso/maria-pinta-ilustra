@@ -18,7 +18,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "", src }
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const defaultMobileUrl = 'https://lottie.host/98c19398-6e01-46db-b0e1-553966cc3640/2xNMFHPUIP.json';
+  const defaultMobileUrl = 'https://lottie.host/8a1eab2a-9091-455e-8129-1554b0db64de/g6WFBmQhgJ.json';
   const defaultDesktopUrl = 'https://lottie.host/77aae8ec-e054-4caa-864a-127a0f8f9b03/qWP2cfR7A0.json';
   
   const animationUrl = src || (isMobile ? defaultMobileUrl : defaultDesktopUrl);
