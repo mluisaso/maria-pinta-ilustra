@@ -248,6 +248,14 @@ const Index = () => {
           <LottieAnimation className="w-full h-auto" />
         </div>
 
+        {/* Lottie Animation Mobile */}
+        <div className="w-full mb-4 -mx-4 md:hidden">
+          <LottieAnimation 
+            src="https://lottie.host/8a1eab2a-9091-455e-8129-1554b0db64de/g6WFBmQhgJ.json"
+            className="w-full h-auto" 
+          />
+        </div>
+
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-4 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
