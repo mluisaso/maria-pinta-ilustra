@@ -4,6 +4,7 @@ import LottieAnimation from '../components/LottieAnimation';
 import ContactModal from '../components/ContactModal';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../components/ui/collapsible";
+import { Player } from '@lottiefiles/react-lottie-player';
 
 interface ImageItem {
   src: string;
@@ -118,6 +119,10 @@ const Index = () => {
       id: 'team-building',
       title: 'Para tu marca',
       images: [
+        // Primeras 2 animaciones Lottie
+        { src: 'lottie:https://lottie.host/d621c91a-d410-45a2-873d-258fe7517caf/TQ1MQIWlDj.json', title: 'Firma animada', description: 'Correos personalizados' },
+        { src: 'lottie:https://lottie.host/35cee8a6-3c2b-4d7e-9361-53a2955bcbd8/S3eks5Jr7X.json', title: 'Firma animada', description: 'Correos personalizados' },
+        
         { src: '/lovable-uploads/c6b5df98-2727-437c-9509-7a3a5cdf6ae0.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
@@ -126,6 +131,9 @@ const Index = () => {
         { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
         
+        // Últimas 2 animaciones Lottie al final
+        { src: 'lottie:https://lottie.host/11b9282d-92f1-4e6f-8566-b355232d7c3a/yT9FBK7rYM.json', title: 'Firma animada', description: 'Correos personalizados' },
+        { src: 'lottie:https://lottie.host/0d6b6fc6-3e3f-4c64-99da-f3aba070d6dc/g8TjHsAQKv.json', title: 'Firma animada', description: 'Correos personalizados' },
       ]
     },
     {
@@ -289,20 +297,22 @@ const Index = () => {
                   <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                     <div className="grid grid-cols-2 gap-1">
                       {section.images.map((image, index) => (
-                        <div key={index} className="group cursor-pointer">
-                          <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                            {image.type === 'lottie' ? (
-                              <LottieAnimation 
-                                src={image.src}
-                                className="w-full h-full"
-                              />
-                            ) : (
-                              <img 
-                                src={image.src} 
-                                alt={image.title}
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                              />
-                            )}
+                         <div key={index} className="group cursor-pointer">
+                           <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                             {image.src.startsWith('lottie:') ? (
+                               <Player
+                                 autoplay
+                                 loop
+                                 src={image.src.replace('lottie:', '')}
+                                 style={{ width: '100%', height: '100%' }}
+                               />
+                             ) : (
+                               <img 
+                                 src={image.src} 
+                                 alt={image.title}
+                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                               />
+                             )}
                              {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
@@ -350,19 +360,21 @@ const Index = () => {
                   >
                     {section.images.map((image, index) => (
                       <div key={index} className="group cursor-pointer flex-shrink-0 w-1/3 min-w-0">
-                        <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                          {image.type === 'lottie' ? (
-                            <LottieAnimation 
-                              src={image.src}
-                              className="w-full h-full"
-                            />
-                          ) : (
-                            <img 
-                              src={image.src} 
-                              alt={image.title}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                           )}
+                         <div className="relative overflow-hidden bg-gray-100 aspect-square">
+                           {image.src.startsWith('lottie:') ? (
+                             <Player
+                               autoplay
+                               loop
+                               src={image.src.replace('lottie:', '')}
+                               style={{ width: '100%', height: '100%' }}
+                             />
+                           ) : (
+                             <img 
+                               src={image.src} 
+                               alt={image.title}
+                               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                             />
+                            )}
                             {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
