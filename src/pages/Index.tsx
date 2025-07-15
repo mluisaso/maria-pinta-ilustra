@@ -123,13 +123,13 @@ const Index = () => {
         { src: 'lottie:https://lottie.host/d621c91a-d410-45a2-873d-258fe7517caf/TQ1MQIWlDj.json', title: 'Firma animada', description: 'Correos personalizados' },
         { src: 'lottie:https://lottie.host/35cee8a6-3c2b-4d7e-9361-53a2955bcbd8/S3eks5Jr7X.json', title: 'Firma animada', description: 'Correos personalizados' },
         
-        { src: '/lovable-uploads/c6b5df98-2727-437c-9509-7a3a5cdf6ae0.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/fab72f2e-11bb-4fea-8e5c-d403f4f617d5.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/854602ed-4c4b-4b2f-ad85-dea3fffc16be.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
-        { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para redes' },
+        { src: '/lovable-uploads/c6b5df98-2727-437c-9509-7a3a5cdf6ae0.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
+        { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
+        { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
+        { src: '/lovable-uploads/fab72f2e-11bb-4fea-8e5c-d403f4f617d5.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
+        { src: '/lovable-uploads/854602ed-4c4b-4b2f-ad85-dea3fffc16be.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
+        { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
+        { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
         
         // Últimas 2 animaciones Lottie al final
         { src: 'lottie:https://lottie.host/11b9282d-92f1-4e6f-8566-b355232d7c3a/yT9FBK7rYM.json', title: 'Firma animada', description: 'Correos personalizados' },
