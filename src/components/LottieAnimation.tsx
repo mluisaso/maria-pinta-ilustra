@@ -5,9 +5,10 @@ import { Player } from '@lottiefiles/react-lottie-player';
 interface LottieAnimationProps {
   className?: string;
   src?: string;
+  onReady?: () => void;
 }
 
-const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "", src }) => {
+const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "", src, onReady }) => {
   // Use useEffect and useState to handle responsive behavior properly
   const [isMobile, setIsMobile] = React.useState<boolean | null>(null);
   
@@ -36,6 +37,11 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "", src }
         loop
         src={animationUrl}
         style={{ width: '100%', height: 'auto', maxWidth: '800px' }}
+        onEvent={(event) => {
+          if (event === 'load' && onReady) {
+            onReady();
+          }
+        }}
       />
     </div>
   );

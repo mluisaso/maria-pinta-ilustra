@@ -16,7 +16,7 @@ interface ImageItem {
 const Index = () => {
   const [showFloatingButton, setShowFloatingButton] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLottieLoaded, setIsLottieLoaded] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [scrollStates, setScrollStates] = useState<{ [key: string]: { canScrollLeft: boolean; canScrollRight: boolean } }>({});
@@ -55,7 +55,7 @@ const Index = () => {
 
   // Evitar parpadeo en la carga inicial
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLottieLoaded(true);
   }, []);
 
   // Todas las imágenes del portfolio organizadas por categorías
@@ -222,7 +222,7 @@ const Index = () => {
   };
 
   return (
-    <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
+    <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLottieLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
       <Header />
 
       {/* Floating Contact Button - Solo desktop */}
@@ -253,7 +253,10 @@ const Index = () => {
 
         {/* Lottie Animation - solo desktop */}
         <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64 hidden md:block">
-          <LottieAnimation className="w-full h-auto" />
+          <LottieAnimation 
+            className="w-full h-auto" 
+            onReady={() => setIsLottieLoaded(true)}
+          />
         </div>
 
         {/* Lottie Animation Mobile */}
@@ -261,6 +264,7 @@ const Index = () => {
           <LottieAnimation 
             src="https://lottie.host/8a1eab2a-9091-455e-8129-1554b0db64de/g6WFBmQhgJ.json"
             className="w-full h-auto" 
+            onReady={() => setIsLottieLoaded(true)}
           />
         </div>
 
