@@ -14,6 +14,7 @@ const LottieAnimation: React.FC<LottieAnimationProps> = ({ className = "", src }
   React.useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
+    console.log('LottieAnimation mounted, isMobile:', window.innerWidth < 768);
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
