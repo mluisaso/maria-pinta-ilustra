@@ -64,7 +64,7 @@ const Index = () => {
       id: 'editorial',
       title: 'Editorial',
       images: [
-        { src: '/lovable-uploads/9215e25a-a54a-4515-892f-3508fcba19c2.png', title: 'Cosmpolitan', description: '' },
+        { src: '/lovable-uploads/9215e25a-a54a-4515-892f-3508fcba19c2.png', title: 'Cosmopolitan', description: '' },
         { src: '/lovable-uploads/a87ac013-0aec-48a1-a067-4ffa4d6906e6.png', title: 'Buenavida', description: 'El País' },
         { src: '/lovable-uploads/fe5a575c-bbd6-4738-a9ae-7409a7c81bda.png', title: 'Renfe', description: '' },
         { src: '/lovable-uploads/40bddeb8-fe16-4370-96ac-4337ad6cfd4a.png', title: 'Telva', description: '' },

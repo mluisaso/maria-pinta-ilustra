@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Instagram, Linkedin } from 'lucide-react';
 import Header from '../components/Header';
 
 const About: React.FC = () => {
@@ -9,7 +10,27 @@ const About: React.FC = () => {
       
       <section className="pt-24 pb-16 px-4 md:px-8 max-w-4xl mx-auto">
         <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-12">Sobre mí</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">¡Hola!</h1>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-3xl mx-auto">
+            Mis ilustraciones son originales y expresivas. Utilizo distintos estilos que se adaptan a un encargo personal o de empresa, pero sobre todo, ofrezco ideas. ¿No sabes muy bien lo que quieres? Estupendo, ahí empiezo yo. ¿Hablamos?
+          </p>
+          
+          {/* Redes sociales */}
+          <div className="flex justify-center space-x-6 mb-12">
+            <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#be1622] transition-colors">
+              <Instagram size={24} />
+            </a>
+            <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#be1622] transition-colors">
+              <Linkedin size={24} />
+            </a>
+            <a href="https://www.tiktok.com/@mariatepinta" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-[#be1622] transition-colors">
+              <img 
+                src="/lovable-uploads/bb8002d5-0962-4d3a-9301-9603bec5426c.png" 
+                alt="TikTok" 
+                className="w-6 h-6 object-contain"
+              />
+            </a>
+          </div>
           <div className="bg-white border-2 border-gray-200 rounded-lg p-8 md:p-12 shadow-lg">
             <div className="mb-8">
               <img 
