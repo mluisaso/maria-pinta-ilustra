@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
             Es la forma corta de MariaLuisa.
           </h1>
           <p className="text-xl text-gray-600">
-            Ilustradora, creadora de mundos imposibles y especialista en dar vida a ideas raras. Si necesitas que algo cobre vida con un lápiz, estás en el lugar correcto.
+            Mis ilustraciones son originales y expresivas. Utilizo distintos estilos que se adaptan a un encargo personal o de empresa, pero sobre todo, ofrezco ideas. ¿No sabes muy bien lo que quieres? Estupendo, ahí empiezo yo. ¿Hablamos?
           </p>
         </div>
 
