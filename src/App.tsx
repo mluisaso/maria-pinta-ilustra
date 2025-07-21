@@ -7,8 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
 import NotFound from "./pages/NotFound";
+import RedirectComponent from "./components/RedirectComponent";
 
 const queryClient = new QueryClient();
 
@@ -23,8 +23,16 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           
-          {/* Redirects from old URLs */}
-          <Route path="/web/*" element={<Index />} />
+          {/* Specific redirects for old URL patterns */}
+          <Route path="/web/index.php/producto/*" element={<RedirectComponent to="https://mariatepinta.es/" />} />
+          <Route path="/web/index.php/subproducto/*" element={<RedirectComponent to="https://mariatepinta.es/" />} />
+          <Route path="/web/index.php/cesta" element={<RedirectComponent to="https://mariatepinta.es/" />} />
+          <Route path="/web/index.php/contacto" element={<RedirectComponent to="https://mariatepinta.es/contact" />} />
+          <Route path="/web/index.php/maria" element={<RedirectComponent to="https://mariatepinta.es/about" />} />
+          <Route path="/web/index.php/faqs" element={<RedirectComponent to="https://mariatepinta.es/" />} />
+          
+          {/* Catch-all for any other /web/ URLs */}
+          <Route path="/web/*" element={<RedirectComponent to="https://mariatepinta.es/" />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
