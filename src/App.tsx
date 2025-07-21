@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import RedirectComponent from "./components/RedirectComponent";
@@ -20,7 +19,6 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           
           {/* Specific redirects for old URL patterns */}
@@ -28,7 +26,7 @@ const App = () => (
           <Route path="/web/index.php/subproducto/*" element={<RedirectComponent to="https://mariatepinta.es/" />} />
           <Route path="/web/index.php/cesta" element={<RedirectComponent to="https://mariatepinta.es/" />} />
           <Route path="/web/index.php/contacto" element={<RedirectComponent to="https://mariatepinta.es/contact" />} />
-          <Route path="/web/index.php/maria" element={<RedirectComponent to="https://mariatepinta.es/about" />} />
+          <Route path="/web/index.php/maria" element={<RedirectComponent to="https://mariatepinta.es/" />} />
           <Route path="/web/index.php/faqs" element={<RedirectComponent to="https://mariatepinta.es/" />} />
           
           {/* Catch-all for any other /web/ URLs */}
