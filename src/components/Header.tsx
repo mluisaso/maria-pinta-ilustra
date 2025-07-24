@@ -13,10 +13,13 @@ const Header: React.FC = () => {
       return;
     }
     
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Pequeño delay para asegurar que el menú se cierre antes del scroll
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   const portfolioCategories = [
