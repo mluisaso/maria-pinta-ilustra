@@ -131,6 +131,10 @@ const Index = () => {
         { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
         { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
         
+        // Nuevas imágenes de Brooklyn Fitboxing
+        { src: '/lovable-uploads/efb2a663-e081-4388-9bc7-c4186af7689b.png', title: 'Brooklyn Fitboxing', description: 'Sorteo en RRSS' },
+        { src: '/lovable-uploads/06ea573e-0c0a-4de3-b975-e8ad7bdf0d75.png', title: 'Brooklyn Fitboxing', description: 'Sorteo en RRSS' },
+        
         // Últimas 2 animaciones Lottie al final
         { src: 'lottie:https://lottie.host/11b9282d-92f1-4e6f-8566-b355232d7c3a/yT9FBK7rYM.json', title: 'Firma animada', description: 'Correos personalizados' },
         { src: 'lottie:https://lottie.host/0d6b6fc6-3e3f-4c64-99da-f3aba070d6dc/g8TjHsAQKv.json', title: 'Firma animada', description: 'Correos personalizados' },
