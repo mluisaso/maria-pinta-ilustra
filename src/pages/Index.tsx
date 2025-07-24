@@ -288,9 +288,9 @@ const Index = () => {
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-4 md:space-y-8">
           {portfolioSections.map((section, sectionIndex) => (
-            <div key={section.id} className="space-y-4">
+            <div key={section.id} id={section.id} className="space-y-4">
               {/* Section Title - visible on all screen sizes */}
-              <h2 id={section.id} className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4 md:block hidden">
+              <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4 md:block hidden">
                 {section.title}
               </h2>
 
