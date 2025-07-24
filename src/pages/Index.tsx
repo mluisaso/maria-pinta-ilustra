@@ -148,6 +148,19 @@ const Index = () => {
         { src: '/lovable-uploads/eb48130d-d8df-4b7f-a088-dd618e939fc2.png', title: 'IA', description: 'Mundo digital' },
       ]
     },
+    {
+      id: 'proyectos-personales',
+      title: 'Proyectos personales',
+      images: [
+        { src: '/lovable-uploads/0ccfe8e6-a5f4-44b4-b585-496b71e0d284.png', title: 'Invitación de boda', description: 'invitación de boda' },
+        { src: '/lovable-uploads/66a48fc2-0af1-4655-b1a4-4f54383dc6c2.png', title: 'Asana', description: 'Asana' },
+        { src: '/lovable-uploads/9c55eafc-4689-4e57-9d43-45c7d8e6c34c.png', title: 'Homenaje a Bowie', description: 'homenaje a Bowie' },
+        { src: '/lovable-uploads/53be8d9e-27e8-4e95-baf5-d5412e185286.png', title: 'Decadencia', description: 'Decadencia' },
+        { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: 'Plastilina' },
+        { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: 'Plastilina' },
+        { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: 'Plastilina' },
+      ]
+    },
   ];
 
   const checkScrollState = (containerId: string) => {
@@ -317,7 +330,7 @@ const Index = () => {
                                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                />
                              )}
-                             {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
+                              {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                    <div className="p-4 max-w-xs text-center">
