@@ -164,9 +164,9 @@ const Header: React.FC = () => {
         
         {/* Menú desplegable móvil */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-[#be1622] p-4">
+          <div className="absolute top-full left-0 right-0 bg-[#be1622] p-4 select-none">
             <nav className="flex flex-col space-y-4">
-              <div className="text-white font-normal text-lg">QUÉ HAGO</div>
+              <div className="text-white font-normal text-lg select-none">QUÉ HAGO</div>
               <div className="ml-4 space-y-2">
                 {portfolioCategories.map((category) => (
                   <button
@@ -175,20 +175,20 @@ const Header: React.FC = () => {
                       scrollToSection(category.id);
                       setIsMobileMenuOpen(false);
                     }}
-                    className="block text-white/90 hover:text-white transition-colors text-sm"
+                    className="block text-white/90 hover:text-white transition-colors text-sm select-none"
                   >
                     {category.name}
                   </button>
                 ))}
               </div>
               
-              <div className="text-white font-normal text-lg">MI ALTER EGO</div>
+              <div className="text-white font-normal text-lg select-none">MI ALTER EGO</div>
               <div className="ml-4 space-y-2">
                 <a 
                   href="https://www.instagram.com/benditarrutina/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-white/90 hover:text-white transition-colors text-sm"
+                  className="block text-white/90 hover:text-white transition-colors text-sm select-none"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Bendita Rutina
@@ -199,7 +199,7 @@ const Header: React.FC = () => {
                 href="/contact"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-200 transition-colors font-normal text-lg"
+                className="text-white hover:text-gray-200 transition-colors font-normal text-lg select-none"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 ¡HOLA!
