@@ -50,7 +50,7 @@ const Header: React.FC = () => {
                 <img 
                   src="/lovable-uploads/29e59049-4a70-48e0-9c96-557eff0b9c02.png" 
                   alt="Ilustración Mariatepinta" 
-                  className="w-full h-auto object-contain cursor-pointer"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </Link>
