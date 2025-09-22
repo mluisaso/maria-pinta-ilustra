@@ -34,7 +34,8 @@ const Header: React.FC = () => {
     { name: 'Viñetas', id: 'vinetas' },
     { name: 'Para tu marca', id: 'team-building' },
     { name: 'Personalización con IA', id: 'ia' },
-    { name: 'Proyectos personales', id: 'proyectos-personales' }
+    { name: 'Proyectos personales', id: 'proyectos-personales' },
+    { name: 'Recordatorios Primera Comunión', id: 'recordatorios-primera-comunion' }
   ];
 
   return (

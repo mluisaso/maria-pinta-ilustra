@@ -165,6 +165,22 @@ const Index = () => {
         { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: 'Plastilina' },
       ]
     },
+    {
+      id: 'recordatorios-primera-comunion',
+      title: 'Recordatorios Primera Comunión - Dibujos de catálogo',
+      images: [
+        { src: '/lovable-uploads/besobeberizado.png', title: '', description: '' },
+        { src: '/lovable-uploads/chinita.png', title: '', description: '' },
+        { src: '/lovable-uploads/corderito-sin-cordero.png', title: '', description: '' },
+        { src: '/lovable-uploads/negritaTUnica.png', title: '', description: '' },
+        { src: '/lovable-uploads/organzareclinatorio.png', title: '', description: '' },
+        { src: '/lovable-uploads/patinete.png', title: '', description: '' },
+        { src: '/lovable-uploads/rezoorganza.png', title: '', description: '' },
+        { src: '/lovable-uploads/tunicaangelito.png', title: '', description: '' },
+        { src: '/lovable-uploads/veladiadema.png', title: '', description: '' },
+        { src: '/lovable-uploads/velapaloma.png', title: '', description: '' },
+      ]
+    },
   ];
 
   const checkScrollState = (containerId: string) => {
@@ -334,7 +350,7 @@ const Index = () => {
                                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                />
                              )}
-                              {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
+                               {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && section.id !== 'recordatorios-primera-comunion' && (
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                    <div className="p-4 max-w-xs text-center">
@@ -396,7 +412,7 @@ const Index = () => {
                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                              />
                             )}
-                            {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
+                            {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && section.id !== 'recordatorios-primera-comunion' && (
                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                   <div className="p-4 max-w-xs text-center">
