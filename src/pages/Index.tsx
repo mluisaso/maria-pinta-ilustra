@@ -179,6 +179,16 @@ const Index = () => {
         { src: '/lovable-uploads/tunicaangelito.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
         { src: '/lovable-uploads/veladiadema.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
         { src: '/lovable-uploads/velapaloma.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/balon_traje_CORTO.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/basketraje.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/escudo-marinero.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/futboltraje.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/marineroBalon.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/marinerobarquito.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/marineroreclinatorio.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/patinete-2.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/RECLINATORIOTRAJE.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/virgenpatio.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
       ]
     },
     {
