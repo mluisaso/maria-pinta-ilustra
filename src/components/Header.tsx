@@ -35,7 +35,8 @@ const Header: React.FC = () => {
     { name: 'Para tu marca', id: 'team-building' },
     { name: 'Personalización con IA', id: 'ia' },
     { name: 'Proyectos personales', id: 'proyectos-personales' },
-    { name: 'Recordatorios Primera Comunión', id: 'recordatorios-primera-comunion' }
+    { name: 'Primera Comunión - Catálogo', displayName: 'Primera Comunión -\nCatálogo', id: 'recordatorios-primera-comunion' },
+    { name: 'Primera Comunión - Personalizados', displayName: 'Primera Comunión -\nPersonalizados', id: 'recordatorios-primera-comunion-personalizados' }
   ];
 
   return (
@@ -69,9 +70,16 @@ const Header: React.FC = () => {
                   <button
                     key={category.name}
                     onClick={() => scrollToSection(category.id)}
-                    className="block text-white/90 hover:text-white transition-colors text-sm"
+                    className="block text-white/90 hover:text-white transition-colors text-sm text-left"
                   >
-                    {category.name}
+                    {category.displayName ? (
+                      <div>
+                        {category.displayName.split('\n')[0]}<br />
+                        <span className="ml-4">{category.displayName.split('\n')[1]}</span>
+                      </div>
+                    ) : (
+                      category.name
+                    )}
                   </button>
                 ))}
               </div>
@@ -174,9 +182,16 @@ const Header: React.FC = () => {
                       scrollToSection(category.id);
                       setIsMobileMenuOpen(false);
                     }}
-                    className="block text-white/90 hover:text-white transition-colors text-sm select-none"
+                    className="block text-white/90 hover:text-white transition-colors text-sm select-none text-left"
                   >
-                    {category.name}
+                    {category.displayName ? (
+                      <div>
+                        {category.displayName.split('\n')[0]}<br />
+                        <span className="ml-4">{category.displayName.split('\n')[1]}</span>
+                      </div>
+                    ) : (
+                      category.name
+                    )}
                   </button>
                 ))}
               </div>
