@@ -381,11 +381,7 @@ const Index = () => {
                                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                   <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                     <div className="p-4 max-w-xs text-center">
-                                      <h3 className={`text-black mb-2 ${
-                                        section.id === 'recordatorios-primera-comunion' || section.id === 'recordatorios-primera-comunion-personalizados' 
-                                          ? 'font-bold' 
-                                          : 'font-normal'
-                                      }`}>{image.title}</h3>
+                                      <h3 className="font-normal text-black mb-2">{image.title}</h3>
                                       {image.description && (
                                         <p className="text-sm text-black/70">{image.description}</p>
                                       )}
@@ -449,11 +445,7 @@ const Index = () => {
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                    <div className="p-4 max-w-xs text-center">
-                                     <h3 className={`text-black mb-2 ${
-                                       section.id === 'recordatorios-primera-comunion' || section.id === 'recordatorios-primera-comunion-personalizados' 
-                                         ? 'font-bold' 
-                                         : 'font-normal'
-                                     }`}>{image.title}</h3>
+                                     <h3 className="font-normal text-black mb-2">{image.title}</h3>
                                      {image.description && (
                                        <p className="text-sm text-black/70">{image.description}</p>
                                      )}
