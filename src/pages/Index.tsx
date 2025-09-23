@@ -156,55 +156,55 @@ const Index = () => {
       id: 'proyectos-personales',
       title: 'Proyectos personales',
       images: [
-        { src: '/lovable-uploads/0ccfe8e6-a5f4-44b4-b585-496b71e0d284.png', title: 'Invitación de boda', description: 'invitación de boda' },
-        { src: '/lovable-uploads/66a48fc2-0af1-4655-b1a4-4f54383dc6c2.png', title: 'Asana', description: 'Asana' },
-        { src: '/lovable-uploads/9c55eafc-4689-4e57-9d43-45c7d8e6c34c.png', title: 'Homenaje a Bowie', description: 'homenaje a Bowie' },
-        { src: '/lovable-uploads/53be8d9e-27e8-4e95-baf5-d5412e185286.png', title: 'Decadencia', description: 'Decadencia' },
-        { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: 'Plastilina' },
-        { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: 'Plastilina' },
-        { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: 'Plastilina' },
+        { src: '/lovable-uploads/0ccfe8e6-a5f4-44b4-b585-496b71e0d284.png', title: 'Invitación de boda', description: '' },
+        { src: '/lovable-uploads/66a48fc2-0af1-4655-b1a4-4f54383dc6c2.png', title: 'Asana', description: '' },
+        { src: '/lovable-uploads/9c55eafc-4689-4e57-9d43-45c7d8e6c34c.png', title: 'Homenaje a Bowie', description: '' },
+        { src: '/lovable-uploads/53be8d9e-27e8-4e95-baf5-d5412e185286.png', title: 'Decadencia', description: '' },
+        { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: '' },
+        { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: '' },
+        { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: '' },
       ]
     },
     {
       id: 'recordatorios-primera-comunion',
       title: 'Recordatorios Primera Comunión - Dibujos de catálogo',
       images: [
-        { src: '/lovable-uploads/besobeberizado.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/chinita.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/corderito-sin-cordero.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/negritaTUnica.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/organzareclinatorio.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/patinete.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/rezoorganza.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/tunicaangelito.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/veladiadema.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/velapaloma.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/balon_traje_CORTO.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/basketraje.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/escudo-marinero.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/futboltraje.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/marineroBalon.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/marinerobarquito.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/marineroreclinatorio.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/patinete-2.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/RECLINATORIOTRAJE.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/virgenpatio.png', title: 'Colores pelo y fondo y razas personalizables', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/besobeberizado.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/chinita.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/corderito-sin-cordero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/negritaTUnica.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/organzareclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/patinete.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/rezoorganza.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/tunicaangelito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/veladiadema.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/velapaloma.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/balon_traje_CORTO.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/basketraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/escudo-marinero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/futboltraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/marineroBalon.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/marinerobarquito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/marineroreclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/patinete-2.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/RECLINATORIOTRAJE.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/virgenpatio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
       ]
     },
     {
       id: 'recordatorios-primera-comunion-personalizados',
       title: 'Recordatorios Primera Comunión - Dibujos personalizados',
       images: [
-        { src: '/lovable-uploads/colormen.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/colorperritos.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/columpio.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/bluegrande.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/flaviasola.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/hermanas.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/inigo.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/marineroperrito.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/rezando.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/trenza.png', title: 'Tu dibujo como quieras', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/colormen.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/colorperritos.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/columpio.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/bluegrande.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/flaviasola.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/hermanas.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/inigo.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/marineroperrito.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/rezando.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/trenza.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
       ]
     },
   ];
@@ -378,14 +378,20 @@ const Index = () => {
                              )}
                                {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
 
-                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
-                                   <div className="p-4 max-w-xs text-center">
-                                     <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                     <p className="text-sm text-black/70">{image.description}</p>
-                                   </div>
-                                 </div>
-                               </div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
+                                    <div className="p-4 max-w-xs text-center">
+                                      <h3 className={`text-black mb-2 ${
+                                        section.id === 'recordatorios-primera-comunion' || section.id === 'recordatorios-primera-comunion-personalizados' 
+                                          ? 'font-bold' 
+                                          : 'font-normal'
+                                      }`}>{image.title}</h3>
+                                      {image.description && (
+                                        <p className="text-sm text-black/70">{image.description}</p>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
                              )}
                           </div>
                         </div>
@@ -440,14 +446,20 @@ const Index = () => {
                              />
                             )}
                             {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
-                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
-                                  <div className="p-4 max-w-xs text-center">
-                                    <h3 className="font-normal text-black mb-2">{image.title}</h3>
-                                    <p className="text-sm text-black/70">{image.description}</p>
-                                  </div>
-                                </div>
-                              </div>
+                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
+                                   <div className="p-4 max-w-xs text-center">
+                                     <h3 className={`text-black mb-2 ${
+                                       section.id === 'recordatorios-primera-comunion' || section.id === 'recordatorios-primera-comunion-personalizados' 
+                                         ? 'font-bold' 
+                                         : 'font-normal'
+                                     }`}>{image.title}</h3>
+                                     {image.description && (
+                                       <p className="text-sm text-black/70">{image.description}</p>
+                                     )}
+                                   </div>
+                                 </div>
+                               </div>
                             )}
                         </div>
                       </div>
