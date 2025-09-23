@@ -110,7 +110,7 @@ const Header: React.FC = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-gray-200 transition-colors text-left text-lg font-normal"
             >
-              ¡HOLA!
+              ¿HABLAMOS?
             </a>
           </nav>
 
@@ -216,7 +216,7 @@ const Header: React.FC = () => {
                 className="text-white hover:text-gray-200 transition-colors font-normal text-lg select-none"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                ¡HOLA!
+                ¿HABLAMOS?
               </a>
               
               {/* Redes sociales en móvil - alineadas a la izquierda */}

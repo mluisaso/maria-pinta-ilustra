@@ -376,7 +376,8 @@ const Index = () => {
                                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                />
                              )}
-                               {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && section.id !== 'recordatorios-primera-comunion' && section.id !== 'recordatorios-primera-comunion-personalizados' && (
+                               {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
+
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                    <div className="p-4 max-w-xs text-center">
@@ -438,7 +439,7 @@ const Index = () => {
                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                              />
                             )}
-                            {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && section.id !== 'recordatorios-primera-comunion' && section.id !== 'recordatorios-primera-comunion-personalizados' && (
+                            {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
                               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
                                   <div className="p-4 max-w-xs text-center">
