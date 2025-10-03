@@ -160,10 +160,10 @@ const Index = () => {
         { src: '/lovable-uploads/66a48fc2-0af1-4655-b1a4-4f54383dc6c2.png', title: 'Asana', description: '' },
         { src: '/lovable-uploads/9c55eafc-4689-4e57-9d43-45c7d8e6c34c.png', title: 'Homenaje a Bowie', description: '' },
         { src: '/lovable-uploads/53be8d9e-27e8-4e95-baf5-d5412e185286.png', title: 'Decadencia', description: '' },
+        { src: '/lovable-uploads/casaOlivia.jpg', title: 'Casa particular', description: 'Ilustración a partir de foto para postales' },
         { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: '' },
         { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: '' },
         { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: '' },
-        { src: '/lovable-uploads/casaOlivia.jpg', title: 'Casa particular', description: 'Ilustración a partir de foto para postales' },
       ]
     },
     {
