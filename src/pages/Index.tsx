@@ -163,6 +163,7 @@ const Index = () => {
         { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: '' },
         { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: '' },
         { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: '' },
+        { src: '/lovable-uploads/casaOlivia.jpg', title: 'Casa particular', description: 'Ilustración a partir de foto para postales' },
       ]
     },
     {
