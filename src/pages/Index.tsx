@@ -5,6 +5,8 @@ import ContactModal from '../components/ContactModal';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../components/ui/collapsible";
 import { Player } from '@lottiefiles/react-lottie-player';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 interface ImageItem {
   src: string;
@@ -19,6 +21,7 @@ const Index = () => {
   const [isLottieLoaded, setIsLottieLoaded] = useState(false);
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({});
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isCustomDrawingModalOpen, setIsCustomDrawingModalOpen] = useState(false);
   const [scrollStates, setScrollStates] = useState<{ [key: string]: { canScrollLeft: boolean; canScrollRight: boolean } }>({});
 
   // Initialize all sections as open
@@ -164,6 +167,20 @@ const Index = () => {
         { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: '' },
         { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: '' },
         { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: '' },
+      ]
+    },
+    {
+      id: 'dibujo-personalizado',
+      title: 'Tu dibujo personalizado en el soporte que quieras',
+      images: [
+        { src: '/lovable-uploads/camisetadracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/mochiladracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/totedracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/bodydracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/camipadre.png', title: '', description: '' },
+        { src: '/lovable-uploads/camisetamadre.png', title: '', description: '' },
+        { src: '/lovable-uploads/sudaderaniña.png', title: '', description: '' },
+        { src: '/lovable-uploads/bodybebe.png', title: '', description: '' },
       ]
     },
     {
@@ -463,6 +480,16 @@ const Index = () => {
 
             </div>
           ))}
+
+          {/* Button for custom drawing section */}
+          <div className="max-w-6xl mx-auto px-4 md:px-8 mt-8 flex justify-center">
+            <Button 
+              onClick={() => setIsCustomDrawingModalOpen(true)}
+              className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
+            >
+              Quiero información
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -490,6 +517,37 @@ const Index = () => {
         isOpen={isContactModalOpen} 
         onClose={() => setIsContactModalOpen(false)} 
       />
+
+      {/* Custom Drawing Info Modal */}
+      <Dialog open={isCustomDrawingModalOpen} onOpenChange={setIsCustomDrawingModalOpen}>
+        <DialogContent className="max-w-2xl font-poppins">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-normal text-black">
+              ¿Te gustaría tener una ilustración hecha especialmente para ti y lucirla en una camiseta, taza, body, bolsa, cuadro u otro producto de LaTostadora? ¡Es muy fácil!
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 mt-4">
+            <h3 className="text-lg font-normal text-black">¿Cómo funciona?</h3>
+            
+            <div className="space-y-4">
+              <div>
+                <p className="font-semibold text-black mb-1">1.- Me cuentas tu idea</p>
+                <p className="text-sm text-black/70">Persona, mascota, escena, afición, fanart, temática especial… ¡lo que imagines!</p>
+              </div>
+              
+              <div>
+                <p className="font-semibold text-black mb-1">2.- Realizo el dibujo personalizado</p>
+                <p className="text-sm text-black/70">100% a medida y exclusivo para ti. Cuando esté listo, decidimos el soporte</p>
+              </div>
+              
+              <div>
+                <p className="font-semibold text-black mb-1">3.- Te mando el link para que lo encargues en LaTostadora</p>
+                <p className="text-sm text-black/70">Tras haber decidido soporte, talla, color, etc... recibes el link para encargarlo. Ellos también se encargan del cobro y envío.</p>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <style>{`
         .scrollbar-hide::-webkit-scrollbar {
