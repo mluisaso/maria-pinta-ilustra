@@ -170,24 +170,6 @@ const Index = () => {
       ]
     },
     {
-      id: 'dibujo-personalizado',
-      title: 'Tu dibujo personalizado en el soporte que quieras',
-      images: [
-        { src: '/lovable-uploads/camisetadracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/mochiladracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/totedracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/bodydracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/camipadre.png', title: '', description: '' },
-        { src: '/lovable-uploads/camisetamadre.png', title: '', description: '' },
-        { src: '/lovable-uploads/sudaderaniña.png', title: '', description: '' },
-        { src: '/lovable-uploads/bodybebe.png', title: '', description: '' },
-        { src: '/lovable-uploads/camilloradita.png', title: '', description: '' },
-        { src: '/lovable-uploads/botellalloradita.png', title: '', description: '' },
-        { src: '/lovable-uploads/tazalloradita.png', title: '', description: '' },
-        { src: '/lovable-uploads/totelloradita.png', title: '', description: '' },
-      ]
-    },
-    {
       id: 'recordatorios-primera-comunion',
       title: 'Recordatorios Primera Comunión - Dibujos de catálogo',
       images: [
@@ -227,6 +209,28 @@ const Index = () => {
         { src: '/lovable-uploads/marineroperrito.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
         { src: '/lovable-uploads/rezando.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
         { src: '/lovable-uploads/trenza.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+      ]
+    },
+    {
+      id: 'dibujo-personalizado',
+      title: 'Tu dibujo, donde tú quieras',
+      images: [
+        { src: '/lovable-uploads/camisetadracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/mochiladracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/totedracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/bodydracarys.png', title: '', description: '' },
+        { src: '/lovable-uploads/camipadre.png', title: '', description: '' },
+        { src: '/lovable-uploads/camisetamadre.png', title: '', description: '' },
+        { src: '/lovable-uploads/sudaderaniña.png', title: '', description: '' },
+        { src: '/lovable-uploads/bodybebe.png', title: '', description: '' },
+        { src: '/lovable-uploads/camilloradita.png', title: '', description: '' },
+        { src: '/lovable-uploads/botellalloradita.png', title: '', description: '' },
+        { src: '/lovable-uploads/tazalloradita.png', title: '', description: '' },
+        { src: '/lovable-uploads/totelloradita.png', title: '', description: '' },
+        { src: '/lovable-uploads/camisim.png', title: '', description: '' },
+        { src: '/lovable-uploads/tazasim.png', title: '', description: '' },
+        { src: '/lovable-uploads/totesim.png', title: '', description: '' },
+        { src: '/lovable-uploads/pijamasimp.png', title: '', description: '' },
       ]
     },
   ];

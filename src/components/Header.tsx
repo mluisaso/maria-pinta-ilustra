@@ -35,9 +35,9 @@ const Header: React.FC = () => {
     { name: 'Para tu marca', id: 'team-building' },
     { name: 'Personalización con IA', id: 'ia' },
     { name: 'Proyectos personales', id: 'proyectos-personales' },
-    { name: 'Tu dibujo personalizado en el soporte que quieras', displayName: 'Tu dibujo personalizado\nen el soporte que quieras', id: 'dibujo-personalizado' },
     { name: 'Primera Comunión - Catálogo', displayName: 'Primera Comunión -\nCatálogo', id: 'recordatorios-primera-comunion' },
-    { name: 'Primera Comunión - Personalizados', displayName: 'Primera Comunión -\nPersonalizados', id: 'recordatorios-primera-comunion-personalizados' }
+    { name: 'Primera Comunión - Personalizados', displayName: 'Primera Comunión -\nPersonalizados', id: 'recordatorios-primera-comunion-personalizados' },
+    { name: 'Tu dibujo, donde tú quieras', displayName: 'Tu dibujo,\ndonde tú quieras', id: 'dibujo-personalizado' }
   ];
 
   return (
