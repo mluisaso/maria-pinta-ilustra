@@ -181,6 +181,10 @@ const Index = () => {
         { src: '/lovable-uploads/camisetamadre.png', title: '', description: '' },
         { src: '/lovable-uploads/sudaderaniña.png', title: '', description: '' },
         { src: '/lovable-uploads/bodybebe.png', title: '', description: '' },
+        { src: '/lovable-uploads/camilloradita.png', title: '', description: '' },
+        { src: '/lovable-uploads/botellalloradita.png', title: '', description: '' },
+        { src: '/lovable-uploads/tazalloradita.png', title: '', description: '' },
+        { src: '/lovable-uploads/totelloradita.png', title: '', description: '' },
       ]
     },
     {
@@ -347,7 +351,7 @@ const Index = () => {
 
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-4 md:space-y-8">
-          {portfolioSections.map((section, sectionIndex) => (
+        {portfolioSections.map((section, sectionIndex) => (
             <div key={section.id} id={section.id} className="space-y-4">
               {/* Section Title - visible on all screen sizes */}
               <h2 className="text-lg font-normal text-black text-left font-poppins underline decoration-[#be1622] decoration-2 underline-offset-4 md:block hidden">
@@ -478,18 +482,20 @@ const Index = () => {
                 </div>
               </div>
 
+              {/* Button for custom drawing section - only show for this section */}
+              {section.id === 'dibujo-personalizado' && (
+                <div className="mt-8 flex justify-center">
+                  <Button 
+                    onClick={() => setIsCustomDrawingModalOpen(true)}
+                    className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
+                  >
+                    Quiero información
+                  </Button>
+                </div>
+              )}
+
             </div>
           ))}
-
-          {/* Button for custom drawing section */}
-          <div className="max-w-6xl mx-auto px-4 md:px-8 mt-8 flex justify-center">
-            <Button 
-              onClick={() => setIsCustomDrawingModalOpen(true)}
-              className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
-            >
-              Quiero información
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -544,6 +550,31 @@ const Index = () => {
                 <p className="font-semibold text-black mb-1">3.- Te mando el link para que lo encargues en LaTostadora</p>
                 <p className="text-sm text-black/70">Tras haber decidido soporte, talla, color, etc... recibes el link para encargarlo. Ellos también se encargan del cobro y envío.</p>
               </div>
+
+              <div>
+                <p className="font-semibold text-black mb-1">4.- Mi tienda en La Tostadora</p>
+                <p className="text-sm text-black/70">
+                  Además de ilustraciones personalizadas, puedes ver otros diseños míos en mi tienda de LaTostadora y usarlos donde quieras. Pincha{' '}
+                  <a 
+                    href="https://www.latostadora.com/mariatepinta" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-semibold underline text-black hover:text-[#be1622]"
+                  >
+                    AQUÍ
+                  </a>
+                  {' '}y elige el que más te guste
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center mt-6">
+              <Button 
+                onClick={() => window.location.href = 'mailto:mluisa@mariatepinta.es?subject=Personalización con LaTostadora'}
+                className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
+              >
+                Me interesa
+              </Button>
             </div>
           </div>
         </DialogContent>
