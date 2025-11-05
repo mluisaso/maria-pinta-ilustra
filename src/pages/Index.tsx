@@ -221,7 +221,7 @@ const Index = () => {
         { src: '/lovable-uploads/bodydracarys.png', title: '', description: '' },
         { src: '/lovable-uploads/camipadre.png', title: '', description: '' },
         { src: '/lovable-uploads/camisetamadre.png', title: '', description: '' },
-        { src: '/lovable-uploads/sudaderaniña.png', title: '', description: '' },
+        
         { src: '/lovable-uploads/bodybebe.png', title: '', description: '' },
         { src: '/lovable-uploads/camilloradita.png', title: '', description: '' },
         { src: '/lovable-uploads/botellalloradita.png', title: '', description: '' },
