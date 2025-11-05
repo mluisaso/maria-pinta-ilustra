@@ -221,7 +221,7 @@ const Index = () => {
         { src: '/lovable-uploads/bodydracarys.png', title: '', description: '' },
         { src: '/lovable-uploads/camipadre.png', title: '', description: '' },
         { src: '/lovable-uploads/camisetamadre.png', title: '', description: '' },
-        { src: '/lovable-uploads/sudaderaniña.png', title: '', description: '' },
+        { src: '/lovable-uploads/sudaderaniña-2.png', title: '', description: '' },
         { src: '/lovable-uploads/bodybebe.png', title: '', description: '' },
         { src: '/lovable-uploads/camilloradita.png', title: '', description: '' },
         { src: '/lovable-uploads/botellalloradita.png', title: '', description: '' },
@@ -493,7 +493,7 @@ const Index = () => {
                     onClick={() => setIsCustomDrawingModalOpen(true)}
                     className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
                   >
-                    Quiero información
+                    Cómo funciona
                   </Button>
                 </div>
               )}
