@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import LottieAnimation from '../components/LottieAnimation';
 import ContactModal from '../components/ContactModal';
+import SEO from '../components/SEO';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "../components/ui/collapsible";
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -308,6 +309,11 @@ const Index = () => {
 
   return (
     <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLottieLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
+      <SEO 
+        title="Màriatepinta - Ilustraciones originales y personalizadas"
+        description="Ilustraciones originales y expresivas que se adaptan a tus necesidades. Encargos personales y de empresa con estilos únicos."
+        canonical="https://www.mariatepinta.es/"
+      />
       <Header />
 
       {/* Floating Contact Button - Solo desktop */}

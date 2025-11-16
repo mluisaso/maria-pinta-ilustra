@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Instagram, Linkedin } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -64,6 +65,11 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-28 md:pt-0">
+      <SEO 
+        title="Contacto - Màriatepinta"
+        description="¿Hablamos? Mis ilustraciones son originales y expresivas. Te ayudo a encontrar lo que necesitas dibujar."
+        canonical="https://www.mariatepinta.es/contact"
+      />
       <Header />
       
       <section className="pt-24 pb-16 px-4 md:px-8 max-w-2xl mx-auto">
