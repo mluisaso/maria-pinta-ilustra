@@ -7,6 +7,7 @@ interface SEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: 'summary' | 'summary_large_image';
+  schema?: object;
 }
 
 const SEO: React.FC<SEOProps> = ({ 
@@ -15,7 +16,8 @@ const SEO: React.FC<SEOProps> = ({
   canonical,
   ogImage = 'https://www.mariatepinta.es/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image'
+  twitterCard = 'summary_large_image',
+  schema
 }) => {
   return (
     <Helmet>
@@ -43,9 +45,17 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="language" content="Spanish" />
       <meta name="author" content="Màriatepinta" />
+      <meta name="keywords" content="ilustración personalizada, diseño gráfico, regalos personalizados, ilustraciones originales, dibujante, MariaLuisa ilustradora" />
+      
+      {/* Structured Data - Schema.org */}
+      {schema && (
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      )}
     </Helmet>
   );
 };

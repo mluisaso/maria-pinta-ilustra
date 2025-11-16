@@ -63,6 +63,26 @@ const Contact: React.FC = () => {
     }));
   };
 
+  // Schema.org structured data for Contact page
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "url": "https://www.mariatepinta.es/contact",
+    "name": "Contacto - Màriatepinta",
+    "description": "Contacta con MariaLuisa para proyectos de ilustración personalizada",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "MariaLuisa",
+      "alternateName": "Màriatepinta",
+      "jobTitle": "Ilustradora y Diseñadora Gráfica",
+      "sameAs": [
+        "https://www.instagram.com/mariatepinta/",
+        "https://www.linkedin.com/in/mariatepinta/",
+        "https://www.tiktok.com/@mariatepinta"
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-28 md:pt-0">
       <SEO 
@@ -70,6 +90,7 @@ const Contact: React.FC = () => {
         description="¿No sabes muy bien lo que quieres? Perfecto, ahí empiezo yo. Ilustraciones personalizadas para empresas y particulares. Hablemos de tu proyecto."
         canonical="https://www.mariatepinta.es/contact"
         ogType="website"
+        schema={schemaData}
       />
       <Header />
       
@@ -79,12 +100,12 @@ const Contact: React.FC = () => {
             ¡Hola! Soy "Mària".<br />
             Es la forma corta de MariaLuisa.
           </h1>
-          <p className="text-xl text-gray-600">
+          <h2 className="text-xl text-gray-600 font-normal">
             Mis ilustraciones son originales y expresivas. Utilizo distintos estilos que se adaptan a un encargo personal o de empresa, pero sobre todo, ofrezco ideas. ¿No sabes muy bien lo que quieres? Estupendo, ahí empiezo yo. ¿Hablamos?
-          </p>
+          </h2>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6" aria-label="Formulario de contacto">
           <div>
             <Input
               type="text"
@@ -134,17 +155,18 @@ const Contact: React.FC = () => {
         </form>
 
         <div className="flex justify-center space-x-6 mt-8">
-          <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
+          <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300" aria-label="Sígueme en Instagram">
             <Instagram size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
+          <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300" aria-label="Conéctate conmigo en LinkedIn">
             <Linkedin size={24} />
           </a>
-          <a href="https://www.tiktok.com/@mariatepinta" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
+          <a href="https://www.tiktok.com/@mariatepinta" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300" aria-label="Sígueme en TikTok">
             <img 
               src="/lovable-uploads/bb8002d5-0962-4d3a-9301-9603bec5426c.png" 
-              alt="TikTok" 
+              alt="TikTok - Màriatepinta" 
               className="w-6 h-6 object-contain"
+              loading="lazy"
             />
           </a>
         </div>
