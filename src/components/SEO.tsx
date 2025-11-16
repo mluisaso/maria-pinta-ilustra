@@ -1,17 +1,51 @@
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   canonical: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: 'summary' | 'summary_large_image';
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, canonical }) => {
+const SEO: React.FC<SEOProps> = ({ 
+  title, 
+  description, 
+  canonical,
+  ogImage = 'https://www.mariatepinta.es/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
+}) => {
   return (
     <Helmet>
-      {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
+      
+      {/* Open Graph / Facebook / Instagram / WhatsApp */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Màriatepinta" />
+      <meta property="og:locale" content="es_ES" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:url" content={canonical} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="Spanish" />
+      <meta name="author" content="Màriatepinta" />
     </Helmet>
   );
 };

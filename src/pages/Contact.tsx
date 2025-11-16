@@ -66,9 +66,10 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-28 md:pt-0">
       <SEO 
-        title="Contacto - Màriatepinta"
-        description="¿Hablamos? Mis ilustraciones son originales y expresivas. Te ayudo a encontrar lo que necesitas dibujar."
+        title="Contacto - Màriatepinta | ¿Hablamos de tu proyecto?"
+        description="¿No sabes muy bien lo que quieres? Perfecto, ahí empiezo yo. Ilustraciones personalizadas para empresas y particulares. Hablemos de tu proyecto."
         canonical="https://www.mariatepinta.es/contact"
+        ogType="website"
       />
       <Header />
       
