@@ -1,4 +1,10 @@
 
+User-agent: *
+Allow: /
+Disallow: /web/
+Disallow: /web/index.php/
+
+# Specific bot permissions
 User-agent: Googlebot
 Allow: /
 
@@ -11,15 +17,5 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
-Disallow: /web/
-Disallow: /web/index.php/
-Disallow: /web/index.php/producto/
-Disallow: /web/index.php/subproducto/
-Disallow: /web/index.php/cesta
-Disallow: /web/index.php/contacto
-Disallow: /web/index.php/maria
-Disallow: /web/index.php/faqs
-
-Sitemap: https://mariatepinta.es/sitemap.xml
+# Sitemap location
+Sitemap: https://www.mariatepinta.es/sitemap.xml

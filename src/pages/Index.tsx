@@ -310,9 +310,10 @@ const Index = () => {
   return (
     <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLottieLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
       <SEO 
-        title="Màriatepinta - Ilustraciones originales y personalizadas"
-        description="Ilustraciones originales y expresivas que se adaptan a tus necesidades. Encargos personales y de empresa con estilos únicos."
+        title="Màriatepinta - Ilustraciones originales y personalizadas | Portfolio de MariaLuisa"
+        description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio de MariaLuisa: desde Cosmopolitan hasta proyectos personalizados. ¿Hablamos?"
         canonical="https://www.mariatepinta.es/"
+        ogType="website"
       />
       <Header />
 
