@@ -1,3 +1,7 @@
+# Redirect all variations to canonical URLs
+http://mariatepinta.es/*  https://www.mariatepinta.es/:splat  301!
+http://www.mariatepinta.es/*  https://www.mariatepinta.es/:splat  301!
+https://mariatepinta.es/*  https://www.mariatepinta.es/:splat  301!
 
 # 301 redirects for old URLs
 /web/index.php/producto/*  https://mariatepinta.es/  301!
