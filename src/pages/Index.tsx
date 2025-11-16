@@ -216,22 +216,22 @@ const Index = () => {
       id: 'dibujo-personalizado',
       title: 'Tu dibujo, donde tú quieras',
       images: [
-        { src: '/lovable-uploads/camisetadracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/mochiladracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/totedracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/bodydracarys.png', title: '', description: '' },
-        { src: '/lovable-uploads/camipadre.png', title: '', description: '' },
-        { src: '/lovable-uploads/camisetamadre.png', title: '', description: '' },
+        { src: '/lovable-uploads/camisetadracarys.png', title: 'Camiseta personalizada', description: 'Dibujo personalizado en camiseta' },
+        { src: '/lovable-uploads/mochiladracarys.png', title: 'Mochila personalizada', description: 'Dibujo personalizado en mochila' },
+        { src: '/lovable-uploads/totedracarys.png', title: 'Tote bag personalizado', description: 'Dibujo personalizado en bolsa tote' },
+        { src: '/lovable-uploads/bodydracarys.png', title: 'Body personalizado', description: 'Dibujo personalizado para bebé' },
+        { src: '/lovable-uploads/camipadre.png', title: 'Camiseta padre', description: 'Ilustración personalizada para padre' },
+        { src: '/lovable-uploads/camisetamadre.png', title: 'Camiseta madre', description: 'Ilustración personalizada para madre' },
         
-        { src: '/lovable-uploads/bodybebe.png', title: '', description: '' },
-        { src: '/lovable-uploads/camilloradita.png', title: '', description: '' },
-        { src: '/lovable-uploads/botellalloradita.png', title: '', description: '' },
-        { src: '/lovable-uploads/tazalloradita.png', title: '', description: '' },
-        { src: '/lovable-uploads/totelloradita.png', title: '', description: '' },
-        { src: '/lovable-uploads/camisim.png', title: '', description: '' },
-        { src: '/lovable-uploads/tazasim.png', title: '', description: '' },
-        { src: '/lovable-uploads/totesim.png', title: '', description: '' },
-        { src: '/lovable-uploads/pijamasimp.png', title: '', description: '' },
+        { src: '/lovable-uploads/bodybebe.png', title: 'Body bebé', description: 'Dibujo personalizado para bebé' },
+        { src: '/lovable-uploads/camilloradita.png', title: 'Camiseta personalizada', description: 'Ilustración infantil en camiseta' },
+        { src: '/lovable-uploads/botellalloradita.png', title: 'Botella personalizada', description: 'Dibujo personalizado en botella' },
+        { src: '/lovable-uploads/tazalloradita.png', title: 'Taza personalizada', description: 'Ilustración en taza' },
+        { src: '/lovable-uploads/totelloradita.png', title: 'Tote bag personalizado', description: 'Dibujo en bolsa tote' },
+        { src: '/lovable-uploads/camisim.png', title: 'Camiseta personalizada', description: 'Ilustración personalizada' },
+        { src: '/lovable-uploads/tazasim.png', title: 'Taza personalizada', description: 'Dibujo personalizado en taza' },
+        { src: '/lovable-uploads/totesim.png', title: 'Tote bag personalizado', description: 'Ilustración en bolsa' },
+        { src: '/lovable-uploads/pijamasimp.png', title: 'Pijama personalizado', description: 'Dibujo infantil en pijama' },
       ]
     },
   ];
@@ -307,6 +307,62 @@ const Index = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Schema.org structured data
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.mariatepinta.es/#website",
+        "url": "https://www.mariatepinta.es/",
+        "name": "Màriatepinta",
+        "description": "Ilustraciones originales y personalizadas para empresas y particulares",
+        "publisher": {
+          "@id": "https://www.mariatepinta.es/#organization"
+        },
+        "inLanguage": "es-ES"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.mariatepinta.es/#organization",
+        "name": "Màriatepinta",
+        "url": "https://www.mariatepinta.es/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.mariatepinta.es/lovable-uploads/e27c95ab-eb40-4ab3-ac43-b70d39b9ed96.png"
+        },
+        "sameAs": [
+          "https://www.instagram.com/mariatepinta/",
+          "https://www.linkedin.com/in/mariatepinta/",
+          "https://www.tiktok.com/@mariatepinta"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.mariatepinta.es/#person",
+        "name": "MariaLuisa",
+        "alternateName": "Màriatepinta",
+        "jobTitle": "Ilustradora y Diseñadora Gráfica",
+        "url": "https://www.mariatepinta.es/",
+        "image": "https://www.mariatepinta.es/og-image.jpg",
+        "sameAs": [
+          "https://www.instagram.com/mariatepinta/",
+          "https://www.linkedin.com/in/mariatepinta/",
+          "https://www.tiktok.com/@mariatepinta"
+        ]
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Portfolio de Ilustraciones",
+        "creator": {
+          "@id": "https://www.mariatepinta.es/#person"
+        },
+        "description": "Portfolio profesional con trabajos para Cosmopolitan, Telva, El País, proyectos editoriales y personalizados",
+        "url": "https://www.mariatepinta.es/"
+      }
+    ]
+  };
+
   return (
     <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLottieLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
       <SEO 
@@ -314,6 +370,7 @@ const Index = () => {
         description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio de MariaLuisa: desde Cosmopolitan hasta proyectos personalizados. ¿Hablamos?"
         canonical="https://www.mariatepinta.es/"
         ogType="website"
+        schema={schemaData}
       />
       <Header />
 
@@ -338,10 +395,16 @@ const Index = () => {
         <div className="mb-8 hidden md:flex flex-col items-center justify-center">
           <img 
             src="/lovable-uploads/e27c95ab-eb40-4ab3-ac43-b70d39b9ed96.png" 
-            alt="Mariatepinta" 
+            alt="Màriatepinta - Ilustraciones originales y personalizadas de MariaLuisa" 
             className="h-auto w-64 lg:w-80 mb-6"
+            loading="eager"
           />
         </div>
+        
+        {/* H1 principal - SEO optimizado pero visualmente oculto */}
+        <h1 className="sr-only">
+          Màriatepinta - Ilustraciones originales y personalizadas para empresas y particulares
+        </h1>
 
         {/* Lottie Animation - solo desktop */}
         <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64 hidden md:block">
@@ -467,13 +530,14 @@ const Index = () => {
                                src={image.src.replace('lottie:', '')}
                                style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                              />
-                           ) : (
-                             <img 
-                               src={image.src} 
-                               alt={image.title}
-                               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                             />
-                            )}
+                            ) : (
+                              <img 
+                                src={image.src} 
+                                alt={image.title || `Ilustración personalizada ${section.title} - Màriatepinta`}
+                                loading="lazy"
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              />
+                             )}
                             {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                  <div className="bg-white/80 w-full h-full flex items-center justify-center backdrop-blur-sm">
