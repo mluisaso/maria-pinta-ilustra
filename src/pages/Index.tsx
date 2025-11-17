@@ -14,6 +14,7 @@ interface ImageItem {
   title: string;
   description: string;
   type?: 'image' | 'lottie';
+  alt?: string;
 }
 
 const Index = () => {
@@ -90,33 +91,33 @@ const Index = () => {
       id: 'infantil',
       title: 'Infantil',
       images: [
-        { src: '/lovable-uploads/16b71bc6-e77e-4c39-b5d6-c01bb272dd5c.png', title: '', description: '' },
-        { src: '/lovable-uploads/2247035a-f2a8-47ec-8acb-e86a76d7c8c2.png', title: '', description: '' },
-        { src: '/lovable-uploads/6f34d969-10be-4b2d-b4b5-7226766d3238.png', title: '', description: '' },
-        { src: '/lovable-uploads/e0e1331f-023b-4c56-8217-292ec90afb7a.png', title: '', description: '' },
-        { src: '/lovable-uploads/46eb03b3-43d3-4e91-aa2c-bc302afb974d.png', title: '', description: '' },
-        { src: '/lovable-uploads/ee0795ab-d68e-4944-8626-90283bee013a.png', title: '', description: '' },
-        { src: '/lovable-uploads/d7ebac4b-8956-41d9-860a-3428aba5baf1.png', title: '', description: '' },
-        { src: '/lovable-uploads/273877fe-4229-408e-a266-9ca348799652.png', title: '', description: '' },
-        { src: '/lovable-uploads/9111f584-d8c5-4127-a2ea-943c83abec57.png', title: '', description: '' },
-        { src: '/lovable-uploads/93769978-c658-47ca-8eb1-f3ade0f9a771.png', title: '', description: '' },
+        { src: '/lovable-uploads/16b71bc6-e77e-4c39-b5d6-c01bb272dd5c.png', title: '', description: '', alt: 'Ilustración infantil en acuarela - personaje tierno con animales del bosque - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/2247035a-f2a8-47ec-8acb-e86a76d7c8c2.png', title: '', description: '', alt: 'Ilustración infantil colorida - niños jugando en escena mágica - Màriatepinta' },
+        { src: '/lovable-uploads/6f34d969-10be-4b2d-b4b5-7226766d3238.png', title: '', description: '', alt: 'Ilustración infantil original - personajes fantásticos para libro de cuentos - MariaLuisa' },
+        { src: '/lovable-uploads/e0e1331f-023b-4c56-8217-292ec90afb7a.png', title: '', description: '', alt: 'Ilustración infantil dulce - niña con expresión tierna en acuarela - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/46eb03b3-43d3-4e91-aa2c-bc302afb974d.png', title: '', description: '', alt: 'Ilustración infantil vibrante - escena de aventuras para niños - Màriatepinta' },
+        { src: '/lovable-uploads/ee0795ab-d68e-4944-8626-90283bee013a.png', title: '', description: '', alt: 'Ilustración infantil encantadora - personaje de cuento con animales amigos - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/d7ebac4b-8956-41d9-860a-3428aba5baf1.png', title: '', description: '', alt: 'Ilustración infantil expresiva - retrato de niño en estilo acuarela - MariaLuisa' },
+        { src: '/lovable-uploads/273877fe-4229-408e-a266-9ca348799652.png', title: '', description: '', alt: 'Ilustración infantil imaginativa - escena de fantasía para literatura infantil - Màriatepinta' },
+        { src: '/lovable-uploads/9111f584-d8c5-4127-a2ea-943c83abec57.png', title: '', description: '', alt: 'Ilustración infantil alegre - personajes jugando en composición colorida - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/93769978-c658-47ca-8eb1-f3ade0f9a771.png', title: '', description: '', alt: 'Ilustración infantil mágica - mundo de fantasía para cuentos infantiles - MariaLuisa' },
       ]
     },
     {
       id: 'vinetas',
       title: 'Viñetas',
       images: [
-        { src: '/lovable-uploads/af6fe3e8-731b-42cc-916f-ec30191c88f2.png', title: '', description: '' },
-        { src: '/lovable-uploads/43b7775c-5b62-4e2e-9bb9-29005cb6c74f.png', title: '', description: '' },
-        { src: '/lovable-uploads/be52a4a3-d4f6-49dc-9bbe-2eeb96b6ebf2.png', title: '', description: '' },
-        { src: '/lovable-uploads/af6f2cdc-cd6a-444e-a85f-20414dd904f0.png', title: '', description: '' },
-        { src: '/lovable-uploads/652b5821-7047-496d-940c-19b294d72e9d.png', title: '', description: '' },
-        { src: '/lovable-uploads/3764098a-b9ec-49a6-9bfb-09ebf115315a.png', title: '', description: '' },
-        { src: '/lovable-uploads/91412baa-26aa-4773-8624-16f876fcf788.png', title: '', description: '' },
-        { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '' },
-        { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '' },
-        { src: '/lovable-uploads/776614fa-73b7-4c84-95ef-61845f90a4d7.png', title: '', description: '' },
-        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '' },
+        { src: '/lovable-uploads/af6fe3e8-731b-42cc-916f-ec30191c88f2.png', title: '', description: '', alt: 'Viñeta ilustrada original - escena humorística de la vida cotidiana - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/43b7775c-5b62-4e2e-9bb9-29005cb6c74f.png', title: '', description: '', alt: 'Viñeta expresiva - personajes en situación cómica - Màriatepinta' },
+        { src: '/lovable-uploads/be52a4a3-d4f6-49dc-9bbe-2eeb96b6ebf2.png', title: '', description: '', alt: 'Viñeta narrativa original - momento de reflexión ilustrado a mano - MariaLuisa' },
+        { src: '/lovable-uploads/af6f2cdc-cd6a-444e-a85f-20414dd904f0.png', title: '', description: '', alt: 'Viñeta ilustrada con humor - personaje en acuarela para prensa - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/652b5821-7047-496d-940c-19b294d72e9d.png', title: '', description: '', alt: 'Viñeta editorial divertida - escena de costumbres contemporáneas - Màriatepinta' },
+        { src: '/lovable-uploads/3764098a-b9ec-49a6-9bfb-09ebf115315a.png', title: '', description: '', alt: 'Viñeta original de actualidad - personajes expresivos en situación social - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/91412baa-26aa-4773-8624-16f876fcf788.png', title: '', description: '', alt: 'Viñeta ilustrada para revista - momento cotidiano con toque de humor - MariaLuisa' },
+        { src: '/lovable-uploads/4bbeb368-9d91-49ef-90a5-aa5728e1d6ba.png', title: '', description: '', alt: 'Viñeta expresiva de opinión - escena social dibujada en acuarela - Màriatepinta' },
+        { src: '/lovable-uploads/6eb93044-004e-4d9b-8bc8-091527e781b7.png', title: '', description: '', alt: 'Viñeta ilustrada con carácter - personajes en situación moderna - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/776614fa-73b7-4c84-95ef-61845f90a4d7.png', title: '', description: '', alt: 'Viñeta narrativa original - escena de la vida diaria con humor - MariaLuisa' },
+        { src: '/lovable-uploads/40341b68-73b7-49b5-bc51-f7a19a99fd11.png', title: '', description: '', alt: 'Viñeta ilustrada para prensa - momento cómico de actualidad - Màriatepinta' },
       ]
     },
     {
@@ -124,114 +125,114 @@ const Index = () => {
       title: 'Para tu marca',
       images: [
         // Primeras 2 animaciones Lottie
-        { src: 'lottie:https://lottie.host/d621c91a-d410-45a2-873d-258fe7517caf/TQ1MQIWlDj.json', title: 'Firma animada', description: 'Correos personalizados' },
-        { src: 'lottie:https://lottie.host/35cee8a6-3c2b-4d7e-9361-53a2955bcbd8/S3eks5Jr7X.json', title: 'Firma animada', description: 'Correos personalizados' },
+        { src: 'lottie:https://lottie.host/d621c91a-d410-45a2-873d-258fe7517caf/TQ1MQIWlDj.json', title: 'Firma animada', description: 'Correos personalizados', alt: 'Firma animada personalizada para email corporativo - ilustración digital en movimiento - MariaLuisa' },
+        { src: 'lottie:https://lottie.host/35cee8a6-3c2b-4d7e-9361-53a2955bcbd8/S3eks5Jr7X.json', title: 'Firma animada', description: 'Correos personalizados', alt: 'Firma de email animada original - diseño corporativo personalizado - Màriatepinta' },
         
-        { src: '/lovable-uploads/c6b5df98-2727-437c-9509-7a3a5cdf6ae0.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
-        { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
-        { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
-        { src: '/lovable-uploads/fab72f2e-11bb-4fea-8e5c-d403f4f617d5.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
-        { src: '/lovable-uploads/854602ed-4c4b-4b2f-ad85-dea3fffc16be.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
-        { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
-        { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible' },
+        { src: '/lovable-uploads/c6b5df98-2727-437c-9509-7a3a5cdf6ae0.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible', alt: 'Ilustración personalizada de equipo de trabajo para redes sociales - retrato corporativo en acuarela - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/987c74e8-f662-44d1-9ef8-b271bd251bfb.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible', alt: 'Retrato ilustrado de equipo profesional - contenido visual para marca corporativa - Màriatepinta' },
+        { src: '/lovable-uploads/35691c1b-2efc-4c49-aefa-e2fd06f7d3c5.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible', alt: 'Ilustración personalizada de empleado para empresa - retrato corporativo original - MariaLuisa' },
+        { src: '/lovable-uploads/fab72f2e-11bb-4fea-8e5c-d403f4f617d5.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible', alt: 'Retrato de equipo personalizado en acuarela - contenido corporativo para redes - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/854602ed-4c4b-4b2f-ad85-dea3fffc16be.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible', alt: 'Ilustración original de profesional para marca - retrato corporativo expresivo - Màriatepinta' },
+        { src: '/lovable-uploads/fbd6b6cc-4ec5-4160-8f5a-5edcb7ec9856.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible', alt: 'Retrato ilustrado de equipo de empresa - contenido visual personalizado para comunicación corporativa - MariaLuisa' },
+        { src: '/lovable-uploads/4aad7615-de13-409b-ac5a-0827db0af510.png', title: 'Equipo personalizado', description: 'Contenido para\nredes/imprimible', alt: 'Ilustración personalizada de trabajador para marca - retrato corporativo en estilo acuarela - MariaLuisa ilustradora' },
         
         // Nuevas imágenes de Brooklyn Fitboxing
-        { src: '/lovable-uploads/efb2a663-e081-4388-9bc7-c4186af7689b.png', title: 'Brooklyn Fitboxing', description: 'Sorteo en RRSS' },
-        { src: '/lovable-uploads/06ea573e-0c0a-4de3-b975-e8ad7bdf0d75.png', title: 'Brooklyn Fitboxing', description: 'Sorteo en RRSS' },
+        { src: '/lovable-uploads/efb2a663-e081-4388-9bc7-c4186af7689b.png', title: 'Brooklyn Fitboxing', description: 'Sorteo en RRSS', alt: 'Ilustración personalizada para sorteo Brooklyn Fitboxing en redes sociales - diseño promocional original - Màriatepinta' },
+        { src: '/lovable-uploads/06ea573e-0c0a-4de3-b975-e8ad7bdf0d75.png', title: 'Brooklyn Fitboxing', description: 'Sorteo en RRSS', alt: 'Ilustración de campaña para Brooklyn Fitboxing - contenido visual para sorteo en redes - MariaLuisa ilustradora' },
         
         // Últimas 2 animaciones Lottie al final
-        { src: 'lottie:https://lottie.host/11b9282d-92f1-4e6f-8566-b355232d7c3a/yT9FBK7rYM.json', title: 'Firma animada', description: 'Correos personalizados' },
-        { src: 'lottie:https://lottie.host/0d6b6fc6-3e3f-4c64-99da-f3aba070d6dc/g8TjHsAQKv.json', title: 'Firma animada', description: 'Correos personalizados' },
+        { src: 'lottie:https://lottie.host/11b9282d-92f1-4e6f-8566-b355232d7c3a/yT9FBK7rYM.json', title: 'Firma animada', description: 'Correos personalizados', alt: 'Firma de correo animada personalizada - diseño digital corporativo en movimiento - MariaLuisa' },
+        { src: 'lottie:https://lottie.host/0d6b6fc6-3e3f-4c64-99da-f3aba070d6dc/g8TjHsAQKv.json', title: 'Firma animada', description: 'Correos personalizados', alt: 'Firma animada original para email profesional - ilustración corporativa dinámica - Màriatepinta' },
       ]
     },
     {
       id: 'ia',
       title: 'Personalización con IA',
       images: [
-        { src: '/lovable-uploads/bab3a667-ae55-4bf3-b15f-69b09134d712.png', title: 'IA', description: 'Robots con personalidad' },
-        { src: '/lovable-uploads/f24ba6cd-1c32-432a-b26a-77d93a529259.png', title: 'IA', description: 'Futuro dibujado a mano' },
-        { src: '/lovable-uploads/950c5cba-5c71-4bd4-9dbe-92bf9378cc03.png', title: 'IA', description: 'Tecnología humanizada' },
-        { src: '/lovable-uploads/a9e262e4-7fa1-4a72-88b1-d333da84764c.png', title: 'IA', description: 'Ciencia ficción' },
-        { src: '/lovable-uploads/ff564f31-ef86-44b1-8029-f9c718cb089e.png', title: 'IA', description: 'Inteligencia visual' },
-        { src: '/lovable-uploads/eb48130d-d8df-4b7f-a088-dd618e939fc2.png', title: 'IA', description: 'Mundo digital' },
+        { src: '/lovable-uploads/bab3a667-ae55-4bf3-b15f-69b09134d712.png', title: 'IA', description: 'Robots con personalidad', alt: 'Ilustración de inteligencia artificial con robots humanizados - tecnología dibujada a mano - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/f24ba6cd-1c32-432a-b26a-77d93a529259.png', title: 'IA', description: 'Futuro dibujado a mano', alt: 'Ilustración de IA y futuro tecnológico - escena de ciencia ficción en acuarela - Màriatepinta' },
+        { src: '/lovable-uploads/950c5cba-5c71-4bd4-9dbe-92bf9378cc03.png', title: 'IA', description: 'Tecnología humanizada', alt: 'Ilustración de tecnología e inteligencia artificial humanizada - mundo digital dibujado a mano - MariaLuisa' },
+        { src: '/lovable-uploads/a9e262e4-7fa1-4a72-88b1-d333da84764c.png', title: 'IA', description: 'Ciencia ficción', alt: 'Ilustración de ciencia ficción e IA - robot con personalidad en estilo acuarela - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/ff564f31-ef86-44b1-8029-f9c718cb089e.png', title: 'IA', description: 'Inteligencia visual', alt: 'Ilustración de inteligencia artificial visual - tecnología del futuro dibujada a mano - Màriatepinta' },
+        { src: '/lovable-uploads/eb48130d-d8df-4b7f-a088-dd618e939fc2.png', title: 'IA', description: 'Mundo digital', alt: 'Ilustración de mundo digital e IA - escena tecnológica futurista en acuarela - MariaLuisa ilustradora' },
       ]
     },
     {
       id: 'proyectos-personales',
       title: 'Proyectos personales',
       images: [
-        { src: '/lovable-uploads/0ccfe8e6-a5f4-44b4-b585-496b71e0d284.png', title: 'Invitación de boda', description: '' },
-        { src: '/lovable-uploads/66a48fc2-0af1-4655-b1a4-4f54383dc6c2.png', title: 'Asana', description: '' },
-        { src: '/lovable-uploads/9c55eafc-4689-4e57-9d43-45c7d8e6c34c.png', title: 'Homenaje a Bowie', description: '' },
-        { src: '/lovable-uploads/53be8d9e-27e8-4e95-baf5-d5412e185286.png', title: 'Decadencia', description: '' },
-        { src: '/lovable-uploads/casaOlivia.jpg', title: 'Casa particular', description: 'Ilustración a partir de foto para postales' },
-        { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: '' },
-        { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: '' },
-        { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: '' },
+        { src: '/lovable-uploads/0ccfe8e6-a5f4-44b4-b585-496b71e0d284.png', title: 'Invitación de boda', description: '', alt: 'Invitación de boda personalizada ilustrada - diseño único en acuarela para celebración - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/66a48fc2-0af1-4655-b1a4-4f54383dc6c2.png', title: 'Asana', description: '', alt: 'Ilustración personal de asana de yoga - postura meditativa dibujada a mano - Màriatepinta' },
+        { src: '/lovable-uploads/9c55eafc-4689-4e57-9d43-45c7d8e6c34c.png', title: 'Homenaje a Bowie', description: '', alt: 'Ilustración de homenaje a David Bowie - retrato artístico del músico en acuarela - MariaLuisa' },
+        { src: '/lovable-uploads/53be8d9e-27e8-4e95-baf5-d5412e185286.png', title: 'Decadencia', description: '', alt: 'Ilustración personal sobre decadencia - obra artística expresiva en acuarela - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/casaOlivia.jpg', title: 'Casa particular', description: 'Ilustración a partir de foto para postales', alt: 'Ilustración personalizada de casa particular a partir de fotografía - lámina para postales - Màriatepinta' },
+        { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: '', alt: 'Ilustración de personaje en plastilina - proyecto personal artístico tridimensional - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: '', alt: 'Creación artística en plastilina - personaje modelado a mano para proyecto personal - MariaLuisa' },
+        { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: '', alt: 'Escultura en plastilina ilustrada - figura artística para proyecto de ilustración - Màriatepinta' },
       ]
     },
     {
       id: 'recordatorios-primera-comunion',
       title: 'Recordatorios Primera Comunión - Dibujos de catálogo',
       images: [
-        { src: '/lovable-uploads/besobeberizado.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/chinita.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/corderito-sin-cordero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/negritaTUnica.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/organzareclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/patinete.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/rezoorganza.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/tunicaangelito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/veladiadema.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/velapaloma.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/balon_traje_CORTO.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/basketraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/escudo-marinero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/futboltraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/marineroBalon.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/marinerobarquito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/marineroreclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/patinete-2.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/RECLINATORIOTRAJE.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
-        { src: '/lovable-uploads/virgenpatio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables' },
+        { src: '/lovable-uploads/besobeberizado.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión personalizable - niña con beso beberizado en acuarela - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/chinita.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña chinita con traje de comunión - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/corderito-sin-cordero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña con corderito personalizable - MariaLuisa' },
+        { src: '/lovable-uploads/negritaTUnica.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña negrita con túnica blanca - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/organzareclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña en reclinatorio con organza - Màriatepinta' },
+        { src: '/lovable-uploads/patinete.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con patinete y traje de comunión - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/rezoorganza.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña rezando con vestido de organza - MariaLuisa' },
+        { src: '/lovable-uploads/tunicaangelito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño angelito con túnica blanca - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/veladiadema.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña con vela y diadema personalizable - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/velapaloma.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con vela y paloma del Espíritu Santo - MariaLuisa' },
+        { src: '/lovable-uploads/balon_traje_CORTO.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño con balón y traje corto personalizable - Màriatepinta' },
+        { src: '/lovable-uploads/basketraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con balón de basket y traje - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/escudo-marinero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero con escudo personalizable - MariaLuisa' },
+        { src: '/lovable-uploads/futboltraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño futbolista con traje de comunión - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/marineroBalon.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero con balón personalizable - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/marinerobarquito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño marinero con barquito en acuarela - MariaLuisa' },
+        { src: '/lovable-uploads/marineroreclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero en reclinatorio - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/patinete-2.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña con patinete y vestido de comunión - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/RECLINATORIOTRAJE.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño en reclinatorio con traje blanco - MariaLuisa' },
+        { src: '/lovable-uploads/virgenpatio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con Virgen del patio en acuarela - Màriatepinta' },
       ]
     },
     {
       id: 'recordatorios-primera-comunion-personalizados',
       title: 'Recordatorios Primera Comunión - Dibujos personalizados',
       images: [
-        { src: '/lovable-uploads/colormen.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/colorperritos.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/columpio.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/bluegrande.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/flaviasola.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/hermanas.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/inigo.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/marineroperrito.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/rezando.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
-        { src: '/lovable-uploads/trenza.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras' },
+        { src: '/lovable-uploads/colormen.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado a medida - niño coloreando con traje - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/colorperritos.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - niño con perritos dibujado a medida - Màriatepinta' },
+        { src: '/lovable-uploads/columpio.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niña en columpio ilustración única - MariaLuisa' },
+        { src: '/lovable-uploads/bluegrande.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión a medida - personaje Blue grande con niño - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/flaviasola.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niña Flavia retrato único en acuarela - Màriatepinta' },
+        { src: '/lovable-uploads/hermanas.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - hermanas ilustradas a medida - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/inigo.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niño Íñigo retrato exclusivo - MariaLuisa' },
+        { src: '/lovable-uploads/marineroperrito.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión a medida - niño marinero con perrito dibujado personalizado - Màriatepinta' },
+        { src: '/lovable-uploads/rezando.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niño rezando ilustración única y exclusiva - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/trenza.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - niña con trenza dibujada a medida - MariaLuisa' },
       ]
     },
     {
       id: 'dibujo-personalizado',
       title: 'Tu dibujo, donde tú quieras',
       images: [
-        { src: '/lovable-uploads/camisetadracarys.png', title: 'Camiseta personalizada', description: 'Dibujo personalizado en camiseta' },
-        { src: '/lovable-uploads/mochiladracarys.png', title: 'Mochila personalizada', description: 'Dibujo personalizado en mochila' },
-        { src: '/lovable-uploads/totedracarys.png', title: 'Tote bag personalizado', description: 'Dibujo personalizado en bolsa tote' },
-        { src: '/lovable-uploads/bodydracarys.png', title: 'Body personalizado', description: 'Dibujo personalizado para bebé' },
-        { src: '/lovable-uploads/camipadre.png', title: 'Camiseta padre', description: 'Ilustración personalizada para padre' },
-        { src: '/lovable-uploads/camisetamadre.png', title: 'Camiseta madre', description: 'Ilustración personalizada para madre' },
+        { src: '/lovable-uploads/camisetadracarys.png', title: 'Camiseta personalizada', description: 'Dibujo personalizado en camiseta', alt: 'Camiseta personalizada con ilustración Dracarys - diseño único en prenda textil - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/mochiladracarys.png', title: 'Mochila personalizada', description: 'Dibujo personalizado en mochila', alt: 'Mochila infantil personalizada con dibujo Dracarys - ilustración original en textil - Màriatepinta' },
+        { src: '/lovable-uploads/totedracarys.png', title: 'Tote bag personalizado', description: 'Dibujo personalizado en bolsa tote', alt: 'Tote bag personalizado con ilustración Dracarys - bolsa de tela con diseño único - MariaLuisa' },
+        { src: '/lovable-uploads/bodydracarys.png', title: 'Body personalizado', description: 'Dibujo personalizado para bebé', alt: 'Body para bebé personalizado con dibujo Dracarys - ropa infantil con ilustración original - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/camipadre.png', title: 'Camiseta padre', description: 'Ilustración personalizada para padre', alt: 'Camiseta personalizada para padre - ilustración familiar en prenda textil - Màriatepinta' },
+        { src: '/lovable-uploads/camisetamadre.png', title: 'Camiseta madre', description: 'Ilustración personalizada para madre', alt: 'Camiseta personalizada para madre - diseño familiar exclusivo en textil - MariaLuisa ilustradora' },
         
-        { src: '/lovable-uploads/bodybebe.png', title: 'Body bebé', description: 'Dibujo personalizado para bebé' },
-        { src: '/lovable-uploads/camilloradita.png', title: 'Camiseta personalizada', description: 'Ilustración infantil en camiseta' },
-        { src: '/lovable-uploads/botellalloradita.png', title: 'Botella personalizada', description: 'Dibujo personalizado en botella' },
-        { src: '/lovable-uploads/tazalloradita.png', title: 'Taza personalizada', description: 'Ilustración en taza' },
-        { src: '/lovable-uploads/totelloradita.png', title: 'Tote bag personalizado', description: 'Dibujo en bolsa tote' },
-        { src: '/lovable-uploads/camisim.png', title: 'Camiseta personalizada', description: 'Ilustración personalizada' },
-        { src: '/lovable-uploads/tazasim.png', title: 'Taza personalizada', description: 'Dibujo personalizado en taza' },
-        { src: '/lovable-uploads/totesim.png', title: 'Tote bag personalizado', description: 'Ilustración en bolsa' },
-        { src: '/lovable-uploads/pijamasimp.png', title: 'Pijama personalizado', description: 'Dibujo infantil en pijama' },
+        { src: '/lovable-uploads/bodybebe.png', title: 'Body bebé', description: 'Dibujo personalizado para bebé', alt: 'Body para bebé con ilustración personalizada - ropa infantil con dibujo único - MariaLuisa' },
+        { src: '/lovable-uploads/camilloradita.png', title: 'Camiseta personalizada', description: 'Ilustración infantil en camiseta', alt: 'Camiseta infantil personalizada Lloradita - ilustración original en prenda - Màriatepinta' },
+        { src: '/lovable-uploads/botellalloradita.png', title: 'Botella personalizada', description: 'Dibujo personalizado en botella', alt: 'Botella personalizada con dibujo Lloradita - diseño único en objeto reutilizable - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/tazalloradita.png', title: 'Taza personalizada', description: 'Ilustración en taza', alt: 'Taza personalizada con ilustración Lloradita - diseño exclusivo en cerámica - MariaLuisa' },
+        { src: '/lovable-uploads/totelloradita.png', title: 'Tote bag personalizado', description: 'Dibujo en bolsa tote', alt: 'Tote bag personalizado Lloradita - bolsa de tela con ilustración original - Màriatepinta' },
+        { src: '/lovable-uploads/camisim.png', title: 'Camiseta personalizada', description: 'Ilustración personalizada', alt: 'Camiseta personalizada Sim - ilustración exclusiva en prenda textil - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/tazasim.png', title: 'Taza personalizada', description: 'Dibujo personalizado en taza', alt: 'Taza personalizada con diseño Sim - ilustración única en cerámica - MariaLuisa' },
+        { src: '/lovable-uploads/totesim.png', title: 'Tote bag personalizado', description: 'Ilustración en bolsa', alt: 'Tote bag personalizado Sim - bolsa de tela con dibujo exclusivo - Màriatepinta' },
+        { src: '/lovable-uploads/pijamasimp.png', title: 'Pijama personalizado', description: 'Dibujo infantil en pijama', alt: 'Pijama infantil personalizado - ilustración original en ropa de dormir para niños - MariaLuisa ilustradora' },
       ]
     },
   ];
@@ -531,14 +532,10 @@ const Index = () => {
                                src={image.src.replace('lottie:', '')}
                                style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                              />
-                            ) : (
+                             ) : (
                                <img 
                                  src={image.src} 
-                                 alt={
-                                   image.title 
-                                     ? `${section.title} - ${image.title} - Ilustración original de MariaLuisa (Màriatepinta)`
-                                     : `${section.title} - Ilustración original de MariaLuisa (Màriatepinta)`
-                                 }
+                                 alt={image.alt || `${section.title} - Ilustración original de MariaLuisa (Màriatepinta)`}
                                  loading="lazy"
                                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                />
