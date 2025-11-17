@@ -369,6 +369,7 @@ const Index = () => {
         title="Màriatepinta - Ilustraciones originales y personalizadas | Portfolio de MariaLuisa"
         description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio de MariaLuisa: desde Cosmopolitan hasta proyectos personalizados. ¿Hablamos?"
         canonical="https://www.mariatepinta.es/"
+        ogImage="https://www.mariatepinta.es/og-image-social.png"
         ogType="website"
         schema={schemaData}
       />
@@ -531,12 +532,16 @@ const Index = () => {
                                style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                              />
                             ) : (
-                              <img 
-                                src={image.src} 
-                                alt={image.title || `Ilustración personalizada ${section.title} - Màriatepinta`}
-                                loading="lazy"
-                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                              />
+                               <img 
+                                 src={image.src} 
+                                 alt={
+                                   image.title 
+                                     ? `${section.title} - ${image.title} - Ilustración original de MariaLuisa (Màriatepinta)`
+                                     : `${section.title} - Ilustración original de MariaLuisa (Màriatepinta)`
+                                 }
+                                 loading="lazy"
+                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                               />
                              )}
                             {section.id !== 'infantil' && section.id !== 'vinetas' && section.id !== 'ia' && (
                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

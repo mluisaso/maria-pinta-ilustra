@@ -89,6 +89,7 @@ const Contact: React.FC = () => {
         title="Contacto - Màriatepinta | ¿Hablamos de tu proyecto?"
         description="¿No sabes muy bien lo que quieres? Perfecto, ahí empiezo yo. Ilustraciones personalizadas para empresas y particulares. Hablemos de tu proyecto."
         canonical="https://www.mariatepinta.es/contact"
+        ogImage="https://www.mariatepinta.es/og-image-social.png"
         ogType="website"
         schema={schemaData}
       />
