@@ -14,7 +14,7 @@ const SEO: React.FC<SEOProps> = ({
   title, 
   description, 
   canonical,
-  ogImage = 'https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4718258b-1038-47ae-9895-1a453aaa1dae/id-preview-39be3afa--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763368535915.png',
+  ogImage = 'https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3dede7b9-1976-440d-bb76-2f383625ab83/id-preview-69c66d54--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763454419618.png',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   schema
