@@ -66,51 +66,20 @@ const Contact: React.FC = () => {
   // Schema.org structured data for Contact page
   const schemaData = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ContactPage",
-        "@id": "https://www.mariatepinta.es/contact#webpage",
-        "url": "https://www.mariatepinta.es/contact",
-        "name": "Contacto - Màriatepinta",
-        "description": "Contacta con MariaLuisa para proyectos de ilustración personalizada",
-        "isPartOf": {
-          "@id": "https://www.mariatepinta.es/#website"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.mariatepinta.es/#organization",
-        "name": "Màriatepinta",
-        "url": "https://www.mariatepinta.es/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png"
-        },
-        "description": "Ilustradora profesional – ilustraciones originales y personalizadas"
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.mariatepinta.es/#person",
-        "name": "MariaLuisa",
-        "alternateName": "Màriatepinta",
-        "jobTitle": "Ilustradora y Diseñadora Gráfica",
-        "email": "mariatepinta@gmail.com",
-        "sameAs": [
-          "https://www.instagram.com/mariatepinta/",
-          "https://www.linkedin.com/in/mariatepinta/",
-          "https://www.tiktok.com/@mariatepinta"
-        ]
-      }
-    ]
+    "@type": "Organization",
+    "name": "Màriatepinta",
+    "url": "https://www.mariatepinta.es/",
+    "logo": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png",
+    "description": "Ilustradora profesional – ilustraciones originales y personalizadas"
   };
 
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-28 md:pt-0">
       <SEO 
-        title="Contacto - Màriatepinta | ¿Hablamos de tu proyecto?"
-        description="¿No sabes muy bien lo que quieres? Perfecto, ahí empiezo yo. Ilustraciones personalizadas para empresas y particulares. Hablemos de tu proyecto."
-        canonical="https://www.mariatepinta.es/contact"
-        ogImage="https://www.mariatepinta.es/og-image-social.png"
+        title="Màriatepinta - Ilustraciones originales y personalizadas"
+        description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio profesional de MariaLuisa."
+        canonical="https://www.mariatepinta.es/"
+        ogImage="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3dede7b9-1976-440d-bb76-2f383625ab83/id-preview-69c66d54--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763454419618.png"
         ogType="website"
         schema={schemaData}
       />
