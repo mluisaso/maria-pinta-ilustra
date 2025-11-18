@@ -311,80 +311,20 @@ const Index = () => {
   // Schema.org structured data
   const schemaData = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.mariatepinta.es/#website",
-        "url": "https://www.mariatepinta.es/",
-        "name": "Màriatepinta - Ilustraciones originales y personalizadas",
-        "description": "Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio profesional de MariaLuisa.",
-        "publisher": {
-          "@id": "https://www.mariatepinta.es/#organization"
-        },
-        "inLanguage": "es-ES"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.mariatepinta.es/#organization",
-        "name": "Màriatepinta",
-        "alternateName": "Maria te pinta",
-        "url": "https://www.mariatepinta.es/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png",
-          "width": 512,
-          "height": 512
-        },
-        "description": "Ilustradora profesional – ilustraciones originales y personalizadas",
-        "sameAs": [
-          "https://www.instagram.com/mariatepinta/",
-          "https://www.linkedin.com/in/mariatepinta/",
-          "https://www.tiktok.com/@mariatepinta"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "email": "mariatepinta@gmail.com",
-          "availableLanguage": ["Spanish", "English"]
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.mariatepinta.es/#person",
-        "name": "MariaLuisa",
-        "alternateName": "Màriatepinta",
-        "jobTitle": "Ilustradora y Diseñadora Gráfica",
-        "description": "Ilustradora profesional especializada en ilustración editorial, diseño gráfico y proyectos personalizados",
-        "url": "https://www.mariatepinta.es/",
-        "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4718258b-1038-47ae-9895-1a453aaa1dae/id-preview-39be3afa--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763368535915.png",
-        "sameAs": [
-          "https://www.instagram.com/mariatepinta/",
-          "https://www.linkedin.com/in/mariatepinta/",
-          "https://www.tiktok.com/@mariatepinta"
-        ],
-        "knowsAbout": ["Illustration", "Graphic Design", "Editorial Design", "Custom Illustrations"]
-      },
-      {
-        "@type": "CreativeWork",
-        "@id": "https://www.mariatepinta.es/#portfolio",
-        "name": "Portfolio de Ilustraciones Profesionales",
-        "creator": {
-          "@id": "https://www.mariatepinta.es/#person"
-        },
-        "description": "Portfolio profesional con trabajos para Cosmopolitan, Telva, El País, proyectos editoriales y personalizados",
-        "url": "https://www.mariatepinta.es/",
-        "about": ["Ilustración editorial", "Diseño gráfico", "Ilustraciones personalizadas", "Regalos originales"]
-      }
-    ]
+    "@type": "Organization",
+    "name": "Màriatepinta",
+    "url": "https://www.mariatepinta.es/",
+    "logo": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png",
+    "description": "Ilustradora profesional – ilustraciones originales y personalizadas"
   };
 
   return (
     <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLottieLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
       <SEO 
-        title="Màriatepinta - Ilustraciones originales y personalizadas | Portfolio de MariaLuisa"
-        description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio de MariaLuisa: desde Cosmopolitan hasta proyectos personalizados. ¿Hablamos?"
+        title="Màriatepinta - Ilustraciones originales y personalizadas"
+        description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio profesional de MariaLuisa."
         canonical="https://www.mariatepinta.es/"
-        ogImage="https://www.mariatepinta.es/og-image-social.png"
+        ogImage="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3dede7b9-1976-440d-bb76-2f383625ab83/id-preview-69c66d54--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763454419618.png"
         ogType="website"
         schema={schemaData}
       />
