@@ -66,21 +66,42 @@ const Contact: React.FC = () => {
   // Schema.org structured data for Contact page
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "url": "https://www.mariatepinta.es/contact",
-    "name": "Contacto - Màriatepinta",
-    "description": "Contacta con MariaLuisa para proyectos de ilustración personalizada",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "MariaLuisa",
-      "alternateName": "Màriatepinta",
-      "jobTitle": "Ilustradora y Diseñadora Gráfica",
-      "sameAs": [
-        "https://www.instagram.com/mariatepinta/",
-        "https://www.linkedin.com/in/mariatepinta/",
-        "https://www.tiktok.com/@mariatepinta"
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://www.mariatepinta.es/contact#webpage",
+        "url": "https://www.mariatepinta.es/contact",
+        "name": "Contacto - Màriatepinta",
+        "description": "Contacta con MariaLuisa para proyectos de ilustración personalizada",
+        "isPartOf": {
+          "@id": "https://www.mariatepinta.es/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.mariatepinta.es/#organization",
+        "name": "Màriatepinta",
+        "url": "https://www.mariatepinta.es/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png"
+        },
+        "description": "Ilustradora profesional – ilustraciones originales y personalizadas"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.mariatepinta.es/#person",
+        "name": "MariaLuisa",
+        "alternateName": "Màriatepinta",
+        "jobTitle": "Ilustradora y Diseñadora Gráfica",
+        "email": "mariatepinta@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/mariatepinta/",
+          "https://www.linkedin.com/in/mariatepinta/",
+          "https://www.tiktok.com/@mariatepinta"
+        ]
+      }
+    ]
   };
 
   return (
