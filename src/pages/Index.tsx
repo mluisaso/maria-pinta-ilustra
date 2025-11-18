@@ -316,8 +316,8 @@ const Index = () => {
         "@type": "WebSite",
         "@id": "https://www.mariatepinta.es/#website",
         "url": "https://www.mariatepinta.es/",
-        "name": "Màriatepinta",
-        "description": "Ilustraciones originales y personalizadas para empresas y particulares",
+        "name": "Màriatepinta - Ilustraciones originales y personalizadas",
+        "description": "Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio profesional de MariaLuisa.",
         "publisher": {
           "@id": "https://www.mariatepinta.es/#organization"
         },
@@ -327,16 +327,26 @@ const Index = () => {
         "@type": "Organization",
         "@id": "https://www.mariatepinta.es/#organization",
         "name": "Màriatepinta",
+        "alternateName": "Maria te pinta",
         "url": "https://www.mariatepinta.es/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.mariatepinta.es/lovable-uploads/e27c95ab-eb40-4ab3-ac43-b70d39b9ed96.png"
+          "url": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png",
+          "width": 512,
+          "height": 512
         },
+        "description": "Ilustradora profesional – ilustraciones originales y personalizadas",
         "sameAs": [
           "https://www.instagram.com/mariatepinta/",
           "https://www.linkedin.com/in/mariatepinta/",
           "https://www.tiktok.com/@mariatepinta"
-        ]
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "mariatepinta@gmail.com",
+          "availableLanguage": ["Spanish", "English"]
+        }
       },
       {
         "@type": "Person",
@@ -344,22 +354,26 @@ const Index = () => {
         "name": "MariaLuisa",
         "alternateName": "Màriatepinta",
         "jobTitle": "Ilustradora y Diseñadora Gráfica",
+        "description": "Ilustradora profesional especializada en ilustración editorial, diseño gráfico y proyectos personalizados",
         "url": "https://www.mariatepinta.es/",
-        "image": "https://www.mariatepinta.es/og-image.jpg",
+        "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4718258b-1038-47ae-9895-1a453aaa1dae/id-preview-39be3afa--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763368535915.png",
         "sameAs": [
           "https://www.instagram.com/mariatepinta/",
           "https://www.linkedin.com/in/mariatepinta/",
           "https://www.tiktok.com/@mariatepinta"
-        ]
+        ],
+        "knowsAbout": ["Illustration", "Graphic Design", "Editorial Design", "Custom Illustrations"]
       },
       {
         "@type": "CreativeWork",
-        "name": "Portfolio de Ilustraciones",
+        "@id": "https://www.mariatepinta.es/#portfolio",
+        "name": "Portfolio de Ilustraciones Profesionales",
         "creator": {
           "@id": "https://www.mariatepinta.es/#person"
         },
         "description": "Portfolio profesional con trabajos para Cosmopolitan, Telva, El País, proyectos editoriales y personalizados",
-        "url": "https://www.mariatepinta.es/"
+        "url": "https://www.mariatepinta.es/",
+        "about": ["Ilustración editorial", "Diseño gráfico", "Ilustraciones personalizadas", "Regalos originales"]
       }
     ]
   };
