@@ -76,9 +76,9 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-white md:pr-64 pt-28 md:pt-0">
       <SEO 
-        title="Màriatepinta - Ilustraciones originales y personalizadas"
-        description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio profesional de MariaLuisa."
-        canonical="https://www.mariatepinta.es/"
+        title="Contacto - Màriatepinta | Ilustraciones personalizadas"
+        description="Contacta con MariaLuisa para ilustraciones originales y personalizadas. Proyectos editoriales, empresas y particulares."
+        canonical="https://www.mariatepinta.es/contact"
         ogImage="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3dede7b9-1976-440d-bb76-2f383625ab83/id-preview-69c66d54--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763454419618.png"
         ogType="website"
         schema={schemaData}
