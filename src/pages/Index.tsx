@@ -69,21 +69,21 @@ const Index = () => {
       id: 'editorial',
       title: 'Editorial',
       images: [
-        { src: '/lovable-uploads/9215e25a-a54a-4515-892f-3508fcba19c2.png', title: 'Cosmopolitan', description: '' },
-        { src: '/lovable-uploads/a87ac013-0aec-48a1-a067-4ffa4d6906e6.png', title: 'Buenavida', description: 'El País' },
-        { src: '/lovable-uploads/fe5a575c-bbd6-4738-a9ae-7409a7c81bda.png', title: 'Renfe', description: '' },
-        { src: '/lovable-uploads/40bddeb8-fe16-4370-96ac-4337ad6cfd4a.png', title: 'Telva', description: '' },
-        { src: '/lovable-uploads/2553f794-e0ab-4c19-a506-864771b8628e.png', title: 'Lifestyle', description: 'La Razón' },
-        { src: '/lovable-uploads/c30215de-34e4-488b-bcb3-6895af63ea01.png', title: 'Lifestyle', description: 'La Razón' },
-        { src: '/lovable-uploads/c3293026-934e-46b8-97ae-87426fa24f74.png', title: 'Cosmopolitan', description: '' },
-        { src: '/lovable-uploads/c156198e-405c-4268-b9e5-175b7f575677.png', title: 'Las estrellitas de Malekin', description: 'Libro infantil' },
-        { src: '/lovable-uploads/47188929-30bb-4254-b206-adca732a6331.png', title: 'Alois', description: 'Libro ilustrado' },
-        { src: '/lovable-uploads/2fc5a8a3-e9f5-4c46-bf37-5e8be56aabab.png', title: 'Banco Santander', description: '' },
-        { src: '/lovable-uploads/de6dafae-05d9-4ee9-8104-1a5df337ca2d.png', title: 'Banco Santander', description: '' },
-        { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Equidieta' },
-        { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Armonía de Hogar' },
-        { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Cómo llegar joven a viejo' },
-        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'Toma las riendas de tu salud' },
+        { src: '/lovable-uploads/9215e25a-a54a-4515-892f-3508fcba19c2.png', title: 'Cosmopolitan', description: '', alt: 'Ilustración editorial para revista Cosmopolitan - MariaLuisa ilustradora profesional' },
+        { src: '/lovable-uploads/a87ac013-0aec-48a1-a067-4ffa4d6906e6.png', title: 'Buenavida', description: 'El País', alt: 'Ilustración para suplemento Buenavida de El País - Màriatepinta' },
+        { src: '/lovable-uploads/fe5a575c-bbd6-4738-a9ae-7409a7c81bda.png', title: 'Renfe', description: '', alt: 'Ilustración editorial para revista Renfe - diseño original de MariaLuisa' },
+        { src: '/lovable-uploads/40bddeb8-fe16-4370-96ac-4337ad6cfd4a.png', title: 'Telva', description: '', alt: 'Ilustración para revista Telva - ilustradora profesional Màriatepinta' },
+        { src: '/lovable-uploads/2553f794-e0ab-4c19-a506-864771b8628e.png', title: 'Lifestyle', description: 'La Razón', alt: 'Ilustración para sección Lifestyle de La Razón - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/c30215de-34e4-488b-bcb3-6895af63ea01.png', title: 'Lifestyle', description: 'La Razón', alt: 'Ilustración editorial para La Razón Lifestyle - Màriatepinta' },
+        { src: '/lovable-uploads/c3293026-934e-46b8-97ae-87426fa24f74.png', title: 'Cosmopolitan', description: '', alt: 'Ilustración original para Cosmopolitan España - MariaLuisa' },
+        { src: '/lovable-uploads/c156198e-405c-4268-b9e5-175b7f575677.png', title: 'Las estrellitas de Malekin', description: 'Libro infantil', alt: 'Ilustración del libro infantil Las estrellitas de Malekin - Màriatepinta ilustradora' },
+        { src: '/lovable-uploads/47188929-30bb-4254-b206-adca732a6331.png', title: 'Alois', description: 'Libro ilustrado', alt: 'Ilustración para libro ilustrado Alois - MariaLuisa ilustradora profesional' },
+        { src: '/lovable-uploads/2fc5a8a3-e9f5-4c46-bf37-5e8be56aabab.png', title: 'Banco Santander', description: '', alt: 'Ilustración corporativa para Banco Santander - Màriatepinta' },
+        { src: '/lovable-uploads/de6dafae-05d9-4ee9-8104-1a5df337ca2d.png', title: 'Banco Santander', description: '', alt: 'Ilustración editorial para Banco Santander - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/f992bc67-3c5c-41d4-a9be-45c2dedeea35.png', title: 'Planeta', description: 'Equidieta', alt: 'Ilustración para libro Equidieta de editorial Planeta - Màriatepinta' },
+        { src: '/lovable-uploads/fcd90193-269c-44eb-9c5a-fce463580757.png', title: 'Planeta', description: 'Armonía de Hogar', alt: 'Ilustración para Armonía de Hogar editorial Planeta - MariaLuisa' },
+        { src: '/lovable-uploads/6b6dd0b6-3077-48c8-a502-3fd2b82541d4.png', title: 'Planeta', description: 'Cómo llegar joven a viejo', alt: 'Ilustración del libro Cómo llegar joven a viejo de Planeta - Màriatepinta ilustradora' },
+        { src: '/lovable-uploads/82e91a67-2fe8-4690-bc02-92f92849eab5.png', title: 'Planeta', description: 'Toma las riendas de tu salud', alt: 'Ilustración para Toma las riendas de tu salud editorial Planeta - MariaLuisa' },
         
       ]
     },
@@ -308,21 +308,60 @@ const Index = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Schema.org structured data
+  // Schema.org structured data - Rich Person + CreativeWork
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Màriatepinta",
-    "url": "https://www.mariatepinta.es/",
-    "logo": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png",
-    "description": "Ilustradora profesional – ilustraciones originales y personalizadas"
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "MariaLuisa",
+        "alternateName": "Màriatepinta",
+        "url": "https://www.mariatepinta.es/",
+        "image": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png",
+        "jobTitle": "Ilustradora profesional",
+        "description": "Ilustradora freelance especializada en ilustración editorial, infantil, personalizada y para marcas. Colaboraciones con Cosmopolitan, El País, Telva, Renfe, Banco Santander y Planeta.",
+        "knowsAbout": ["Ilustración editorial", "Ilustración infantil", "Viñetas", "Ilustración para marcas", "Recordatorios Primera Comunión", "Productos personalizados"],
+        "sameAs": [
+          "https://www.instagram.com/mariatepinta/",
+          "https://www.linkedin.com/in/mariatepinta/",
+          "https://www.tiktok.com/@mariatepinta",
+          "https://www.instagram.com/benditarrutina/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Màriatepinta",
+        "url": "https://www.mariatepinta.es/",
+        "description": "Portfolio de ilustraciones originales y personalizadas de MariaLuisa. Ilustración editorial, infantil, viñetas, diseño para marcas y productos personalizados.",
+        "inLanguage": "es"
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Portfolio de ilustraciones - Màriatepinta",
+        "url": "https://www.mariatepinta.es/",
+        "description": "Colección de ilustraciones originales: editorial (Cosmopolitan, El País, Telva, Renfe, Planeta), infantil, viñetas, diseño para marcas y productos personalizados.",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Ilustración Editorial"},
+            {"@type": "ListItem", "position": 2, "name": "Ilustración Infantil"},
+            {"@type": "ListItem", "position": 3, "name": "Viñetas"},
+            {"@type": "ListItem", "position": 4, "name": "Ilustración para marcas"},
+            {"@type": "ListItem", "position": 5, "name": "Personalización con IA"},
+            {"@type": "ListItem", "position": 6, "name": "Proyectos personales"},
+            {"@type": "ListItem", "position": 7, "name": "Recordatorios Primera Comunión"},
+            {"@type": "ListItem", "position": 8, "name": "Productos personalizados"}
+          ]
+        }
+      }
+    ]
   };
 
   return (
     <div className={`min-h-screen bg-white md:pr-64 pt-24 md:pt-0 ${!isLottieLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}>
       <SEO 
-        title="Màriatepinta - Ilustraciones originales y personalizadas"
-        description="Ilustraciones originales y expresivas para editoriales, empresas y particulares. Portfolio profesional de MariaLuisa."
+        title="Màriatepinta - Ilustradora | Ilustraciones originales para editorial, marcas y particulares"
+        description="Portfolio de MariaLuisa, ilustradora profesional. Ilustraciones para Cosmopolitan, El País, Telva, Renfe, Planeta. Encargos personalizados, infantil, viñetas y recordatorios de comunión."
         canonical="https://www.mariatepinta.es/"
         ogImage="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3dede7b9-1976-440d-bb76-2f383625ab83/id-preview-69c66d54--f82f7f2b-2ec6-4f1e-9646-689eac9b14e5.lovable.app-1763454419618.png"
         ogType="website"
@@ -357,10 +396,13 @@ const Index = () => {
           />
         </div>
         
-        {/* H1 principal - SEO optimizado pero visualmente oculto */}
-        <h1 className="sr-only">
-          Màriatepinta - Ilustraciones originales y personalizadas para empresas y particulares
+        {/* H1 principal - SEO */}
+        <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 text-center max-w-2xl mx-auto px-4 mb-4 font-poppins">
+          Ilustraciones originales y personalizadas
         </h1>
+        <p className="text-base md:text-lg text-gray-600 text-center max-w-xl mx-auto px-4 mb-6 font-poppins">
+          Soy MariaLuisa, ilustradora freelance. Creo ilustraciones para editoriales, marcas, particulares y productos personalizados. ¿Hablamos?
+        </p>
 
         {/* Lottie Animation - solo desktop */}
         <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64 hidden md:block">

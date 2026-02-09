@@ -48,7 +48,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="language" content="Spanish" />
       <meta name="author" content="Màriatepinta" />
-      <meta name="keywords" content="ilustración personalizada, diseño gráfico, regalos personalizados, ilustraciones originales, dibujante, MariaLuisa ilustradora" />
+      <meta name="keywords" content="ilustradora profesional, ilustración editorial, ilustración personalizada, ilustración infantil, viñetas ilustradas, recordatorios comunión personalizados, regalos personalizados ilustrados, MariaLuisa ilustradora, Màriatepinta, ilustradora freelance España" />
       
       {/* Structured Data - Schema.org */}
       {schema && (
