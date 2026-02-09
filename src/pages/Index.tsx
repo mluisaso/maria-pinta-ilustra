@@ -396,14 +396,6 @@ const Index = () => {
           />
         </div>
         
-        {/* H1 principal - SEO */}
-        <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 text-center max-w-2xl mx-auto px-4 mb-4 font-poppins">
-          Ilustraciones originales y personalizadas
-        </h1>
-        <p className="text-base md:text-lg text-gray-600 text-center max-w-xl mx-auto px-4 mb-6 font-poppins">
-          Soy MariaLuisa, ilustradora freelance. Creo ilustraciones para editoriales, marcas, particulares y productos personalizados. ¿Hablamos?
-        </p>
-
         {/* Lottie Animation - solo desktop */}
         <div className="w-full mb-4 md:mb-16 -mx-4 md:-mx-64 hidden md:block">
           <LottieAnimation 
@@ -420,6 +412,14 @@ const Index = () => {
             onReady={() => setIsLottieLoaded(true)}
           />
         </div>
+
+        {/* H1 principal - SEO */}
+        <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 text-center max-w-2xl mx-auto px-4 mb-4 font-poppins">
+          Ilustraciones originales y personalizadas
+        </h1>
+        <p className="text-base md:text-lg text-gray-600 text-center max-w-xl mx-auto px-4 mb-6 font-poppins">
+          Soy Maria Luisa, ilustradora freelance. Creo ilustraciones para editoriales, marcas, particulares y productos personalizados. ¿Hablamos?
+        </p>
 
         {/* Portfolio Sections */}
         <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-4 md:space-y-8">
