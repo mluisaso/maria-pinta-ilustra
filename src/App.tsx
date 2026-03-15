@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
+import CatalogoNinos from "./pages/CatalogoNinos";
 import NotFound from "./pages/NotFound";
 import RedirectComponent from "./components/RedirectComponent";
 
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/catalogo-ninos" element={<CatalogoNinos />} />
           
           {/* Specific redirects for old URL patterns */}
           <Route path="/web/index.php/producto/*" element={<RedirectComponent to="https://mariatepinta.es/" />} />
