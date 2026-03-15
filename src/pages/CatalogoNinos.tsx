@@ -35,6 +35,16 @@ const catalogImages = [
   { src: '/lovable-uploads/traje_vela.png', alt: 'Traje vela - recordatorio Primera Comunión niño catálogo' },
   { src: '/lovable-uploads/trajeangelito.png', alt: 'Traje angelito - recordatorio Primera Comunión niño catálogo' },
   { src: '/lovable-uploads/trajeangelitoCORTO.png', alt: 'Traje angelito corto - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajeavioncito.png', alt: 'Traje avioncito - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajebalonpie.png', alt: 'Traje balón pie - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajeCaballo.png', alt: 'Traje caballo - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajeCORTOCaballo.png', alt: 'Traje corto caballo - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajehoverboard.png', alt: 'Traje hoverboard - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajeLARGOpaloma.png', alt: 'Traje largo paloma - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/tunica_balon.png', alt: 'Túnica balón - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/tunica_baloncesto.png', alt: 'Túnica baloncesto - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/tunicaAvioncito.png', alt: 'Túnica avioncito - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/tunicavela.png', alt: 'Túnica vela - recordatorio Primera Comunión niño catálogo' },
 ];
 
 const CatalogoNinos: React.FC = () => {
