@@ -25,6 +25,16 @@ const catalogImages = [
   { src: '/lovable-uploads/ninopatinPANTALONLARGO.png', alt: 'Niño patín pantalón largo - recordatorio Primera Comunión niño catálogo' },
   { src: '/lovable-uploads/crayondepietraje.png', alt: 'Crayon de pie traje - recordatorio Primera Comunión niño catálogo' },
   { src: '/lovable-uploads/ninotunicaHoverboard.png', alt: 'Niño túnica hoverboard - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/paloma_tunica.png', alt: 'Paloma túnica - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/pelorizado-futbolistamarinero.png', alt: 'Pelorizado futbolista marinero - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/perfilmarinero.png', alt: 'Perfil marinero - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/perfilcorbatamarinero.png', alt: 'Perfil corbata - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/reclinatorio_chaqueta-gris.png', alt: 'Reclinatorio chaqueta gris - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/traje_corto_tenis.png', alt: 'Traje corto tenis - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/traje_paloma.png', alt: 'Traje paloma - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/traje_vela.png', alt: 'Traje vela - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajeangelito.png', alt: 'Traje angelito - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajeangelitoCORTO.png', alt: 'Traje angelito corto - recordatorio Primera Comunión niño catálogo' },
 ];
 
 const CatalogoNinos: React.FC = () => {
