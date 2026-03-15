@@ -555,6 +555,18 @@ const Index = () => {
                 </div>
               </div>
 
+              {/* Button for catalog section */}
+              {section.id === 'recordatorios-primera-comunion' && (
+                <div className="mt-4 flex justify-center">
+                  <Button 
+                    onClick={() => window.location.href = '/catalogo-ninos'}
+                    className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
+                  >
+                    Ver catálogo niños
+                  </Button>
+                </div>
+              )}
+
               {/* Button for custom drawing section - only show for this section */}
               {section.id === 'dibujo-personalizado' && (
                 <div className="mt-8 flex justify-center">

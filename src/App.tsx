@@ -21,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/catalogo-ninos" element={<CatalogoNinos />} />
           
           {/* Specific redirects for old URL patterns */}
           <Route path="/web/index.php/producto/*" element={<RedirectComponent to="https://mariatepinta.es/" />} />
