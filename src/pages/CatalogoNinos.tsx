@@ -48,6 +48,7 @@ const CatalogoNinos: React.FC = () => {
       <SEO 
         title="Catálogo Niños - Recordatorios Primera Comunión | Maria Luisa Ilustradora"
         description="Catálogo completo de dibujos para recordatorios de Primera Comunión. Adaptables a color, largo de traje, túnica o marinero, y distintas razas."
+        canonical="https://mariatepinta.es/catalogo-ninos"
       />
       
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-8">
