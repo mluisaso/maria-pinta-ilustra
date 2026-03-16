@@ -555,14 +555,26 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Button for catalog section */}
+              {/* Buttons for catalog section */}
               {section.id === 'recordatorios-primera-comunion' && (
-                <div className="mt-4 flex justify-center">
+                <div className="mt-4 flex flex-wrap justify-center gap-3">
                   <Button 
                     onClick={() => window.location.href = '/catalogo-ninos'}
                     className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
                   >
                     Ver catálogo niños
+                  </Button>
+                  <Button 
+                    onClick={() => window.location.href = '/catalogo-ninas'}
+                    className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
+                  >
+                    Ver catálogo niñas
+                  </Button>
+                  <Button 
+                    onClick={() => window.location.href = '/catalogo-hermanos'}
+                    className="bg-[#be1622] hover:bg-[#a01420] text-white font-poppins"
+                  >
+                    Ver catálogo hermanos
                   </Button>
                 </div>
               )}
