@@ -83,7 +83,14 @@ const CatalogoNinos: React.FC = () => {
         </h1>
 
         <p className="text-base text-gray-700 font-poppins mb-10 max-w-3xl">
-          Todas las imágenes se pueden adaptar a color y largo de traje, túnica o marinero. También a distintas razas.
+          Todas las imágenes se pueden adaptar a color y largo de traje, túnica o marinero. También a distintas razas.{' '}
+          <a 
+            href="/CATALOGOCHICOS_compressed_2.pdf" 
+            download 
+            className="text-[#be1622] underline underline-offset-4 decoration-2 hover:opacity-70 transition-opacity font-medium cursor-pointer"
+          >
+            DESCARGAR CATÁLOGO CHICOS
+          </a>
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
