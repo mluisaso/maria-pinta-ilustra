@@ -45,6 +45,16 @@ const catalogImages = [
   { src: '/lovable-uploads/tunica_baloncesto.png', alt: 'Túnica baloncesto - recordatorio Primera Comunión niño catálogo' },
   { src: '/lovable-uploads/tunicaAvioncito.png', alt: 'Túnica avioncito - recordatorio Primera Comunión niño catálogo' },
   { src: '/lovable-uploads/tunicavela.png', alt: 'Túnica vela - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/virgencapillaValdefuentes.png', alt: 'Virgen capilla Valdefuentes - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/virgenPatioValdefuentes.png', alt: 'Virgen patio Valdefuentes - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/trajeclaro-baloncesto.png', alt: 'Traje claro baloncesto - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/balon_trajeoscuro.png', alt: 'Balón traje oscuro - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/barquito.png', alt: 'Barquito - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/besovirgenmarinero.png', alt: 'Beso virgen marinero - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/reclinatoriocrayontraje.png', alt: 'Reclinatorio crayon traje - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/escudo_marinero.png', alt: 'Escudo marinero - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/escudo_trajeoscuro.png', alt: 'Escudo traje oscuro - recordatorio Primera Comunión niño catálogo' },
+  { src: '/lovable-uploads/escudotraje.png', alt: 'Escudo traje - recordatorio Primera Comunión niño catálogo' },
 ];
 
 const CatalogoNinos: React.FC = () => {
