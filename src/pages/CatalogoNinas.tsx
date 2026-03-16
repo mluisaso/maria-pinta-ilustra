@@ -15,6 +15,16 @@ const catalogImages = [
   { src: '/lovable-uploads/trenzaflore.png', alt: 'Trenza flores - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/sujetando_vestido.png', alt: 'Sujetando vestido - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/subidaenpalomaTUNICA.png', alt: 'Subida en paloma túnica - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/subidaenpaloma.png', alt: 'Subida en paloma - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/subidaencaballo.png', alt: 'Subida en caballo - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/rezotunica.png', alt: 'Rezo túnica - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/rezoorganza-2.png', alt: 'Rezo organza - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/perfilflores.png', alt: 'Perfil flores - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/patinetetunica.png', alt: 'Patinete túnica - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/patinete-3.png', alt: 'Patinete - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/organzareclinatorio-2.png', alt: 'Organza reclinatorio - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/organzAngelito.png', alt: 'Organza angelito - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/niñahoverboard.png', alt: 'Niña hoverboard - recordatorio Primera Comunión niña catálogo' },
 ];
 
 const CatalogoNinas: React.FC = () => {
