@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import CatalogoNinos from "./pages/CatalogoNinos";
+import CatalogoNinas from "./pages/CatalogoNinas";
+import CatalogoHermanos from "./pages/CatalogoHermanos";
 import NotFound from "./pages/NotFound";
 import RedirectComponent from "./components/RedirectComponent";
 
