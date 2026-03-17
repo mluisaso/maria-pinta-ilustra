@@ -4,7 +4,14 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SEO from '@/components/SEO';
 
-const catalogImages: { src: string; alt: string }[] = [];
+const catalogImages = [
+  { src: '/lovable-uploads/melllizospatin.png', alt: 'Mellizos patín - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/mellizosrezoperfil.png', alt: 'Mellizos rezo perfil - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/mellizosdefrenteangelito.png', alt: 'Mellizos de frente angelito - recordatorio Primera Comunión hermanos catálogo' },
+  { src: encodeURI('/lovable-uploads/mellizosbalonfutbol.png'), alt: 'Mellizos balón fútbol - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/mellizosbalonbasket.png', alt: 'Mellizos balón basket - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/hermanostunicabalon.png', alt: 'Hermanos túnica balón - recordatorio Primera Comunión hermanos catálogo' },
+];
 
 const CatalogoHermanos: React.FC = () => {
   const navigate = useNavigate();
