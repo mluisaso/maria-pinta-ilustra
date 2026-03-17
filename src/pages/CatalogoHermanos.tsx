@@ -4,7 +4,14 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import SEO from '@/components/SEO';
 
-const catalogImages: { src: string; alt: string }[] = [];
+const catalogImages = [
+  { src: '/lovable-uploads/melllizospatin.png', alt: 'Mellizos patín - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/mellizosrezoperfil.png', alt: 'Mellizos rezo perfil - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/mellizosdefrenteangelito.png', alt: 'Mellizos de frente angelito - recordatorio Primera Comunión hermanos catálogo' },
+  { src: encodeURI('/lovable-uploads/mellizosbalonfutbol.png'), alt: 'Mellizos balón fútbol - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/mellizosbalonbasket.png', alt: 'Mellizos balón basket - recordatorio Primera Comunión hermanos catálogo' },
+  { src: '/lovable-uploads/hermanostunicabalon.png', alt: 'Hermanos túnica balón - recordatorio Primera Comunión hermanos catálogo' },
+];
 
 const CatalogoHermanos: React.FC = () => {
   const navigate = useNavigate();
@@ -32,7 +39,14 @@ const CatalogoHermanos: React.FC = () => {
         </h1>
 
         <p className="text-base text-gray-700 font-poppins mb-10 max-w-3xl">
-          Próximamente se añadirán más dibujos a esta sección.
+          Todas las imágenes se pueden adaptar a traje o túnica, poner o quitar fajín de color, medallas y/o cruces. También a distintas razas.{' '}
+          <a 
+            href="/CATALOGOhermanos_compressed.pdf" 
+            download 
+            className="text-[#be1622] underline underline-offset-4 decoration-2 hover:opacity-70 transition-opacity font-medium cursor-pointer"
+          >
+            DESCARGAR CATÁLOGO HERMANOS
+          </a>
         </p>
 
         {catalogImages.length > 0 && (
