@@ -35,6 +35,11 @@ const catalogImages = [
   { src: '/lovable-uploads/columpionegrita.png', alt: 'Columpio negrita - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/columpio_TUNICA.png', alt: 'Columpio túnica - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/columpio_organza.png', alt: 'Columpio organza - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/besobebetunica.png', alt: 'Beso bebé túnica - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/besobeberizado-2.png', alt: 'Beso bebé rizado - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/bailepaloma.png', alt: 'Baile paloma - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/angel_cuelga_cruz.png', alt: 'Ángel cuelga cruz - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/angel_cuelga_cruz_tunica.png', alt: 'Ángel cuelga cruz túnica - recordatorio Primera Comunión niña catálogo' },
 ];
 
 const CatalogoNinas: React.FC = () => {
@@ -63,7 +68,14 @@ const CatalogoNinas: React.FC = () => {
         </h1>
 
         <p className="text-base text-gray-700 font-poppins mb-10 max-w-3xl">
-          Todas las imágenes se pueden adaptar a traje o túnica, poner o quitar fajín de color, medallas y/o cruces. También a distintas razas.
+          Todas las imágenes se pueden adaptar a traje o túnica, poner o quitar fajín de color, medallas y/o cruces. También a distintas razas.{' '}
+          <a 
+            href="/CATALOGOCHICaS_compressed.pdf" 
+            download 
+            className="text-[#be1622] underline underline-offset-4 decoration-2 hover:opacity-70 transition-opacity font-medium cursor-pointer"
+          >
+            DESCARGAR CATÁLOGO CHICAS
+          </a>
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
