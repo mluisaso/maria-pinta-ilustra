@@ -12,5 +12,10 @@ https://mariatepinta.es/*  https://www.mariatepinta.es/:splat  301!
 /web/index.php/faqs  https://mariatepinta.es/  301!
 /web/*  https://mariatepinta.es/  301!
 
+# Allow direct access to PDF files
+/CATALOGOCHICaS_compressed.pdf  /CATALOGOCHICaS_compressed.pdf  200!
+/CATALOGOCHICOS_compressed_2.pdf  /CATALOGOCHICOS_compressed_2.pdf  200!
+/CATALOGOhermanos_compressed.pdf  /CATALOGOhermanos_compressed.pdf  200!
+
 # Fallback for SPA
 /*  /index.html  200
