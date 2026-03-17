@@ -35,6 +35,11 @@ const catalogImages = [
   { src: '/lovable-uploads/columpionegrita.png', alt: 'Columpio negrita - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/columpio_TUNICA.png', alt: 'Columpio túnica - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/columpio_organza.png', alt: 'Columpio organza - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/besobebetunica.png', alt: 'Beso bebé túnica - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/besobeberizado-2.png', alt: 'Beso bebé rizado - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/bailepaloma.png', alt: 'Baile paloma - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/angel_cuelga_cruz.png', alt: 'Ángel cuelga cruz - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/angel_cuelga_cruz_tunica.png', alt: 'Ángel cuelga cruz túnica - recordatorio Primera Comunión niña catálogo' },
 ];
 
 const CatalogoNinas: React.FC = () => {
