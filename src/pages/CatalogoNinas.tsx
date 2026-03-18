@@ -26,7 +26,7 @@ const catalogImages = [
   { src: '/lovable-uploads/organzAngelito.png', alt: 'Organza angelito - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/nenahoverboard.png', alt: 'Niña hoverboard - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/organzacorderito.png', alt: 'Organza corderito - recordatorio Primera Comunión niña catálogo' },
-  { src: encodeURI('/lovable-uploads/niña_tunicahoverboard.png'), alt: 'Niña túnica hoverboard - recordatorio Primera Comunión niña catálogo' },
+  { src: '/lovable-uploads/nena_tunicahoverboard.png', alt: 'Niña túnica hoverboard - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/negritaTUnica-2.png', alt: 'Negrita túnica - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/negrita.png', alt: 'Negrita - recordatorio Primera Comunión niña catálogo' },
   { src: '/lovable-uploads/mangalargaREzoOrganza.png', alt: 'Manga larga rezo organza - recordatorio Primera Comunión niña catálogo' },
