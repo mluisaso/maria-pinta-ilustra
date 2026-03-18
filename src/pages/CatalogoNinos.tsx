@@ -83,7 +83,7 @@ const CatalogoNinos: React.FC = () => {
         </h1>
 
         <p className="text-base text-gray-700 font-poppins mb-10 max-w-3xl">
-          Todas las imágenes se pueden adaptar a color y largo de traje, túnica o marinero. También a distintas razas.{' '}
+          Todas las imágenes se pueden adaptar a color y largo de traje, túnica o marinero. También a distintas razas y cualquier uniforme escolar.{' '}
           <a 
             href="/CATALOGOCHICOS_compressed_2.pdf" 
             download 
