@@ -31,12 +31,12 @@ const Header: React.FC = () => {
   const portfolioCategories = [
     { name: 'Editorial', id: 'editorial' },
     { name: 'Infantil', id: 'infantil' }, 
+    { name: 'Primera Comunión - Catálogo', displayName: 'Primera Comunión -\nCatálogo', id: 'recordatorios-primera-comunion' },
+    { name: 'Primera Comunión - Personalizados', displayName: 'Primera Comunión -\nPersonalizados', id: 'recordatorios-primera-comunion-personalizados' },
     { name: 'Viñetas', id: 'vinetas' },
     { name: 'Para tu marca', id: 'team-building' },
     { name: 'Personalización con IA', id: 'ia' },
     { name: 'Proyectos personales', id: 'proyectos-personales' },
-    { name: 'Primera Comunión - Catálogo', displayName: 'Primera Comunión -\nCatálogo', id: 'recordatorios-primera-comunion' },
-    { name: 'Primera Comunión - Personalizados', displayName: 'Primera Comunión -\nPersonalizados', id: 'recordatorios-primera-comunion-personalizados' },
     { name: 'Tu dibujo, donde tú quieras', displayName: 'Tu dibujo,\ndonde tú quieras', id: 'dibujo-personalizado' }
   ];
 
