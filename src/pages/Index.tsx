@@ -104,6 +104,48 @@ const Index = () => {
       ]
     },
     {
+      id: 'recordatorios-primera-comunion',
+      title: 'Recordatorios Primera Comunión - Dibujos de catálogo',
+      images: [
+        { src: '/lovable-uploads/besobeberizado.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión personalizable - niña con beso beberizado en acuarela - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/chinita.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña chinita con traje de comunión - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/corderito-sin-cordero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña con corderito personalizable - MariaLuisa' },
+        { src: '/lovable-uploads/negritaTUnica.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña negrita con túnica blanca - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/organzareclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña en reclinatorio con organza - Màriatepinta' },
+        { src: '/lovable-uploads/patinete.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con patinete y traje de comunión - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/rezoorganza.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña rezando con vestido de organza - MariaLuisa' },
+        { src: '/lovable-uploads/tunicaangelito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño angelito con túnica blanca - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/veladiadema.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña con vela y diadema personalizable - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/velapaloma.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con vela y paloma del Espíritu Santo - MariaLuisa' },
+        { src: '/lovable-uploads/balon_traje_CORTO.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño con balón y traje corto personalizable - Màriatepinta' },
+        { src: '/lovable-uploads/basketraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con balón de basket y traje - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/escudo-marinero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero con escudo personalizable - MariaLuisa' },
+        { src: '/lovable-uploads/futboltraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño futbolista con traje de comunión - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/marineroBalon.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero con balón personalizable - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/marinerobarquito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño marinero con barquito en acuarela - MariaLuisa' },
+        { src: '/lovable-uploads/marineroreclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero en reclinatorio - ilustración Màriatepinta' },
+        { src: '/lovable-uploads/patinete-2.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña con patinete y vestido de comunión - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/RECLINATORIOTRAJE.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño en reclinatorio con traje blanco - MariaLuisa' },
+        { src: '/lovable-uploads/virgenpatio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con Virgen del patio en acuarela - Màriatepinta' },
+      ]
+    },
+    {
+      id: 'recordatorios-primera-comunion-personalizados',
+      title: 'Recordatorios Primera Comunión - Dibujos personalizados',
+      images: [
+        { src: '/lovable-uploads/colormen.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado a medida - niño coloreando con traje - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/colorperritos.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - niño con perritos dibujado a medida - Màriatepinta' },
+        { src: '/lovable-uploads/columpio.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niña en columpio ilustración única - MariaLuisa' },
+        { src: '/lovable-uploads/bluegrande.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión a medida - personaje Blue grande con niño - ilustradora MariaLuisa' },
+        { src: '/lovable-uploads/flaviasola.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niña Flavia retrato único en acuarela - Màriatepinta' },
+        { src: '/lovable-uploads/hermanas.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - hermanas ilustradas a medida - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/inigo.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niño Íñigo retrato exclusivo - MariaLuisa' },
+        { src: '/lovable-uploads/marineroperrito.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión a medida - niño marinero con perrito dibujado personalizado - Màriatepinta' },
+        { src: '/lovable-uploads/rezando.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niño rezando ilustración única y exclusiva - MariaLuisa ilustradora' },
+        { src: '/lovable-uploads/trenza.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - niña con trenza dibujada a medida - MariaLuisa' },
+      ]
+    },
+    {
       id: 'vinetas',
       title: 'Viñetas',
       images: [
@@ -169,48 +211,6 @@ const Index = () => {
         { src: '/lovable-uploads/ef37dc2b-d6c1-4dbb-972c-09cec5a05927.png', title: 'Plastilina', description: '', alt: 'Ilustración de personaje en plastilina - proyecto personal artístico tridimensional - MariaLuisa ilustradora' },
         { src: '/lovable-uploads/a0dae427-a54b-440b-8210-4cf81d6c947c.png', title: 'Plastilina', description: '', alt: 'Creación artística en plastilina - personaje modelado a mano para proyecto personal - MariaLuisa' },
         { src: '/lovable-uploads/77a2dd6c-b604-4139-9694-d509ae705e4f.png', title: 'Plastilina', description: '', alt: 'Escultura en plastilina ilustrada - figura artística para proyecto de ilustración - Màriatepinta' },
-      ]
-    },
-    {
-      id: 'recordatorios-primera-comunion',
-      title: 'Recordatorios Primera Comunión - Dibujos de catálogo',
-      images: [
-        { src: '/lovable-uploads/besobeberizado.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión personalizable - niña con beso beberizado en acuarela - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/chinita.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña chinita con traje de comunión - ilustración Màriatepinta' },
-        { src: '/lovable-uploads/corderito-sin-cordero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña con corderito personalizable - MariaLuisa' },
-        { src: '/lovable-uploads/negritaTUnica.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña negrita con túnica blanca - ilustradora MariaLuisa' },
-        { src: '/lovable-uploads/organzareclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña en reclinatorio con organza - Màriatepinta' },
-        { src: '/lovable-uploads/patinete.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con patinete y traje de comunión - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/rezoorganza.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña rezando con vestido de organza - MariaLuisa' },
-        { src: '/lovable-uploads/tunicaangelito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño angelito con túnica blanca - ilustración Màriatepinta' },
-        { src: '/lovable-uploads/veladiadema.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niña con vela y diadema personalizable - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/velapaloma.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con vela y paloma del Espíritu Santo - MariaLuisa' },
-        { src: '/lovable-uploads/balon_traje_CORTO.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño con balón y traje corto personalizable - Màriatepinta' },
-        { src: '/lovable-uploads/basketraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con balón de basket y traje - ilustradora MariaLuisa' },
-        { src: '/lovable-uploads/escudo-marinero.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero con escudo personalizable - MariaLuisa' },
-        { src: '/lovable-uploads/futboltraje.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño futbolista con traje de comunión - ilustración Màriatepinta' },
-        { src: '/lovable-uploads/marineroBalon.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero con balón personalizable - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/marinerobarquito.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño marinero con barquito en acuarela - MariaLuisa' },
-        { src: '/lovable-uploads/marineroreclinatorio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño marinero en reclinatorio - ilustración Màriatepinta' },
-        { src: '/lovable-uploads/patinete-2.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niña con patinete y vestido de comunión - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/RECLINATORIOTRAJE.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio Primera Comunión de catálogo - niño en reclinatorio con traje blanco - MariaLuisa' },
-        { src: '/lovable-uploads/virgenpatio.png', title: 'Basado en catálogo', description: 'Colores pelo y fondo y razas personalizables', alt: 'Recordatorio comunión personalizable - niño con Virgen del patio en acuarela - Màriatepinta' },
-      ]
-    },
-    {
-      id: 'recordatorios-primera-comunion-personalizados',
-      title: 'Recordatorios Primera Comunión - Dibujos personalizados',
-      images: [
-        { src: '/lovable-uploads/colormen.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado a medida - niño coloreando con traje - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/colorperritos.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - niño con perritos dibujado a medida - Màriatepinta' },
-        { src: '/lovable-uploads/columpio.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niña en columpio ilustración única - MariaLuisa' },
-        { src: '/lovable-uploads/bluegrande.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión a medida - personaje Blue grande con niño - ilustradora MariaLuisa' },
-        { src: '/lovable-uploads/flaviasola.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niña Flavia retrato único en acuarela - Màriatepinta' },
-        { src: '/lovable-uploads/hermanas.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - hermanas ilustradas a medida - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/inigo.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niño Íñigo retrato exclusivo - MariaLuisa' },
-        { src: '/lovable-uploads/marineroperrito.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión a medida - niño marinero con perrito dibujado personalizado - Màriatepinta' },
-        { src: '/lovable-uploads/rezando.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio Primera Comunión personalizado - niño rezando ilustración única y exclusiva - MariaLuisa ilustradora' },
-        { src: '/lovable-uploads/trenza.png', title: 'Dibujo a medida', description: 'Tu dibujo como quieras', alt: 'Recordatorio comunión totalmente personalizado - niña con trenza dibujada a medida - MariaLuisa' },
       ]
     },
     {
