@@ -39,7 +39,7 @@ const CatalogoHermanos: React.FC = () => {
         </h1>
 
         <p className="text-base text-gray-700 font-poppins mb-10 max-w-3xl">
-          Todas las imágenes se pueden adaptar a traje o túnica, poner o quitar fajín de color, medallas y/o cruces. También a distintas razas.{' '}
+          Todas las imágenes se pueden adaptar a traje o túnica, poner o quitar fajín de color, medallas y/o cruces. También a distintas razas y cualquier uniforme escolar.{' '}
           <a 
             href="/CATALOGOhermanos_compressed.pdf" 
             download 
