@@ -322,7 +322,7 @@ const Index = () => {
         "description": "Ilustradora freelance especializada en ilustración editorial, infantil, personalizada y para marcas. Colaboraciones con Cosmopolitan, El País, Telva, Renfe, Banco Santander y Planeta.",
         "knowsAbout": ["Ilustración editorial", "Ilustración infantil", "Viñetas", "Ilustración para marcas", "Recordatorios Primera Comunión", "Productos personalizados"],
         "sameAs": [
-          "https://www.instagram.com/mariatepinta/",
+          "https://www.instagram.com/ilustraciones_mariatepinta/",
           "https://www.linkedin.com/in/mariatepinta/",
           "https://www.tiktok.com/@mariatepinta",
           "https://www.instagram.com/benditarrutina/"

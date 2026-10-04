@@ -117,7 +117,7 @@ const Header: React.FC = () => {
 
           {/* Redes sociales */}
           <div className="flex justify-center space-x-4 mb-6">
-            <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
+            <a href="https://www.instagram.com/ilustraciones_mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
               <Instagram size={20} />
             </a>
             <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
@@ -222,7 +222,7 @@ const Header: React.FC = () => {
               
               {/* Redes sociales en móvil - alineadas a la izquierda */}
               <div className="flex space-x-4 pt-4">
-                <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
+                <a href="https://www.instagram.com/ilustraciones_mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
                   <Instagram size={20} />
                 </a>
                 <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
