@@ -418,7 +418,7 @@ const Index = () => {
           Ilustraciones originales y personalizadas
         </h1>
         <p className="text-base md:text-lg text-gray-600 text-center max-w-xl mx-auto px-4 mb-6 font-poppins">
-          Soy Maria Luisa, ilustradora freelance. Creo ilustraciones para editoriales, marcas, particulares y productos personalizados. ¿Hablamos?
+          Soy Maria Luisa, ilustradora. Creo ilustraciones para editoriales, marcas, particulares y productos personalizados. ¿Hablamos?
         </p>
 
         {/* Portfolio Sections */}
