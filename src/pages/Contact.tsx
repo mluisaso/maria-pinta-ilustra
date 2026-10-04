@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
         </form>
 
         <div className="flex justify-center space-x-6 mt-8">
-          <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300" aria-label="Sígueme en Instagram">
+          <a href="https://www.instagram.com/ilustraciones_mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300" aria-label="Sígueme en Instagram">
             <Instagram size={24} />
           </a>
           <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300" aria-label="Conéctate conmigo en LinkedIn">

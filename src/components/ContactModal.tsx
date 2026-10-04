@@ -148,7 +148,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           </form>
 
           <div className="flex justify-center space-x-6 mt-6">
-            <a href="https://www.instagram.com/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
+            <a href="https://www.instagram.com/ilustraciones_mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
               <Instagram size={24} />
             </a>
             <a href="https://www.linkedin.com/in/mariatepinta/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-[#be1622] transition-colors duration-300">
