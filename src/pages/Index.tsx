@@ -319,7 +319,7 @@ const Index = () => {
         "url": "https://www.mariatepinta.es/",
         "image": "https://www.mariatepinta.es/lovable-uploads/de3a7e0d-246d-4835-8478-9a4c3f409e87.png",
         "jobTitle": "Ilustradora profesional",
-        "description": "Ilustradora freelance especializada en ilustración editorial, infantil, personalizada y para marcas. Colaboraciones con Cosmopolitan, El País, Telva, Renfe, Banco Santander y Planeta.",
+        "description": "Ilustradora especializada en ilustración editorial, infantil, personalizada y para marcas. Colaboraciones con Cosmopolitan, El País, Telva, Renfe, Banco Santander y Planeta.",
         "knowsAbout": ["Ilustración editorial", "Ilustración infantil", "Viñetas", "Ilustración para marcas", "Recordatorios Primera Comunión", "Productos personalizados"],
         "sameAs": [
           "https://www.instagram.com/ilustraciones_mariatepinta/",
@@ -418,7 +418,7 @@ const Index = () => {
           Ilustraciones originales y personalizadas
         </h1>
         <p className="text-base md:text-lg text-gray-600 text-center max-w-xl mx-auto px-4 mb-6 font-poppins">
-          Soy Maria Luisa, ilustradora freelance. Creo ilustraciones para editoriales, marcas, particulares y productos personalizados. ¿Hablamos?
+          Soy Maria Luisa, ilustradora. Creo ilustraciones para editoriales, marcas, particulares y productos personalizados. ¿Hablamos?
         </p>
 
         {/* Portfolio Sections */}
